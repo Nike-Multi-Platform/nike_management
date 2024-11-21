@@ -61,193 +61,193 @@ namespace Nike_Shop_Management.GUI
             // 
             // tx_description2
             // 
-            this.tx_description2.Location = new System.Drawing.Point(406, 167);
-            this.tx_description2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_description2.Location = new System.Drawing.Point(515, 219);
+            this.tx_description2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_description2.Name = "tx_description2";
-            this.tx_description2.Size = new System.Drawing.Size(159, 138);
+            this.tx_description2.Size = new System.Drawing.Size(237, 180);
             this.tx_description2.TabIndex = 69;
             this.tx_description2.Text = "";
             // 
             // tx_description
             // 
-            this.tx_description.Location = new System.Drawing.Point(174, 167);
-            this.tx_description.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_description.Location = new System.Drawing.Point(232, 219);
+            this.tx_description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_description.Name = "tx_description";
-            this.tx_description.Size = new System.Drawing.Size(159, 138);
+            this.tx_description.Size = new System.Drawing.Size(233, 180);
             this.tx_description.TabIndex = 68;
             this.tx_description.Text = "";
             // 
             // txStylecode
             // 
-            this.txStylecode.Location = new System.Drawing.Point(256, 373);
-            this.txStylecode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txStylecode.Location = new System.Drawing.Point(394, 490);
+            this.txStylecode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txStylecode.Name = "txStylecode";
-            this.txStylecode.Size = new System.Drawing.Size(158, 23);
+            this.txStylecode.Size = new System.Drawing.Size(211, 27);
             this.txStylecode.TabIndex = 67;
             // 
             // txSizeAndFit
             // 
-            this.txSizeAndFit.Location = new System.Drawing.Point(256, 418);
-            this.txSizeAndFit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txSizeAndFit.Location = new System.Drawing.Point(394, 545);
+            this.txSizeAndFit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSizeAndFit.Name = "txSizeAndFit";
-            this.txSizeAndFit.Size = new System.Drawing.Size(158, 23);
+            this.txSizeAndFit.Size = new System.Drawing.Size(211, 27);
             this.txSizeAndFit.TabIndex = 66;
             // 
             // comboSupplier
             // 
             this.comboSupplier.DropDownWidth = 208;
-            this.comboSupplier.Location = new System.Drawing.Point(678, 51);
-            this.comboSupplier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboSupplier.Location = new System.Drawing.Point(904, 67);
+            this.comboSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboSupplier.Name = "comboSupplier";
-            this.comboSupplier.Size = new System.Drawing.Size(159, 21);
+            this.comboSupplier.Size = new System.Drawing.Size(213, 25);
             this.comboSupplier.TabIndex = 65;
             // 
             // tx_more_info
             // 
-            this.tx_more_info.Location = new System.Drawing.Point(174, 51);
-            this.tx_more_info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tx_more_info.Location = new System.Drawing.Point(232, 67);
+            this.tx_more_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_more_info.Name = "tx_more_info";
-            this.tx_more_info.Size = new System.Drawing.Size(392, 79);
+            this.tx_more_info.Size = new System.Drawing.Size(521, 101);
             this.tx_more_info.TabIndex = 64;
             this.tx_more_info.Text = "";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(716, 474);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(955, 620);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(121, 34);
+            this.btnAdd.Size = new System.Drawing.Size(161, 44);
             this.btnAdd.TabIndex = 61;
-            this.btnAdd.Values.Text = "Add";
+            this.btnAdd.Values.Text = "Thêm";
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(598, 52);
-            this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel12.Location = new System.Drawing.Point(789, 67);
+            this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel12.Name = "kryptonLabel12";
-            this.kryptonLabel12.Size = new System.Drawing.Size(54, 20);
+            this.kryptonLabel12.Size = new System.Drawing.Size(106, 24);
             this.kryptonLabel12.TabIndex = 60;
-            this.kryptonLabel12.Values.Text = "supplier";
+            this.kryptonLabel12.Values.Text = "Nhà cung cấp";
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(406, 143);
-            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel7.Location = new System.Drawing.Point(541, 187);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(78, 20);
+            this.kryptonLabel7.Size = new System.Drawing.Size(64, 24);
             this.kryptonLabel7.TabIndex = 59;
-            this.kryptonLabel7.Values.Text = "description2";
+            this.kryptonLabel7.Values.Text = "Mô tả 2";
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(163, 143);
-            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel8.Location = new System.Drawing.Point(217, 187);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(71, 20);
+            this.kryptonLabel8.Size = new System.Drawing.Size(64, 24);
             this.kryptonLabel8.TabIndex = 58;
-            this.kryptonLabel8.Values.Text = "description";
+            this.kryptonLabel8.Values.Text = "Mô tả 1";
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(172, 332);
-            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel9.Location = new System.Drawing.Point(232, 434);
+            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(77, 20);
+            this.kryptonLabel9.Size = new System.Drawing.Size(123, 24);
             this.kryptonLabel9.TabIndex = 57;
-            this.kryptonLabel9.Values.Text = "color shown";
+            this.kryptonLabel9.Values.Text = "Màu sắc hiển thị";
             // 
             // txColorShown
             // 
-            this.txColorShown.Location = new System.Drawing.Point(256, 332);
-            this.txColorShown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txColorShown.Location = new System.Drawing.Point(394, 434);
+            this.txColorShown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txColorShown.Name = "txColorShown";
-            this.txColorShown.Size = new System.Drawing.Size(158, 23);
+            this.txColorShown.Size = new System.Drawing.Size(211, 27);
             this.txColorShown.TabIndex = 56;
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(592, 89);
-            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel6.Location = new System.Drawing.Point(789, 127);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(67, 20);
+            this.kryptonLabel6.Size = new System.Drawing.Size(64, 24);
             this.kryptonLabel6.TabIndex = 51;
-            this.kryptonLabel6.Values.Text = "sale prices";
+            this.kryptonLabel6.Values.Text = "Giá bán";
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(172, 373);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel3.Location = new System.Drawing.Point(232, 491);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(65, 20);
+            this.kryptonLabel3.Size = new System.Drawing.Size(104, 24);
             this.kryptonLabel3.TabIndex = 49;
-            this.kryptonLabel3.Values.Text = "style code";
+            this.kryptonLabel3.Values.Text = "Mã sản phẩm";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(172, 418);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel2.Location = new System.Drawing.Point(232, 546);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(69, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(146, 24);
             this.kryptonLabel2.TabIndex = 48;
-            this.kryptonLabel2.Values.Text = "size and fit";
+            this.kryptonLabel2.Values.Text = "Kích thước phù hợp";
             // 
             // lbl_
             // 
-            this.lbl_.Location = new System.Drawing.Point(163, 21);
-            this.lbl_.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbl_.Location = new System.Drawing.Point(217, 27);
+            this.lbl_.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbl_.Name = "lbl_";
-            this.lbl_.Size = new System.Drawing.Size(64, 20);
+            this.lbl_.Size = new System.Drawing.Size(117, 24);
             this.lbl_.TabIndex = 47;
-            this.lbl_.Values.Text = "more info";
+            this.lbl_.Values.Text = "Thêm thông tin ";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(598, 143);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kryptonLabel1.Location = new System.Drawing.Point(789, 186);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(32, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(61, 24);
             this.kryptonLabel1.TabIndex = 73;
-            this.kryptonLabel1.Values.Text = "Size";
+            this.kryptonLabel1.Values.Text = "Kích cỡ";
             // 
             // checked_list_Size
             // 
-            this.checked_list_Size.Location = new System.Drawing.Point(598, 167);
-            this.checked_list_Size.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checked_list_Size.Location = new System.Drawing.Point(797, 219);
+            this.checked_list_Size.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checked_list_Size.Name = "checked_list_Size";
-            this.checked_list_Size.Size = new System.Drawing.Size(239, 137);
+            this.checked_list_Size.Size = new System.Drawing.Size(319, 179);
             this.checked_list_Size.TabIndex = 74;
             // 
             // u_PictureBox
             // 
-            this.u_PictureBox.Location = new System.Drawing.Point(9, 68);
-            this.u_PictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.u_PictureBox.Location = new System.Drawing.Point(11, 90);
+            this.u_PictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.u_PictureBox.Name = "u_PictureBox";
             this.u_PictureBox.PathThumbail = null;
-            this.u_PictureBox.Size = new System.Drawing.Size(132, 168);
+            this.u_PictureBox.Size = new System.Drawing.Size(176, 220);
             this.u_PictureBox.TabIndex = 46;
             // 
             // cancelButton1
             // 
-            this.cancelButton1.Location = new System.Drawing.Point(575, 475);
-            this.cancelButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelButton1.Location = new System.Drawing.Point(767, 621);
+            this.cancelButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelButton1.Name = "cancelButton1";
-            this.cancelButton1.Size = new System.Drawing.Size(103, 32);
+            this.cancelButton1.Size = new System.Drawing.Size(137, 42);
             this.cancelButton1.TabIndex = 75;
-            this.cancelButton1.Values.Text = "Cancel";
+            this.cancelButton1.Values.Text = "Hủy";
             // 
             // txSalePrices
             // 
-            this.txSalePrices.Location = new System.Drawing.Point(678, 89);
-            this.txSalePrices.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txSalePrices.Location = new System.Drawing.Point(904, 117);
+            this.txSalePrices.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSalePrices.Name = "txSalePrices";
-            this.txSalePrices.Size = new System.Drawing.Size(159, 23);
+            this.txSalePrices.Size = new System.Drawing.Size(213, 27);
             this.txSalePrices.TabIndex = 76;
             // 
             // AddProductColor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 533);
+            this.ClientSize = new System.Drawing.Size(1168, 697);
             this.Controls.Add(this.txSalePrices);
             this.Controls.Add(this.cancelButton1);
             this.Controls.Add(this.checked_list_Size);
@@ -269,7 +269,8 @@ namespace Nike_Shop_Management.GUI
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.lbl_);
             this.Controls.Add(this.u_PictureBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddProductColor";
             this.Text = "AddProductColor";
             this.Load += new System.EventHandler(this.AddProductColor_Load);

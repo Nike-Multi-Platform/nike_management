@@ -119,7 +119,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 47);
             this.sidebar.Margin = new System.Windows.Forms.Padding(0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(200, 603);
+            this.sidebar.Size = new System.Drawing.Size(233, 603);
             this.sidebar.TabIndex = 1;
             // 
             // kryptonPanel1
@@ -158,7 +158,7 @@
             this.btn_product.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_product.TabIndex = 5;
             this.btn_product.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_product.Values.Image")));
-            this.btn_product.Values.Text = "      Product";
+            this.btn_product.Values.Text = "Quản lý nhân viên";
             this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // kryptonPalette1
@@ -176,7 +176,7 @@
             this.btn_ParentProduct.Name = "btn_ParentProduct";
             this.btn_ParentProduct.Palette = this.kryptonPalette1;
             this.btn_ParentProduct.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.btn_ParentProduct.Size = new System.Drawing.Size(200, 58);
+            this.btn_ParentProduct.Size = new System.Drawing.Size(232, 58);
             this.btn_ParentProduct.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_ParentProduct.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_ParentProduct.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
@@ -195,7 +195,7 @@
             this.btn_ParentProduct.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_ParentProduct.TabIndex = 7;
             this.btn_ParentProduct.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_ParentProduct.Values.Image")));
-            this.btn_ParentProduct.Values.Text = "      Parent Product";
+            this.btn_ParentProduct.Values.Text = "Quản lý sản phẩm";
             this.btn_ParentProduct.Click += new System.EventHandler(this.btn_ParentProduct_Click);
             // 
             // btn_order
@@ -224,7 +224,7 @@
             this.btn_order.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_order.TabIndex = 8;
             this.btn_order.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_order.Values.Image")));
-            this.btn_order.Values.Text = "         Order";
+            this.btn_order.Values.Text = "Quản lý đặt hàng";
             // 
             // btn_customer
             // 
@@ -252,7 +252,7 @@
             this.btn_customer.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_customer.TabIndex = 9;
             this.btn_customer.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_customer.Values.Image")));
-            this.btn_customer.Values.Text = "         Customer";
+            this.btn_customer.Values.Text = "Quản lý khách hàng";
             this.btn_customer.Click += new System.EventHandler(this.btn_customer_Click);
             // 
             // btn_RevenueStatistics
@@ -262,7 +262,7 @@
             this.btn_RevenueStatistics.Margin = new System.Windows.Forms.Padding(0);
             this.btn_RevenueStatistics.Name = "btn_RevenueStatistics";
             this.btn_RevenueStatistics.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
-            this.btn_RevenueStatistics.Size = new System.Drawing.Size(200, 58);
+            this.btn_RevenueStatistics.Size = new System.Drawing.Size(233, 58);
             this.btn_RevenueStatistics.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_RevenueStatistics.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btn_RevenueStatistics.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
@@ -281,7 +281,7 @@
             this.btn_RevenueStatistics.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_RevenueStatistics.TabIndex = 10;
             this.btn_RevenueStatistics.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_RevenueStatistics.Values.Image")));
-            this.btn_RevenueStatistics.Values.Text = "       Revenue Statistics";
+            this.btn_RevenueStatistics.Values.Text = "Thống kê doanh thu";
             // 
             // btnProductObject
             // 
@@ -290,7 +290,7 @@
             this.btnProductObject.Margin = new System.Windows.Forms.Padding(0);
             this.btnProductObject.Name = "btnProductObject";
             this.btnProductObject.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
-            this.btnProductObject.Size = new System.Drawing.Size(200, 58);
+            this.btnProductObject.Size = new System.Drawing.Size(221, 58);
             this.btnProductObject.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnProductObject.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.btnProductObject.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
@@ -309,7 +309,7 @@
             this.btnProductObject.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btnProductObject.TabIndex = 11;
             this.btnProductObject.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnProductObject.Values.Image")));
-            this.btnProductObject.Values.Text = "       Product Object";
+            this.btnProductObject.Values.Text = "Đối tượng sản phẩm";
             this.btnProductObject.Click += new System.EventHandler(this.btnProductObject_Click);
             // 
             // menuTransition
@@ -324,19 +324,23 @@
             // panelBody
             // 
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBody.Location = new System.Drawing.Point(200, 47);
+            this.panelBody.Location = new System.Drawing.Point(233, 47);
             this.panelBody.Margin = new System.Windows.Forms.Padding(0);
             this.panelBody.Name = "panelBody";
-            this.panelBody.Size = new System.Drawing.Size(900, 603);
+            this.panelBody.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.panelBody.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.InputControlRibbon;
+            this.panelBody.Size = new System.Drawing.Size(867, 603);
             this.panelBody.TabIndex = 5;
             // 
             // ManagementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1100, 650);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.headerPanel);
+            this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
             this.Name = "ManagementForm";
