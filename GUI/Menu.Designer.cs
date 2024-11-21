@@ -45,6 +45,7 @@ namespace Nike_Shop_Management.GUI
             // 
             this.panelLogo.Location = new System.Drawing.Point(30, 12);
             this.panelLogo.Name = "panelLogo";
+            this.panelLogo.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.panelLogo.Size = new System.Drawing.Size(246, 117);
             this.panelLogo.TabIndex = 3;
             // 
@@ -52,6 +53,7 @@ namespace Nike_Shop_Management.GUI
             // 
             this.panelMenu.Location = new System.Drawing.Point(30, 146);
             this.panelMenu.Name = "panelMenu";
+            this.panelMenu.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.panelMenu.Size = new System.Drawing.Size(246, 494);
             this.panelMenu.TabIndex = 2;
             // 
@@ -68,6 +70,7 @@ namespace Nike_Shop_Management.GUI
             this.panelNavBar.Controls.Add(this.btnCloseChildForm);
             this.panelNavBar.Location = new System.Drawing.Point(311, 12);
             this.panelNavBar.Name = "panelNavBar";
+            this.panelNavBar.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.panelNavBar.Size = new System.Drawing.Size(859, 57);
             this.panelNavBar.TabIndex = 0;
             // 
@@ -75,6 +78,7 @@ namespace Nike_Shop_Management.GUI
             // 
             this.panelDesktop.Location = new System.Drawing.Point(311, 88);
             this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.panelDesktop.Size = new System.Drawing.Size(859, 552);
             this.panelDesktop.TabIndex = 4;
             // 
