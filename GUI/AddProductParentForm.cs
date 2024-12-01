@@ -104,8 +104,8 @@ namespace Nike_Shop_Management.GUI
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-                u_PictureBox.UploadImage(u_PictureBox.PathThumbail);
 
+           u_PictureBox.UploadImage(u_PictureBox.PathThumbail);
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

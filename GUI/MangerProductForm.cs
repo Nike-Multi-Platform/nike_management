@@ -228,13 +228,12 @@ namespace Nike_Shop_Management.GUI
             {
                 string str = productParentClicked.thumbnail.Replace("Nike-application/", "");
                 linkHolder = str;
-
             }
             else
             {
                 linkHolder = u_PictureBox.PathThumbail;
             }
-
+            u_PictureBox.UploadImage(linkHolder);
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
