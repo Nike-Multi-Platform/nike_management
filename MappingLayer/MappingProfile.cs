@@ -55,6 +55,12 @@ namespace MappingLayer
             CreateMap<GetTheSizeProductResult, SizeDTO>();
 
 
+            CreateMap<user_order, UserOrderDTO>();
+            CreateMap<UserOrderDTO, user_order>();
+
+            CreateMap<user_order_status, UserOrderStatusDTO>();
+            CreateMap<UserOrderStatusDTO, user_order_status>();
+
             CreateMap<SizeDTO, GetTheSizeProductCurrentResult>()
          .ForMember(dest => dest.size_id, opt => opt.MapFrom(src => src.size_id))
          .ForMember(dest => dest.size_name, opt => opt.MapFrom(src => src.size_name));

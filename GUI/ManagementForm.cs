@@ -11,7 +11,14 @@ namespace Nike_Shop_Management.GUI
         public ManagementForm()
         {
             InitializeComponent();
+            btn_order.Click += Btn_order_Click;
         }
+
+        private void Btn_order_Click(object sender, EventArgs e)
+        {
+            util.OpenChildForm(new OrderManagementForm(), panelBody);
+        }
+
         private void btn_Home_Click(object sender, EventArgs e)
         {
             menuTransition.Start();

@@ -57,20 +57,23 @@
     <Reference Include="CloudinaryDotNet, Version=1.26.2.0, Culture=neutral, PublicKeyToken=c8234dc617ae7841, processorArchitecture=MSIL">
       <HintPath>packages\CloudinaryDotNet.1.26.2\lib\net452\CloudinaryDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Design">
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="LibBLL">
       <HintPath>LibBLL\bin\Debug\LibBLL.dll</HintPath>
@@ -79,7 +82,7 @@
       <HintPath>LibBLL\bin\Debug\LibConstants.dll</HintPath>
     </Reference>
     <Reference Include="LibDAL">
-      <HintPath>LibBLL\bin\Debug\LibDAL.dll</HintPath>
+      <HintPath>LibDAL\bin\Debug\LibDAL.dll</HintPath>
     </Reference>
     <Reference Include="LibDTO">
       <HintPath>LibDTO\bin\Debug\LibDTO.dll</HintPath>
@@ -160,6 +163,9 @@
   <ItemGroup>
     <Compile Include="CustomControl\CancelButton.cs" />
     <Compile Include="CustomControl\PriceTextBox.cs" />
+    <Compile Include="CustomControl\U_ProductParentOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="GUI\EditProductSizeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     </Compile>
     <Compile Include="GUI\AddProductParentForm.Designer.cs">
       <DependentUpon>AddProductParentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\OrderManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrderManagementForm.Designer.cs">
+      <DependentUpon>OrderManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ProductDetailsForm.cs">
       <SubType>Form</SubType>
@@ -268,6 +280,9 @@
     <Compile Include="u_PictureBox.Designer.cs">
       <DependentUpon>u_PictureBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomControl\U_ProductParentOrder.resx">
+      <DependentUpon>U_ProductParentOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EditProductSizeForm.resx">
       <DependentUpon>EditProductSizeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +298,9 @@
     <Compile Include="u_SpinnerLoading.Designer.cs">
       <DependentUpon>u_SpinnerLoading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\OrderManagementForm.resx">
+      <DependentUpon>OrderManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProductDetailsForm.resx">
       <DependentUpon>ProductDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
