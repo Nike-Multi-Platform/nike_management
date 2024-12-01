@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="headerPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -131,6 +137,12 @@
         7g/b6ILcO3xbIaZxjCfIUbrAGgbgu19f0zRN0zRN0zQt+QUCv+Xw6V+/gOGpAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="FormLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btn_Menu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn_Menu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -139,6 +151,15 @@
         SUVORK5CYII=
 </value>
   </data>
+  <metadata name="sidebar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="kryptonPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btn_product.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="kryptonPalette1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>517, 17</value>
   </metadata>
@@ -151,6 +172,9 @@
         hjyOAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="btn_ParentProduct.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn_ParentProduct.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -174,19 +198,9 @@
         pa3nEAkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_order.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAaBJREFUSEvFlz0vg1EYhmuili4qEalBor/AZKs/YBNJfUyMFgaJiJhs0kloxCQE
-        u00qxaRikSAEg49RiMFCXee8d5cO2ve8b44ruZI+5znP/bS0UYl/o1qtLmClzhKuYIeuxQ/h72hYwyk5
-        jWW8xFZdjReCh3AJ23RkoU7iK+Z15A+WruKOSn+wdBhfVPqDpZ34g1kd+YOlVzip0h8sNe/2LZX+YOkI
-        xsm2ov+Gi13B/dhYVHRjuHwTzETGvFF7FdsYLhftWHQOFdkcDOSDuciMKrI5GIjj92z+JrQrsnkYurXj
-        7hQVFQ4GN4J5ZwYUFQ4Gx4J5J8ynokVR4WAwYyPcmFOMGwTcBzmh+MaMItwgYNNGheNA4+4QMoFfuB7C
-        fo27Q0gPGrp15A+W3uG4Sn+wdBlPMakjP7Awjdf4hhdY/5283hNMazwaBM3jE86gCX/A2ndy4yOeoek/
-        Y7TPcQ2CjkyoHg/ip20IU2NOj2exZBtRIaiA5pXmcA/LalmozY93V/1zLKgVDYJSuI8faP7V6VPLQp3F
-        Y/XNE0upJRKJXwpN135bkQ0vAAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="btn_customer.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn_customer.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -199,6 +213,9 @@
         rUbtAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="btn_RevenueStatistics.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn_RevenueStatistics.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -213,6 +230,9 @@
         8pxqqYRhffAN7j7gy360sZZ8FXqsVCOZzC0LvDRP6QNU4AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="btnProductObject.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnProductObject.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -227,10 +247,28 @@
         8pxqqYRhffAN7j7gy360sZZ8FXqsVCOZzC0LvDRP6QNU4AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="btn_order.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="kryptonButton1.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAKpJREFUSEvtl0EKhTAMRLt27SHcexIv8W/rITxJnYQRql1US7S/kAeDSYwZKBI0
+        /AUxxgVaX9JCmxzc/EEbr5bSmbTJYdPK1AyZ6cYnrsaIR9ZqNHJMlfHEh2o0ccxzYyvcOMONrejHGPEM
+        Hcys3UX7BcSPjQdIzEUDa0dekvYLiPs56nRX6+5N8pLMdrXu3iQvyXd1B0eNuM3LZYUbZ9C4yQd9m1+Y
+        7whhB0rRXCy4oH3UAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="menuTransition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>181, 17</value>
   </metadata>
   <metadata name="sidebarTransition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>344, 17</value>
+  </metadata>
+  <metadata name="panelBody.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

@@ -37,7 +37,8 @@
     <Reference Include="LibDAL">
       <HintPath>..\LibDAL\bin\Debug\LibDAL.dll</HintPath>
     </Reference>
-    <Reference Include="LibDTO">
+    <Reference Include="LibDTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\LibDTO\bin\Debug\LibDTO.dll</HintPath>
     </Reference>
     <Reference Include="System" />

@@ -30,7 +30,6 @@ namespace Nike_Shop_Management.GUI
         private void InitializeComponent()
         {
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.txProductPrice = new Nike_Shop_Management.CustomControl.PriceTextBox();
             this.lbl_count_types = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -44,7 +43,6 @@ namespace Nike_Shop_Management.GUI
             this.btnShowMore = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.comboSubCategories = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.txProductName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.u_PictureBox = new Nike_Shop_Management.u_PictureBox();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -71,6 +69,8 @@ namespace Nike_Shop_Management.GUI
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panel_product_parent = new System.Windows.Forms.FlowLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txProductPrice = new Nike_Shop_Management.CustomControl.PriceTextBox();
+            this.u_PictureBox = new Nike_Shop_Management.u_PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboProductObject)).BeginInit();
@@ -130,14 +130,6 @@ namespace Nike_Shop_Management.GUI
             this.kryptonPanel1.Size = new System.Drawing.Size(345, 793);
             this.kryptonPanel1.TabIndex = 0;
             // 
-            // txProductPrice
-            // 
-            this.txProductPrice.Location = new System.Drawing.Point(188, 504);
-            this.txProductPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txProductPrice.Name = "txProductPrice";
-            this.txProductPrice.Size = new System.Drawing.Size(151, 27);
-            this.txProductPrice.TabIndex = 29;
-            // 
             // lbl_count_types
             // 
             this.lbl_count_types.Location = new System.Drawing.Point(188, 559);
@@ -152,7 +144,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel7.Location = new System.Drawing.Point(24, 559);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(128, 24);
+            this.kryptonLabel7.Size = new System.Drawing.Size(104, 20);
             this.kryptonLabel7.TabIndex = 27;
             this.kryptonLabel7.Values.Text = "Số lượng các loại";
             // 
@@ -170,7 +162,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel19.Location = new System.Drawing.Point(24, 293);
             this.kryptonLabel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel19.Name = "kryptonLabel19";
-            this.kryptonLabel19.Size = new System.Drawing.Size(151, 24);
+            this.kryptonLabel19.Size = new System.Drawing.Size(122, 20);
             this.kryptonLabel19.TabIndex = 26;
             this.kryptonLabel19.Values.Text = "Đối tượng sản phẩm";
             // 
@@ -180,7 +172,7 @@ namespace Nike_Shop_Management.GUI
             this.comboProductObject.Location = new System.Drawing.Point(188, 293);
             this.comboProductObject.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboProductObject.Name = "comboProductObject";
-            this.comboProductObject.Size = new System.Drawing.Size(151, 25);
+            this.comboProductObject.Size = new System.Drawing.Size(151, 21);
             this.comboProductObject.TabIndex = 25;
             // 
             // btnCancel
@@ -197,7 +189,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel18.Location = new System.Drawing.Point(24, 346);
             this.kryptonLabel18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel18.Name = "kryptonLabel18";
-            this.kryptonLabel18.Size = new System.Drawing.Size(152, 24);
+            this.kryptonLabel18.Size = new System.Drawing.Size(123, 20);
             this.kryptonLabel18.TabIndex = 17;
             this.kryptonLabel18.Values.Text = "Danh mục sản phẩm";
             // 
@@ -206,7 +198,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel17.Location = new System.Drawing.Point(24, 400);
             this.kryptonLabel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel17.Name = "kryptonLabel17";
-            this.kryptonLabel17.Size = new System.Drawing.Size(112, 24);
+            this.kryptonLabel17.Size = new System.Drawing.Size(91, 20);
             this.kryptonLabel17.TabIndex = 17;
             this.kryptonLabel17.Values.Text = "Danh mục phụ";
             // 
@@ -225,7 +217,7 @@ namespace Nike_Shop_Management.GUI
             this.comboProductCategories.Location = new System.Drawing.Point(188, 345);
             this.comboProductCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboProductCategories.Name = "comboProductCategories";
-            this.comboProductCategories.Size = new System.Drawing.Size(151, 25);
+            this.comboProductCategories.Size = new System.Drawing.Size(151, 21);
             this.comboProductCategories.TabIndex = 16;
             // 
             // btnShowMore
@@ -244,7 +236,7 @@ namespace Nike_Shop_Management.GUI
             this.comboSubCategories.Location = new System.Drawing.Point(188, 400);
             this.comboSubCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboSubCategories.Name = "comboSubCategories";
-            this.comboSubCategories.Size = new System.Drawing.Size(151, 25);
+            this.comboSubCategories.Size = new System.Drawing.Size(151, 21);
             this.comboSubCategories.TabIndex = 16;
             // 
             // txProductName
@@ -252,24 +244,15 @@ namespace Nike_Shop_Management.GUI
             this.txProductName.Location = new System.Drawing.Point(188, 449);
             this.txProductName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txProductName.Name = "txProductName";
-            this.txProductName.Size = new System.Drawing.Size(151, 27);
+            this.txProductName.Size = new System.Drawing.Size(151, 23);
             this.txProductName.TabIndex = 14;
-            // 
-            // u_PictureBox
-            // 
-            this.u_PictureBox.Location = new System.Drawing.Point(92, 49);
-            this.u_PictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.u_PictureBox.Name = "u_PictureBox";
-            this.u_PictureBox.PathThumbail = null;
-            this.u_PictureBox.Size = new System.Drawing.Size(181, 221);
-            this.u_PictureBox.TabIndex = 12;
             // 
             // kryptonLabel10
             // 
             this.kryptonLabel10.Location = new System.Drawing.Point(21, 13);
             this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(131, 24);
+            this.kryptonLabel10.Size = new System.Drawing.Size(106, 20);
             this.kryptonLabel10.TabIndex = 3;
             this.kryptonLabel10.Values.Text = "Hình ảnh thu nhỏ ";
             // 
@@ -278,7 +261,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel9.Location = new System.Drawing.Point(24, 506);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(104, 24);
+            this.kryptonLabel9.Size = new System.Drawing.Size(85, 20);
             this.kryptonLabel9.TabIndex = 2;
             this.kryptonLabel9.Values.Text = "Giá sản phẩm";
             // 
@@ -287,7 +270,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel8.Location = new System.Drawing.Point(24, 453);
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(107, 24);
+            this.kryptonLabel8.Size = new System.Drawing.Size(87, 20);
             this.kryptonLabel8.TabIndex = 1;
             this.kryptonLabel8.Values.Text = "Tên sản phẩm";
             // 
@@ -330,7 +313,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel6.Location = new System.Drawing.Point(619, 15);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(112, 24);
+            this.kryptonLabel6.Size = new System.Drawing.Size(91, 20);
             this.kryptonLabel6.TabIndex = 14;
             this.kryptonLabel6.Values.Text = "Danh mục phụ";
             // 
@@ -339,7 +322,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel5.Location = new System.Drawing.Point(396, 15);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(152, 24);
+            this.kryptonLabel5.Size = new System.Drawing.Size(123, 20);
             this.kryptonLabel5.TabIndex = 13;
             this.kryptonLabel5.Values.Text = "Danh mục sản phẩm";
             // 
@@ -348,7 +331,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel4.Location = new System.Drawing.Point(163, 15);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(151, 24);
+            this.kryptonLabel4.Size = new System.Drawing.Size(122, 20);
             this.kryptonLabel4.TabIndex = 12;
             this.kryptonLabel4.Values.Text = "Đối tượng sản phẩm";
             // 
@@ -359,7 +342,7 @@ namespace Nike_Shop_Management.GUI
             this.comboProductCategoriesFileter.Location = new System.Drawing.Point(396, 47);
             this.comboProductCategoriesFileter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboProductCategoriesFileter.Name = "comboProductCategoriesFileter";
-            this.comboProductCategoriesFileter.Size = new System.Drawing.Size(184, 25);
+            this.comboProductCategoriesFileter.Size = new System.Drawing.Size(184, 21);
             this.comboProductCategoriesFileter.TabIndex = 9;
             // 
             // TxSearchFilter
@@ -367,7 +350,7 @@ namespace Nike_Shop_Management.GUI
             this.TxSearchFilter.Location = new System.Drawing.Point(163, 104);
             this.TxSearchFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxSearchFilter.Name = "TxSearchFilter";
-            this.TxSearchFilter.Size = new System.Drawing.Size(620, 27);
+            this.TxSearchFilter.Size = new System.Drawing.Size(620, 23);
             this.TxSearchFilter.TabIndex = 11;
             // 
             // comboProductObjectFilter
@@ -376,7 +359,7 @@ namespace Nike_Shop_Management.GUI
             this.comboProductObjectFilter.Location = new System.Drawing.Point(163, 47);
             this.comboProductObjectFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboProductObjectFilter.Name = "comboProductObjectFilter";
-            this.comboProductObjectFilter.Size = new System.Drawing.Size(203, 25);
+            this.comboProductObjectFilter.Size = new System.Drawing.Size(203, 21);
             this.comboProductObjectFilter.TabIndex = 8;
             // 
             // ComboSubCategoriesFilter
@@ -386,7 +369,7 @@ namespace Nike_Shop_Management.GUI
             this.ComboSubCategoriesFilter.Location = new System.Drawing.Point(619, 47);
             this.ComboSubCategoriesFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComboSubCategoriesFilter.Name = "ComboSubCategoriesFilter";
-            this.ComboSubCategoriesFilter.Size = new System.Drawing.Size(163, 25);
+            this.ComboSubCategoriesFilter.Size = new System.Drawing.Size(163, 21);
             this.ComboSubCategoriesFilter.TabIndex = 7;
             // 
             // kryptonLabel2
@@ -394,7 +377,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel2.Location = new System.Drawing.Point(5, 28);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(104, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(85, 20);
             this.kryptonLabel2.TabIndex = 0;
             this.kryptonLabel2.Values.Text = "Giá sản phẩm";
             // 
@@ -403,7 +386,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel3.Location = new System.Drawing.Point(10, 139);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(96, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(78, 20);
             this.kryptonLabel3.TabIndex = 1;
             this.kryptonLabel3.Values.Text = "Ngày ra mắt";
             // 
@@ -413,7 +396,7 @@ namespace Nike_Shop_Management.GUI
             this.comboPriceFilter.Location = new System.Drawing.Point(20, 61);
             this.comboPriceFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboPriceFilter.Name = "comboPriceFilter";
-            this.comboPriceFilter.Size = new System.Drawing.Size(151, 25);
+            this.comboPriceFilter.Size = new System.Drawing.Size(151, 21);
             this.comboPriceFilter.TabIndex = 2;
             // 
             // ComboDateFilter
@@ -422,7 +405,7 @@ namespace Nike_Shop_Management.GUI
             this.ComboDateFilter.Location = new System.Drawing.Point(20, 183);
             this.ComboDateFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComboDateFilter.Name = "ComboDateFilter";
-            this.ComboDateFilter.Size = new System.Drawing.Size(151, 25);
+            this.ComboDateFilter.Size = new System.Drawing.Size(151, 21);
             this.ComboDateFilter.TabIndex = 3;
             // 
             // kryptonGroupBox2
@@ -493,7 +476,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel11.Location = new System.Drawing.Point(7, 29);
             this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel11.Name = "kryptonLabel11";
-            this.kryptonLabel11.Size = new System.Drawing.Size(104, 24);
+            this.kryptonLabel11.Size = new System.Drawing.Size(85, 20);
             this.kryptonLabel11.TabIndex = 30;
             this.kryptonLabel11.Values.Text = "Giá sản phẩm";
             // 
@@ -503,7 +486,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonComboBox2.Location = new System.Drawing.Point(51, 63);
             this.kryptonComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox2.Name = "kryptonComboBox2";
-            this.kryptonComboBox2.Size = new System.Drawing.Size(159, 25);
+            this.kryptonComboBox2.Size = new System.Drawing.Size(159, 21);
             this.kryptonComboBox2.TabIndex = 29;
             // 
             // kryptonLabel1
@@ -511,7 +494,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel1.Location = new System.Drawing.Point(10, 154);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(96, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(78, 20);
             this.kryptonLabel1.TabIndex = 28;
             this.kryptonLabel1.Values.Text = "Ngày ra mắt";
             // 
@@ -521,7 +504,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonComboBox1.Location = new System.Drawing.Point(51, 185);
             this.kryptonComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(159, 25);
+            this.kryptonComboBox1.Size = new System.Drawing.Size(159, 21);
             this.kryptonComboBox1.TabIndex = 27;
             // 
             // panel_product_parent
@@ -538,9 +521,26 @@ namespace Nike_Shop_Management.GUI
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // txProductPrice
+            // 
+            this.txProductPrice.Location = new System.Drawing.Point(188, 504);
+            this.txProductPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txProductPrice.Name = "txProductPrice";
+            this.txProductPrice.Size = new System.Drawing.Size(151, 23);
+            this.txProductPrice.TabIndex = 29;
+            // 
+            // u_PictureBox
+            // 
+            this.u_PictureBox.Location = new System.Drawing.Point(92, 49);
+            this.u_PictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.u_PictureBox.Name = "u_PictureBox";
+            this.u_PictureBox.PathThumbail = null;
+            this.u_PictureBox.Size = new System.Drawing.Size(181, 221);
+            this.u_PictureBox.TabIndex = 12;
+            // 
             // MangerProductForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1801, 793);
