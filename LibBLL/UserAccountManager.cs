@@ -60,7 +60,7 @@ namespace LibBLL
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public UserAccountDTO GetUserByID(int id)
+        public UserAccountDTO GetUserByID(string id)
         {
             return _accountRepository.GetUser(id);
         }
@@ -81,7 +81,7 @@ namespace LibBLL
         /// </summary>
         /// <param name="id"></param>
         /// <returns>   1 - xóa thành công , 0 - xóa thất bại</returns>
-        public int DeleleUser(int id)
+        public int DeleleUser(string id)
         {
             return _accountRepository.Delete(id);
         }
@@ -104,7 +104,7 @@ namespace LibBLL
             return _accountRepository.Save(entity);
         }
 
-        public int Delete(int id)
+        public int Delete(string id)
         {
             return _accountRepository.Delete(id);
         }
@@ -124,7 +124,7 @@ namespace LibBLL
             return _accountRepository.GetListAccounts();
         }
 
-        public UserAccountDTO GetByID(int id)
+        public UserAccountDTO GetByID(string id)
         {
             return _accountRepository.GetUser(id);
         }
@@ -132,6 +132,16 @@ namespace LibBLL
         public string Name()
         {
             return "User account";
+        }
+
+        public int Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public UserAccountDTO GetByID(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

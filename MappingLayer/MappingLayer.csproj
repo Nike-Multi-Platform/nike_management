@@ -35,7 +35,7 @@
       <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="LibDAL">
-      <HintPath>..\LibBLL\bin\Debug\LibDAL.dll</HintPath>
+      <HintPath>..\LibDAL\bin\Debug\LibDAL.dll</HintPath>
     </Reference>
     <Reference Include="LibDTO">
       <HintPath>..\LibDTO\bin\Debug\LibDTO.dll</HintPath>
@@ -53,9 +53,6 @@
     <Compile Include="AutoMapperConfig.cs" />
     <Compile Include="MappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
