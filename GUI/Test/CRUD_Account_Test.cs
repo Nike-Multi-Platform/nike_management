@@ -46,7 +46,7 @@ namespace Nike_Shop_Management.GUI
         {
             if (txID.Text != String.Empty)
             {
-                UserAccountDTO ucc = accountManager.GetUserByID(Int32.Parse(txID.Text.ToString()));
+                UserAccountDTO ucc = accountManager.GetUserByID(txID.Text.ToString());
                 ucc.user_address = address.Text;
                 // các thuộc tính khác
                 int fl = accountManager.EditUser(ucc);
@@ -82,7 +82,7 @@ namespace Nike_Shop_Management.GUI
         {
             if (txID.Text != String.Empty)
             {
-                int flag = accountManager.DeleleUser(Int32.Parse(txID.Text));
+                int flag = accountManager.DeleleUser(txID.Text);
                 if (flag == 1)
                 {
                     MessageBox.Show("Xóa thành công");

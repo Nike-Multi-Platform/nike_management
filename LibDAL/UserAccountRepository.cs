@@ -33,7 +33,7 @@ namespace LibDAL
         public UserAccountDTO GetAccount(string email, string password)
         {
             //return objectMapper.AccountMapperToEnity(_db.user_accounts.Where(o => o.user_email == email && o.user_password == password).FirstOrDefault());
-            user_account u = _db.user_accounts.Where(o => o.user_email == email && o.user_password == password).FirstOrDefault();
+            user_account u = _db.user_accounts.Where(o => o.user_email == email && o.user_id == password).FirstOrDefault();
             return AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(u);
         }
         public List<UserAccountDTO> GetListAccounts()
@@ -41,7 +41,7 @@ namespace LibDAL
             List<UserAccountDTO> l = _db.user_accounts.Select(emp => AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(emp)).ToList();
             return l;
         }
-        public UserAccountDTO GetUser(int id)
+        public UserAccountDTO GetUser(string id)
         {
             user_account u = _db.user_accounts.Where(user => user.user_id == id).FirstOrDefault();
             return AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(u);
@@ -56,9 +56,7 @@ namespace LibDAL
                 {
                     existingUser.user_first_name = user.user_username;
                     existingUser.user_last_name = user.user_email;
-                    existingUser.user_password = user.user_password;
-                    existingUser.user_point = user.user_point;
-                    existingUser.user_member_tier = user.user_member_tier;
+                    existingUser.password = user.user_password;
                     existingUser.user_gender = user.user_gender;
                     existingUser.user_address = user.user_address;
                     existingUser.user_url = user.user_url;
@@ -73,7 +71,7 @@ namespace LibDAL
             }
         }
 
-        public int Delete(int id)
+        public int Delete(string id)
         {
             try
             {
@@ -99,10 +97,7 @@ namespace LibDAL
                                             user.user_phone_number.Contains(inputSearch) ||
                                             user.user_address.Contains(inputSearch) ||
                                             user.user_first_name.Contains(inputSearch) ||
-                                            user.user_last_name.Contains(inputSearch) ||
-                                            (isNumericSearch && user.user_member_tier == numericSearch) ||
-                                            (isNumericSearch && user.user_point == numericSearch)
-                                            ).ToList().Select(o => AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(o)).ToList();
+                                            user.user_last_name.Contains(inputSearch) ).ToList().Select(o => AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(o)).ToList();
 
                 if (result != null)
                 {
