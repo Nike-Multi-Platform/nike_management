@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
-      <HintPath>..\MappingLayer\bin\Debug\AutoMapper.dll</HintPath>
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="LibConstants">
       <HintPath>..\LibConstants\bin\Debug\LibConstants.dll</HintPath>
@@ -65,6 +65,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="FlashSaleRespository.cs" />
     <Compile Include="GoodReceiptDetailsRepository.cs" />
     <Compile Include="GoodReceiptRepository.cs" />
     <Compile Include="IRepository.cs" />
