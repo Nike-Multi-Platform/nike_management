@@ -166,6 +166,8 @@
     <Compile Include="CustomControl\U_ProductParentOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="GHNService\GHNOrderResponse.cs" />
+    <Compile Include="GHNService\GHNService.cs" />
     <Compile Include="GUI\EditProductSizeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +356,7 @@
       <DependentUpon>u_SpinnerLoading.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CloudService\CloudIServiceConfig.config" />
+    <None Include="GHNService\GHNServiceConfig.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
