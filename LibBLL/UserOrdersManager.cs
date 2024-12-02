@@ -35,6 +35,10 @@ namespace LibBLL
             return _userOrdersRepository.getProductParentByUserOrder(user_order_id);
         }
 
+       public UserOrderDTO UpdateOrderCode(int user_order_id, string order_code)
+        {
+            return _userOrdersRepository.UpdateOrderCode(user_order_id, order_code);
+        }
 
 
     }

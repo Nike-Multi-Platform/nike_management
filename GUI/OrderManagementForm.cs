@@ -7,9 +7,11 @@ using Nike_Shop_Management.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +25,9 @@ namespace Nike_Shop_Management.GUI
         private readonly UserOrdersManager userOrdersManagement = new UserOrdersManager();
         private readonly UserOrderStatusManager userOrderStatusManager = new UserOrderStatusManager();
         List<ProductParentDTO> listProductParent;
+        GHNService.GHNService ghn = new GHNService.GHNService();
+        public int User_order_status_id { get; set; }
+        private UserOrderDTO userOrderDTO = new UserOrderDTO();
         public OrderManagementForm()
         {
             InitializeComponent();
@@ -30,19 +35,71 @@ namespace Nike_Shop_Management.GUI
             load_cbo_order_status();
             this.cbo_order_status.SelectedIndexChanged += Cbo_order_status_SelectedIndexChanged;
             this.grd_user_order.CellClick += Grd_user_order_CellClick;
+            this.btn_Confirm_Order.Visible = false;
+            this.btn_Confirm_Order.Click += Btn_Confirm_Order_Click;
         }
+
 
         private void Grd_user_order_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return; 
             int user_order_id = int.Parse(grd_user_order.Rows[e.RowIndex].Cells["user_order_id"].Value.ToString());
             LoadDataPanel(user_order_id);
+            User_order_status_id = int.Parse(grd_user_order.Rows[e.RowIndex].Cells["order_status_id"].Value.ToString());
+            if(User_order_status_id == 2)
+            {
+                this.btn_Confirm_Order.Visible = true;
+            }
+            else
+            {
+                this.btn_Confirm_Order.Visible = false;
+            }
+            userOrderDTO.Shipping_fee = decimal.Parse(grd_user_order.Rows[e.RowIndex].Cells["shipping_fee"].Value.ToString());
+            userOrderDTO.First_name = grd_user_order.Rows[e.RowIndex].Cells["first_name"].Value.ToString();
+            userOrderDTO.Phone_number = grd_user_order.Rows[e.RowIndex].Cells["phone_number"].Value.ToString();
+            userOrderDTO.Address = grd_user_order.Rows[e.RowIndex].Cells["Address"].Value.ToString();
+           
+        }
+
+        private void Btn_Confirm_Order_Click(object sender, EventArgs e)
+        {
+            int sum_weight = 0;
+            int sum_height = 0;
+            int sum_width = 0;
+            int sum_length = 0;
+
+            var orderData = new
+            {
+                payment_type_id = userOrderDTO.Shipping_fee > 0 ? 2 : 1,
+                note = "Hi HI HI", // test
+                required_note = "KHONGCHOXEMHANG",
+                from_name = "Nike Store",
+                from_phone = "0939638911",
+                from_address = "140 Le Trong Tran",
+                from_ward_name = "Tay Thanh",
+                from_district_name = "Tan Phu",
+                from_province_name = "Ho Chi Minh",
+                to_name = userOrderDTO.First_name, 
+                to_phone = userOrderDTO.Phone_number, 
+                to_address = "123 Le Loi, District 1", // test
+                to_ward_code = "20308", // test
+                to_district_id = 1441,
+                cod_amount = 0, // test
+                weight = sum_weight,
+                length = sum_height,
+                width = sum_width,
+                height = sum_length,
+                service_id = 2, // test
+            };
+
         }
 
         private void Cbo_order_status_SelectedIndexChanged(object sender, EventArgs e)
         {
             int user_order_status_id = (int)this.cbo_order_status.SelectedValue;
             LoadUserOrder(user_order_status_id);
+            this.btn_Confirm_Order.Visible = false;
+            LoadDataPanel(0);
         }
 
         private void LoadUserOrder(int sorted)
@@ -104,7 +161,13 @@ namespace Nike_Shop_Management.GUI
                 HeaderText = "Trạng thái",
                 Name = "order_status"
             });
-
+            this.grd_user_order.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "UserOrderStatusId",
+                HeaderText = "UserOrderStatusId",
+                Name = "order_status_id",
+                Visible = false
+            });
             this.grd_user_order.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "total_price",
@@ -156,6 +219,13 @@ namespace Nike_Shop_Management.GUI
 
             this.grd_user_order.Columns.Add(new DataGridViewTextBoxColumn
             {
+                DataPropertyName = "Address",
+                HeaderText = "Địa chỉ",
+                Name = "Address"
+            });
+
+            this.grd_user_order.Columns.Add(new DataGridViewTextBoxColumn
+            {
                 DataPropertyName = "Total_quantity",
                 HeaderText = "Số lượng",
                 Name = "total_quantity"
@@ -190,6 +260,7 @@ namespace Nike_Shop_Management.GUI
             this.cbo_order_status.DisplayMember = "user_order_status_name";
             this.cbo_order_status.ValueMember = "user_order_status_id";
         }
+
 
 
 

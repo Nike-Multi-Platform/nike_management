@@ -69,7 +69,15 @@ namespace LibDAL
                            return userOrderDto;
                        })
                        .ToList();
-            }
         }
+
+        public UserOrderDTO UpdateOrderCode(int user_order_id, string order_code)
+        {
+            var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
+            userOrder.order_code = order_code;
+            _db.SubmitChanges();
+            return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
+        }
+    }
 
 }
