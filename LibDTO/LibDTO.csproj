@@ -46,6 +46,7 @@
     <Compile Include="GoodsReceiptDTO.cs" />
     <Compile Include="ProductCategoriesDTO.cs" />
     <Compile Include="ProductColorsDTO.cs" />
+    <Compile Include="ProductDTO.cs" />
     <Compile Include="ProductIconsDTO.cs" />
     <Compile Include="ProductImgDTO.cs" />
     <Compile Include="ProductObjectDTO.cs" />

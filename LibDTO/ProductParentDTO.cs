@@ -11,8 +11,17 @@ namespace LibDTO
         public Boolean is_new_release { get; set; }
         public int product_icons_id { get; set; }
         public int sub_categories_id { get; set; }
+        private int weight;
+        private int height;
+        private int width;
+        private int length;
+        public int Weight { get => weight; set => weight = value; }
+        public int Height { get => height; set => height = value; }
+        public int Width { get => width; set => width = value; }
+        public int Length { get => length; set => length = value; }
+        public ProductDTO product { get; set; }
+
         //public ProductIconsDTO productIcons { get; set; }
-        //public ProductDTO product { get; set; }
         //public ProductObjectDTO productObject { get; set; }
         //public ProductCategoryDTO productCategory { get; set; }
 

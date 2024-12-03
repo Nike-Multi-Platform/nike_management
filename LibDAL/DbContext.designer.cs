@@ -129,7 +129,7 @@ namespace LibDAL
     #endregion
 		
 		public DbContextDataContext() : 
-				base(global::LibDAL.Properties.Settings.Default.Nike_DBConnectionString2, mappingSource)
+				base(global::LibDAL.Properties.Settings.Default.Nike_DBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1447,8 +1447,6 @@ namespace LibDAL
 		
 		private int _flash_sale_id;
 		
-		private string _flash_sale_name;
-		
 		private string _thumbnail;
 		
 		private string _status;
@@ -1469,8 +1467,6 @@ namespace LibDAL
     partial void OnCreated();
     partial void Onflash_sale_idChanging(int value);
     partial void Onflash_sale_idChanged();
-    partial void Onflash_sale_nameChanging(string value);
-    partial void Onflash_sale_nameChanged();
     partial void OnthumbnailChanging(string value);
     partial void OnthumbnailChanged();
     partial void OnstatusChanging(string value);
@@ -1507,26 +1503,6 @@ namespace LibDAL
 					this._flash_sale_id = value;
 					this.SendPropertyChanged("flash_sale_id");
 					this.Onflash_sale_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_flash_sale_name", DbType="NVarChar(255)")]
-		public string flash_sale_name
-		{
-			get
-			{
-				return this._flash_sale_name;
-			}
-			set
-			{
-				if ((this._flash_sale_name != value))
-				{
-					this.Onflash_sale_nameChanging(value);
-					this.SendPropertyChanging();
-					this._flash_sale_name = value;
-					this.SendPropertyChanged("flash_sale_name");
-					this.Onflash_sale_nameChanged();
 				}
 			}
 		}

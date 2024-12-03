@@ -168,6 +168,7 @@
     </Compile>
     <Compile Include="GHNService\GHNOrderResponse.cs" />
     <Compile Include="GHNService\GHNService.cs" />
+    <Compile Include="GHNService\GHNServiceConfig.cs" />
     <Compile Include="GUI\EditProductSizeForm.cs">
       <SubType>Form</SubType>
     </Compile>

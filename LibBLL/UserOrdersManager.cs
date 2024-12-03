@@ -25,6 +25,10 @@ namespace LibBLL
             return _userOrdersRepository.GetUserOrders();
         }
 
+        public UserOrderDTO GetUserOrderByID(int user_order_id)
+        {
+            return _userOrdersRepository.GetUserOrderByID(user_order_id);
+        }
         public List<UserOrderDTO> GetUserOrderByStatus(int user_order_status_id)
         {
             return _userOrdersRepository.GetUserOrderByStatus(user_order_status_id);
