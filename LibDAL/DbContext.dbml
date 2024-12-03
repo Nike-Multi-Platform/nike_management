@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Nike_DB" Class="DbContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI\QUANGDIEU;Initial Catalog=Nike_DB;Persist Security Info=True;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="LibDAL.Properties.Settings" SettingsPropertyName="Nike_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI;Initial Catalog=Nike_DB;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="LibDAL.Properties.Settings" SettingsPropertyName="Nike_DBConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.bag" Member="bags">
     <Type Name="bag">
       <Column Name="bag_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -38,7 +38,7 @@
       <Column Name="voucher_code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="discount_type" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="usage" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="quantity" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="min_order_value" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="discount_value" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
       <Column Name="discount_max_value" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
@@ -51,6 +51,7 @@
   <Table Name="dbo.flash_sale" Member="flash_sales">
     <Type Name="flash_sale">
       <Column Name="flash_sale_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="flash_sale_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="thumbnail" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="started_at" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />

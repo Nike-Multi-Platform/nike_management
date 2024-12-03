@@ -87,5 +87,10 @@ namespace Nike_Shop_Management.GUI
             //util.OpenChildForm(new GUI.Test.test_templates_crud_co_ban<UserAccountDTO>(o), panelBody);
         }
 
+        private void btnImportProduct_Click(object sender, EventArgs e)
+        {
+            util.OpenChildForm(new GUI.ImportProductManagementForm(), panelBody);
+
+        }
     }
 }
