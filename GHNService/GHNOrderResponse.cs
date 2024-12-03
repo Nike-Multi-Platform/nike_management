@@ -10,6 +10,11 @@ namespace Nike_Shop_Management.GHNService
     {
         public string Code { get; set; }
         public string Message { get; set; }
-        public object Data { get; set; }
+        public GHNOrderData Data { get; set; }
+    }
+    public class GHNOrderData
+    {
+        public string order_code { get; set; }
+        public string status { get; set; }
     }
 }

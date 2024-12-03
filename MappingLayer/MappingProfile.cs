@@ -64,6 +64,7 @@ namespace MappingLayer
             CreateMap<flash_sale, FlashSaleDTO>();
             CreateMap<FlashSaleDTO, flash_sale>();
 
+
             CreateMap<SizeDTO, GetTheSizeProductCurrentResult>()
          .ForMember(dest => dest.size_id, opt => opt.MapFrom(src => src.size_id))
          .ForMember(dest => dest.size_name, opt => opt.MapFrom(src => src.size_name));
@@ -71,6 +72,20 @@ namespace MappingLayer
             CreateMap<GetTheSizeProductCurrentResult, SizeDTO>()
                 .ForMember(dest => dest.size_id, otp => otp.MapFrom(src => src.size_id))
               .ForMember(dest => dest.size_name, opt => opt.MapFrom(src => src.size_name));
+
+
+
+            CreateMap<UserOrderProductDTO, ProductSizeDTO>()
+         .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id));
+
+            CreateMap<ProductSizeDTO, UserOrderProductDTO>()
+                .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id));
+
+            CreateMap<user_order_product, UserOrderProductDTO>()
+                  .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id));
+            CreateMap<UserOrderProductDTO, user_order_product>()
+                .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id));
+
         }
     }
 }

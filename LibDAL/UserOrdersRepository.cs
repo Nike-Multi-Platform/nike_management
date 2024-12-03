@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-
 namespace LibDAL
 {
     public class UserOrdersRepository
@@ -36,6 +35,16 @@ namespace LibDAL
                        .ToList();
         }
 
+        public UserOrderDTO GetUserOrderByID(int user_order_id)
+        {
+            var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
+            var userOrderDTO = AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
+
+            var userOrderStatus = _db.user_order_status.FirstOrDefault(status => status.user_order_status_id == userOrderDTO.User_order_status_id);
+            userOrderDTO.UserOrderStatusDTO = AutoMapperConfig.Mapper.Map<user_order_status, UserOrderStatusDTO>(userOrderStatus);
+            return userOrderDTO;
+        }
+
         public List<ProductParentDTO> getProductParentByUserOrder(int user_order_id)
         {
             var productParents = _db.user_order_products
@@ -46,13 +55,9 @@ namespace LibDAL
                                            && userOrderProduct.product_size.product.product_parent != null)
 
                 .Select(userOrderProduct => userOrderProduct.product_size.product.product_parent)
-
                 .Distinct()
-
                 .Select(productParent => AutoMapperConfig.Mapper.Map<product_parent, ProductParentDTO>(productParent))
-
                 .ToList();
-
             return productParents;
         }
 
@@ -75,6 +80,7 @@ namespace LibDAL
         {
             var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
             userOrder.order_code = order_code;
+            userOrder.user_order_status_id = 3;
             _db.SubmitChanges();
             return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
         }
