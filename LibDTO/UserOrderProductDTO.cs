@@ -11,8 +11,6 @@ namespace LibDTO
         public int user_order_id { get; set; }
         public int product_size_id { get; set; }
         public int amount { get; set; }
-        public ProductSizeDTO product_size { get; set; }
-
     }
 
 }

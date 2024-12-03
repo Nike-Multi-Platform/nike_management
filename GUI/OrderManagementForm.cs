@@ -16,6 +16,7 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Nike_Shop_Management.GUI
@@ -29,6 +30,31 @@ namespace Nike_Shop_Management.GUI
         public int User_order_status_id { get; set; }
         UserOrderDTO selectedUserOrder = null;
         List<UserOrderDTO> userOrders = null;
+        private readonly List<object> statusDescriptions = new List<object>
+        {
+            new { Key = "ready_to_pick", Value = "Người bán đang chuẩn bị hàng" },
+            new { Key = "picking", Value = "Đang lấy hàng" },
+            new { Key = "cancel", Value = "Hủy đơn hàng" },
+            new { Key = "money_collect_picking", Value = "Đang thu tiền người gửi" },
+            new { Key = "picked", Value = "Đã lấy hàng" },
+            new { Key = "storing", Value = "Hàng đang nằm ở kho" },
+            new { Key = "transporting", Value = "Đang luân chuyển hàng" },
+            new { Key = "sorting", Value = "Đang phân loại hàng hóa" },
+            new { Key = "delivering", Value = "Nhân viên đang giao cho người nhận" },
+            new { Key = "money_collect_delivering", Value = "Nhân viên đang thu tiền người nhận" },
+            new { Key = "delivered", Value = "Giao hàng thành công" },
+            new { Key = "delivery_fail", Value = "Giao hàng thất bại" },
+            new { Key = "waiting_to_return", Value = "Đang đợi trả hàng về cho người gửi" },
+            new { Key = "return", Value = "Trả hàng" },
+            new { Key = "return_transporting", Value = "Đang luân chuyển hàng trả" },
+            new { Key = "return_sorting", Value = "Đang phân loại hàng trả" },
+            new { Key = "returning", Value = "Nhân viên đang đi trả hàng" },
+            new { Key = "return_fail", Value = "Nhân viên trả hàng thất bại" },
+            new { Key = "returned", Value = "Nhân viên trả hàng thành công" },
+            new { Key = "exception", Value = "Đơn hàng ngoại lệ không nằm trong quy trình" },
+            new { Key = "damage", Value = "Hàng bị hư hỏng" },
+            new { Key = "lost", Value = "Hàng bị mất" }
+        };
         public OrderManagementForm()
         {
             InitializeComponent();
@@ -38,16 +64,26 @@ namespace Nike_Shop_Management.GUI
             this.grd_user_order.CellClick += Grd_user_order_CellClick;
             this.btn_Confirm_Order.Visible = false;
             this.btn_Confirm_Order.Click += Btn_Confirm_Order_Click;
+            this.lb_status.AutoSize = true;
+            this.lb_status.Visible = false;
+            this.lb_status.Width = ScrollStateFullDrag;
+            this.lb_status_title.Width = ScrollStateFullDrag;
+            this.lb_status_title.Visible = false;
+            this.lb_status_title.Text = "Trạng thái giao hàng";
+            this.grd_user_order.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            this.grd_user_order.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+            this.panel_order_product.AutoScroll = true;
         }
 
 
-        private void Grd_user_order_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void Grd_user_order_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return; 
             int user_order_id = int.Parse(grd_user_order.Rows[e.RowIndex].Cells["user_order_id"].Value.ToString());
             LoadDataPanel(user_order_id);
             User_order_status_id = int.Parse(grd_user_order.Rows[e.RowIndex].Cells["order_status_id"].Value.ToString());
-            if(User_order_status_id == 2)
+            if(User_order_status_id == 1)
             {
                 this.btn_Confirm_Order.Visible = true;
             }
@@ -58,15 +94,61 @@ namespace Nike_Shop_Management.GUI
 
             int rowIndex = e.RowIndex;
             selectedUserOrder = userOrders.ElementAt(rowIndex);
+            var res = await ghn.GetOrderDetailGHN(selectedUserOrder.Order_code);
+            if (res.Code == "200")
+            {
+                this.lb_status.Visible = true;
 
+
+                foreach (var item in statusDescriptions)
+                {
+                    if (item.GetType().GetProperty("Key").GetValue(item).ToString() == res.Data.status)
+                    {
+                        this.lb_status.Text = item.GetType().GetProperty("Value").GetValue(item).ToString();
+                        break;
+                    }
+                }
+                //this.lb_status.Text = status.ToString();
+                this.lb_status_title.Visible = true;
+            }
+            else
+            {
+                this.lb_status.Visible = false;
+                this.lb_status_title.Visible = false;
+            }
         }
 
         private async void Btn_Confirm_Order_Click(object sender, EventArgs e)
         {
-            int sum_weight = 10;
-            int sum_height = 10;
-            int sum_width = 10;
-            int sum_length = 10;
+            int sum_weight = 0;
+            int sum_height = 0;
+            int sum_width = 0;
+            int sum_length = 0;
+
+            List<UserOrderProductDTO> productsOrder = userOrdersManagement.GetProductOrder(selectedUserOrder.User_order_id);
+            List<ProductParentDTO> listProductParent = new List<ProductParentDTO>();
+            foreach (var item in productsOrder)
+            {
+                ProductParentDTO productParent = userOrdersManagement.getProductParentBySize(item.product_size_id).FirstOrDefault();
+                listProductParent.Add(productParent);
+                sum_weight += productParent.Weight * item.amount;
+                sum_height += productParent.Height * item.amount;
+                sum_width += productParent.Width * item.amount;
+                sum_length += productParent.Length * item.amount;
+            }
+            var itemsOrder = new List<object>();
+            foreach (var item in listProductParent)
+            {
+                itemsOrder.Add(new
+                {
+                    name = item.product_parent_name,
+                    weight = item.Weight,
+                    length = item.Length,
+                    width = item.Width,
+                    height = item.Height,
+                    quantity = 1
+                });
+            }
 
             int to_DistrictID = int.Parse(selectedUserOrder.GHN_service.Split(',')[1]);
             string to_WardID = selectedUserOrder.GHN_service.Split(',')[2];
@@ -93,23 +175,12 @@ namespace Nike_Shop_Management.GUI
                 to_ward_code = to_WardID,
                 to_district_id = to_DistrictID,
                 cod_amount = codAmount,
-                weight = sum_weight,
-                length = sum_height,
-                width = sum_width,
-                height = sum_length,
+                weight = sum_weight > 100 || sum_height < 1 ? 100 : sum_height,
+                length = sum_height > 100 || sum_height < 1 ? 100 : sum_height,
+                width = sum_width > 100 || sum_width < 1 ? 100 : sum_height,
+                height = sum_length > 100 || sum_height < 1 ? 100 : sum_height,
                 service_type_id = serviceType,
-                items = new List<object>()
-                {
-                    new
-                    {
-                        name = "Nike",
-                        weight = sum_weight,
-                        length = sum_height,
-                        width = sum_width,
-                        height = sum_length,
-                        quantity = 1
-                    }
-                }
+                items = itemsOrder
             };
 
             var response = await ghn.CreateOrderGHN(orderData);
@@ -118,9 +189,9 @@ namespace Nike_Shop_Management.GUI
                 string order_code = response.Data.order_code;
                 userOrdersManagement.UpdateOrderCode(selectedUserOrder.User_order_id, order_code);
                 MessageBox.Show("Tạo đơn hàng thành công");
-                LoadUserOrder(3);
-                // set selected combo box to 3
-                this.cbo_order_status.SelectedValue = 3;
+                LoadUserOrder(2);
+                // set selected combo box to 2
+                this.cbo_order_status.SelectedValue = 2;
             }
             else
             {
@@ -141,7 +212,8 @@ namespace Nike_Shop_Management.GUI
         private async void LoadUserOrder(int sorted)
         {
             this.grd_user_order.AutoGenerateColumns = false;
-           userOrders = null;
+            userOrders = null;
+            int checkUpdate = 0;
             if (sorted == 0)
             {
                 userOrders = userOrdersManagement.GetUserOrders();
@@ -157,8 +229,24 @@ namespace Nike_Shop_Management.GUI
             {
                 var order_code = item.Order_code;
                 var res = await ghn.GetOrderDetailGHN(order_code);
-                string status = res.Data.status;
-                MessageBox.Show(status);
+                if(res.Code == "200")
+                {
+                    var order_status = res.Data.status;
+                    if(userOrdersManagement.UpdateOrderStatus(item.User_order_id, sorted, order_status) != null)
+                        checkUpdate = 1;
+                }
+            }
+
+            if(checkUpdate == 1)
+            {
+                if (sorted == 0)
+                {
+                    userOrders = userOrdersManagement.GetUserOrders();
+                }
+                else
+                {
+                    userOrders = userOrdersManagement.GetUserOrderByStatus(sorted);
+                }
             }
             this.grd_user_order.ScrollBars = ScrollBars.Both;
 
@@ -287,16 +375,19 @@ namespace Nike_Shop_Management.GUI
         private void LoadDataPanel(int user_order_id)
         {
             listProductParent = userOrdersManagement.getProductParentByUserOrder(user_order_id);
+            List<UserOrderProductDTO> productsOrder = userOrdersManagement.GetProductOrder(user_order_id);
             if (panel_order_product.Controls.Count > 0)
             {
                 panel_order_product.Controls.Clear();
             }
             if (listProductParent != null)
             {
+                int i = 0;
                 foreach (var item in listProductParent)
                 {
                     U_ProductParentOrder u = new U_ProductParentOrder();
-                    u.PaintData(item);
+                    u.PaintData(item, productsOrder[i]);
+                    i++;
                     panel_order_product.Controls.Add(u);
                 }
             }

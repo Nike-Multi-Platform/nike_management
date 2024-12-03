@@ -52,6 +52,8 @@ namespace Nike_Shop_Management.GHNService
                 throw new ArgumentNullException(nameof(orderData), "Order data cannot be null.");
             EnsureValidConfiguration();
             var url = $"{BaseUrl}/shipping-order/create";
+            // clear headers to avoid conflicts
+            client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Token", token);
             client.DefaultRequestHeaders.Add("ShopId", shopId.ToString());
             var content = new StringContent(JsonConvert.SerializeObject(orderData), Encoding.UTF8, "application/json");
@@ -146,6 +148,10 @@ namespace Nike_Shop_Management.GHNService
         {
             EnsureValidConfiguration();
             var url = $"{BaseUrl}/switch-status/cancel";
+            // clear headers to avoid conflicts
+            client.DefaultRequestHeaders.Clear();
+            client.DefaultRequestHeaders.Add("Token", token);
+            client.DefaultRequestHeaders.Add("ShopId", shopId.ToString());
             var content = new StringContent(JsonConvert.SerializeObject(new { order_codes = orderCodes, shop_id = ShopId }), Encoding.UTF8, "application/json");
 
             try
@@ -153,11 +159,34 @@ namespace Nike_Shop_Management.GHNService
                 var response = await client.PostAsync(url, content);
                 response.EnsureSuccessStatusCode();
                 var responseString = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<GHNOrderResponse>(responseString);
+                var jsonResponse = JsonConvert.DeserializeObject<dynamic>(responseString);
+                var res_Data = new GHNOrderData
+                {
+                    status = jsonResponse.data.status
+                };
+                return new GHNOrderResponse
+                {
+                    Code = "200",
+                    Message = "Order cancelled successfully",
+                    Data = res_Data
+                };
+            }
+            catch (HttpRequestException httpEx)
+            {
+                return new GHNOrderResponse
+                {
+                    Code = "HTTP_ERROR",
+                    Message = httpEx.Message
+                };
             }
             catch (Exception ex)
             {
-                throw new Exception("Failed to cancel order", ex);
+                return new GHNOrderResponse
+                {
+                    Code = "500",
+                    Message = "An unexpected error occurred: " + ex.Message
+                };
+
             }
         }
     }

@@ -82,10 +82,9 @@ namespace MappingLayer
                 .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id));
 
             CreateMap<user_order_product, UserOrderProductDTO>()
-                  .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id));
-            CreateMap<UserOrderProductDTO, user_order_product>()
-                .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id));
-
+            .ForMember(dest => dest.user_order_id, opt => opt.MapFrom(src => src.user_order_id))
+            .ForMember(dest => dest.product_size_id, opt => opt.MapFrom(src => src.product_size_id))
+            .ForMember(dest => dest.amount, opt => opt.MapFrom(src => src.amount));
         }
     }
 }
