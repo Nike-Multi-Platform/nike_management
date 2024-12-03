@@ -60,7 +60,7 @@ namespace MappingLayer
 
             CreateMap<user_order_status, UserOrderStatusDTO>();
             CreateMap<UserOrderStatusDTO, user_order_status>();
-            
+
             CreateMap<flash_sale, FlashSaleDTO>();
             CreateMap<FlashSaleDTO, flash_sale>();
 

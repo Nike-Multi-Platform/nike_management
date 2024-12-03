@@ -47,6 +47,8 @@
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panelBody = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonCommand1 = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
+            this.btnImportProduct = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.headerPanel)).BeginInit();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -116,6 +118,7 @@
             this.sidebar.Controls.Add(this.btnProductObject);
             this.sidebar.Controls.Add(this.btn_order);
             this.sidebar.Controls.Add(this.btn_flashsale);
+            this.sidebar.Controls.Add(this.btnImportProduct);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sidebar.Location = new System.Drawing.Point(0, 47);
@@ -363,6 +366,39 @@
             this.panelBody.Size = new System.Drawing.Size(867, 603);
             this.panelBody.TabIndex = 5;
             // 
+            // kryptonCommand1
+            // 
+            this.kryptonCommand1.Text = "kryptonCommand1";
+            // 
+            // btnImportProduct
+            // 
+            this.btnImportProduct.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
+            this.btnImportProduct.Location = new System.Drawing.Point(0, 464);
+            this.btnImportProduct.Margin = new System.Windows.Forms.Padding(0);
+            this.btnImportProduct.Name = "btnImportProduct";
+            this.btnImportProduct.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
+            this.btnImportProduct.Size = new System.Drawing.Size(233, 58);
+            this.btnImportProduct.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnImportProduct.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btnImportProduct.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            this.btnImportProduct.StateCommon.Border.Color1 = System.Drawing.Color.Cyan;
+            this.btnImportProduct.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImportProduct.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnImportProduct.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.btnImportProduct.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.btnImportProduct.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
+            this.btnImportProduct.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnImportProduct.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnImportProduct.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportProduct.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.SolidRightLine;
+            this.btnImportProduct.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.btnImportProduct.TabIndex = 14;
+            this.btnImportProduct.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton1.Values.Image")));
+            this.btnImportProduct.Values.Text = "   Nhập hàng";
+            this.btnImportProduct.Click += new System.EventHandler(this.btnImportProduct_Click);
+            // 
             // ManagementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -408,5 +444,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnProductObject;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_order;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_flashsale;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnImportProduct;
+        private ComponentFactory.Krypton.Toolkit.KryptonCommand kryptonCommand1;
     }
 }
