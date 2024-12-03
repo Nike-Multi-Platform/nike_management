@@ -17,6 +17,8 @@ namespace Nike_Shop_Management.CustomControl
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl;
         private PictureBox img_product;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_product_name;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lb_amount;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel amount;
         CloudIService CloudIService;
 
         public ProductParentDTO productParentDTO { get; set; }
@@ -79,11 +81,12 @@ namespace Nike_Shop_Management.CustomControl
             this.BackColor = ColorTranslator.FromHtml("#ddd");
         }
 
-        public void PaintData(ProductParentDTO productParent)
+        public void PaintData(ProductParentDTO productParent, UserOrderProductDTO productsOrder)
         {
             productParentDTO = productParent;
             lbl_product_name.Text = productParent.product_parent_name;
             lbl_price.Text = productParent.product_price;
+            amount.Text = productsOrder.amount.ToString();
             LoadImgFromUrl(productParent.thumbnail);
         }
         public void LoadImgFromUrl(string path)
@@ -100,25 +103,27 @@ namespace Nike_Shop_Management.CustomControl
             this.lbl = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.img_product = new System.Windows.Forms.PictureBox();
             this.lbl_product_name = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lb_amount = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.amount = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.img_product)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_price
             // 
-            this.lbl_price.Location = new System.Drawing.Point(38, 141);
+            this.lbl_price.Location = new System.Drawing.Point(75, 170);
             this.lbl_price.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_price.Name = "lbl_price";
-            this.lbl_price.Size = new System.Drawing.Size(108, 21);
+            this.lbl_price.Size = new System.Drawing.Size(134, 25);
             this.lbl_price.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.lbl_price.TabIndex = 9;
             this.lbl_price.Values.Text = "kryptonLabel1";
             // 
             // lbl
             // 
-            this.lbl.Location = new System.Drawing.Point(5, 141);
+            this.lbl.Location = new System.Drawing.Point(5, 170);
             this.lbl.Margin = new System.Windows.Forms.Padding(2);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(28, 20);
+            this.lbl.Size = new System.Drawing.Size(34, 24);
             this.lbl.TabIndex = 8;
             this.lbl.Values.Text = "Giá";
             // 
@@ -131,7 +136,7 @@ namespace Nike_Shop_Management.CustomControl
             this.img_product.Location = new System.Drawing.Point(20, 26);
             this.img_product.Margin = new System.Windows.Forms.Padding(2);
             this.img_product.Name = "img_product";
-            this.img_product.Size = new System.Drawing.Size(126, 103);
+            this.img_product.Size = new System.Drawing.Size(189, 139);
             this.img_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.img_product.TabIndex = 7;
             this.img_product.TabStop = false;
@@ -141,19 +146,40 @@ namespace Nike_Shop_Management.CustomControl
             this.lbl_product_name.Location = new System.Drawing.Point(5, 2);
             this.lbl_product_name.Margin = new System.Windows.Forms.Padding(2);
             this.lbl_product_name.Name = "lbl_product_name";
-            this.lbl_product_name.Size = new System.Drawing.Size(62, 20);
+            this.lbl_product_name.Size = new System.Drawing.Size(76, 24);
             this.lbl_product_name.TabIndex = 6;
             this.lbl_product_name.Values.Text = "TÊN GIÀY";
+            // 
+            // lb_amount
+            // 
+            this.lb_amount.Location = new System.Drawing.Point(5, 213);
+            this.lb_amount.Margin = new System.Windows.Forms.Padding(2);
+            this.lb_amount.Name = "lb_amount";
+            this.lb_amount.Size = new System.Drawing.Size(73, 24);
+            this.lb_amount.TabIndex = 10;
+            this.lb_amount.Values.Text = "Số lượng";
+            // 
+            // amount
+            // 
+            this.amount.Location = new System.Drawing.Point(75, 213);
+            this.amount.Margin = new System.Windows.Forms.Padding(2);
+            this.amount.Name = "amount";
+            this.amount.Size = new System.Drawing.Size(134, 25);
+            this.amount.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.amount.TabIndex = 11;
+            this.amount.Values.Text = "kryptonLabel1";
             // 
             // U_ProductParentOrder
             // 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.amount);
+            this.Controls.Add(this.lb_amount);
             this.Controls.Add(this.lbl_price);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.img_product);
             this.Controls.Add(this.lbl_product_name);
             this.Name = "U_ProductParentOrder";
-            this.Size = new System.Drawing.Size(169, 177);
+            this.Size = new System.Drawing.Size(238, 252);
             ((System.ComponentModel.ISupportInitialize)(this.img_product)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

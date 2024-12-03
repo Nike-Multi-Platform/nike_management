@@ -16,5 +16,6 @@ namespace Nike_Shop_Management.GHNService
     {
         public string order_code { get; set; }
         public string status { get; set; }
+        public object DataResponse { get; set; }
     }
 }
