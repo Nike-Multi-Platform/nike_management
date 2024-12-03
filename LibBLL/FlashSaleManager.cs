@@ -7,10 +7,30 @@ namespace LibBLL
 {
     public class FlashSaleManager
     {
+        private readonly FlashSaleRespository _flashSaleRepository;
 
-        public FlashSaleManager() 
-        { 
+        public FlashSaleManager(FlashSaleRespository flashSaleRepository)
+        {
+            _flashSaleRepository = flashSaleRepository;
         }
+
+        public FlashSaleManager()
+        {
+            _flashSaleRepository = new FlashSaleRespository(new DbContextDataContext());
+        }
+
+        public List<FlashSaleDTO> GetAll()
+        {
+            return _flashSaleRepository.getFlashSale();
+        }
+        public int Add(FlashSaleDTO entity)
+        {
+            return _flashSaleRepository.AddFlashSale(entity);
+        }
+        public int Update(FlashSaleDTO entity) {
+            return _flashSaleRepository.Edit(entity);
+        }
+
 
     }
 }
