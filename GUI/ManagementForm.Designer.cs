@@ -43,6 +43,7 @@
             this.btn_RevenueStatistics = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnProductObject = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_order = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_flashsale = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panelBody = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -87,7 +88,7 @@
             this.FormLabel.Location = new System.Drawing.Point(75, 12);
             this.FormLabel.Margin = new System.Windows.Forms.Padding(0);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(166, 20);
+            this.FormLabel.Size = new System.Drawing.Size(206, 24);
             this.FormLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormLabel.TabIndex = 1;
             this.FormLabel.Values.Text = "Nike Shop Management";
@@ -114,6 +115,7 @@
             this.sidebar.Controls.Add(this.btn_RevenueStatistics);
             this.sidebar.Controls.Add(this.btnProductObject);
             this.sidebar.Controls.Add(this.btn_order);
+            this.sidebar.Controls.Add(this.btn_flashsale);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sidebar.Location = new System.Drawing.Point(0, 47);
@@ -309,8 +311,37 @@
             this.btn_order.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.SolidRightLine;
             this.btn_order.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_order.TabIndex = 12;
-            this.btn_order.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton1.Values.Image")));
+            this.btn_order.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_order.Values.Image")));
             this.btn_order.Values.Text = "   Đơn hàng";
+            // 
+            // btn_flashsale
+            // 
+            this.btn_flashsale.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
+            this.btn_flashsale.Location = new System.Drawing.Point(0, 406);
+            this.btn_flashsale.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_flashsale.Name = "btn_flashsale";
+            this.btn_flashsale.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
+            this.btn_flashsale.Size = new System.Drawing.Size(233, 58);
+            this.btn_flashsale.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_flashsale.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_flashsale.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            this.btn_flashsale.StateCommon.Border.Color1 = System.Drawing.Color.Cyan;
+            this.btn_flashsale.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_flashsale.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_flashsale.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.btn_flashsale.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.btn_flashsale.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
+            this.btn_flashsale.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_flashsale.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_flashsale.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_flashsale.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.SolidRightLine;
+            this.btn_flashsale.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.btn_flashsale.TabIndex = 13;
+            this.btn_flashsale.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_flashsale.Values.Image")));
+            this.btn_flashsale.Values.Text = "   Flash sale";
+            this.btn_flashsale.Click += new System.EventHandler(this.btn_flashsale_Click);
             // 
             // menuTransition
             // 
@@ -376,5 +407,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_RevenueStatistics;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnProductObject;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_order;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_flashsale;
     }
 }
