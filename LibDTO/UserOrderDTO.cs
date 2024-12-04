@@ -10,7 +10,7 @@ namespace LibDTO
     {
         private int user_order_id, user_order_status_id, total_quantity;
 
-        private string user_id, first_name, last_name, address, email, phone_number, payment_method, order_code, order_code_return, ghn_service;
+        private string user_id, first_name, last_name, address, email, phone_number, payment_method, order_code, order_code_return, ghn_service, transaction_code;
 
         private System.DateTime createdAt, updatedAt;
 
@@ -19,6 +19,8 @@ namespace LibDTO
         private System.Nullable<byte> is_canceled_by;
 
         private decimal shipping_fee, total_price, discount_price, final_price;
+        
+        public string Transaction_code { get => transaction_code; set => transaction_code = value; }
         public UserOrderStatusDTO UserOrderStatusDTO { get; set; }
         public List<UserOrderProductDTO> user_order_product { get; set; }
         public string UserOrderStatusName => UserOrderStatusDTO?.user_order_status_name ?? "N/A";

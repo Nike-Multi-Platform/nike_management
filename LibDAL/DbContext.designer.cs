@@ -441,6 +441,34 @@ namespace LibDAL
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), product_id);
 			return ((ISingleResult<GetTheSizeProductCurrentResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTheSizeProduct")]
+		public ISingleResult<GetTheSizeProductResult1> GetTheSizeProduct1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> typeSize)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), product_id, typeSize);
+			return ((ISingleResult<GetTheSizeProductResult1>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTheSizeProductCurrent")]
+		public ISingleResult<GetTheSizeProductCurrentResult1> GetTheSizeProductCurrent1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), product_id);
+			return ((ISingleResult<GetTheSizeProductCurrentResult1>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ProcessImportProducts")]
+		public int ProcessImportProducts1()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SaveTempImportProduct")]
+		public int SaveTempImportProduct1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> receipt_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_size_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Money")] System.Nullable<decimal> import_price, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> quantity)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), receipt_id, product_id, product_size_id, import_price, quantity);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.bag")]
@@ -7774,7 +7802,7 @@ namespace LibDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_order_code", DbType="VarChar(120) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_order_code", DbType="VarChar(120)")]
 		public string order_code
 		{
 			get
@@ -7794,7 +7822,7 @@ namespace LibDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_order_code_return", DbType="VarChar(120) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_order_code_return", DbType="VarChar(120)")]
 		public string order_code_return
 		{
 			get
@@ -8183,7 +8211,17 @@ namespace LibDAL
 		
 		private int _product_size_id;
 		
-		private System.Nullable<int> _amount;
+		private int _amount;
+		
+		private string _thumbnail;
+		
+		private string _product_name;
+		
+		private string _size_name;
+		
+		private decimal _price;
+		
+		private System.Nullable<int> _on_register_flash_sales_id;
 		
 		private EntityRef<product_size> _product_size;
 		
@@ -8197,8 +8235,18 @@ namespace LibDAL
     partial void Onuser_order_idChanged();
     partial void Onproduct_size_idChanging(int value);
     partial void Onproduct_size_idChanged();
-    partial void OnamountChanging(System.Nullable<int> value);
+    partial void OnamountChanging(int value);
     partial void OnamountChanged();
+    partial void OnthumbnailChanging(string value);
+    partial void OnthumbnailChanged();
+    partial void Onproduct_nameChanging(string value);
+    partial void Onproduct_nameChanged();
+    partial void Onsize_nameChanging(string value);
+    partial void Onsize_nameChanged();
+    partial void OnpriceChanging(decimal value);
+    partial void OnpriceChanged();
+    partial void Onon_register_flash_sales_idChanging(System.Nullable<int> value);
+    partial void Onon_register_flash_sales_idChanged();
     #endregion
 		
 		public user_order_product()
@@ -8256,8 +8304,8 @@ namespace LibDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Int")]
-		public System.Nullable<int> amount
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_amount", DbType="Int NOT NULL")]
+		public int amount
 		{
 			get
 			{
@@ -8272,6 +8320,106 @@ namespace LibDAL
 					this._amount = value;
 					this.SendPropertyChanged("amount");
 					this.OnamountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thumbnail", DbType="Text NOT NULL", CanBeNull=false, UpdateCheck=UpdateCheck.Never)]
+		public string thumbnail
+		{
+			get
+			{
+				return this._thumbnail;
+			}
+			set
+			{
+				if ((this._thumbnail != value))
+				{
+					this.OnthumbnailChanging(value);
+					this.SendPropertyChanging();
+					this._thumbnail = value;
+					this.SendPropertyChanged("thumbnail");
+					this.OnthumbnailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_product_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string product_name
+		{
+			get
+			{
+				return this._product_name;
+			}
+			set
+			{
+				if ((this._product_name != value))
+				{
+					this.Onproduct_nameChanging(value);
+					this.SendPropertyChanging();
+					this._product_name = value;
+					this.SendPropertyChanged("product_name");
+					this.Onproduct_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string size_name
+		{
+			get
+			{
+				return this._size_name;
+			}
+			set
+			{
+				if ((this._size_name != value))
+				{
+					this.Onsize_nameChanging(value);
+					this.SendPropertyChanging();
+					this._size_name = value;
+					this.SendPropertyChanged("size_name");
+					this.Onsize_nameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Money NOT NULL")]
+		public decimal price
+		{
+			get
+			{
+				return this._price;
+			}
+			set
+			{
+				if ((this._price != value))
+				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_on_register_flash_sales_id", DbType="Int")]
+		public System.Nullable<int> on_register_flash_sales_id
+		{
+			get
+			{
+				return this._on_register_flash_sales_id;
+			}
+			set
+			{
+				if ((this._on_register_flash_sales_id != value))
+				{
+					this.Onon_register_flash_sales_idChanging(value);
+					this.SendPropertyChanging();
+					this._on_register_flash_sales_id = value;
+					this.SendPropertyChanged("on_register_flash_sales_id");
+					this.Onon_register_flash_sales_idChanged();
 				}
 			}
 		}
@@ -8791,6 +8939,112 @@ namespace LibDAL
 				if ((this._size_id != value))
 				{
 					this._size_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_product_size_id", DbType="Int NOT NULL")]
+		public int product_size_id
+		{
+			get
+			{
+				return this._product_size_id;
+			}
+			set
+			{
+				if ((this._product_size_id != value))
+				{
+					this._product_size_id = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetTheSizeProductResult1
+	{
+		
+		private int _size_id;
+		
+		private string _size_name;
+		
+		public GetTheSizeProductResult1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_id", DbType="Int NOT NULL")]
+		public int size_id
+		{
+			get
+			{
+				return this._size_id;
+			}
+			set
+			{
+				if ((this._size_id != value))
+				{
+					this._size_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_name", DbType="NVarChar(50)")]
+		public string size_name
+		{
+			get
+			{
+				return this._size_name;
+			}
+			set
+			{
+				if ((this._size_name != value))
+				{
+					this._size_name = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetTheSizeProductCurrentResult1
+	{
+		
+		private int _size_id;
+		
+		private string _size_name;
+		
+		private int _product_size_id;
+		
+		public GetTheSizeProductCurrentResult1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_id", DbType="Int NOT NULL")]
+		public int size_id
+		{
+			get
+			{
+				return this._size_id;
+			}
+			set
+			{
+				if ((this._size_id != value))
+				{
+					this._size_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_name", DbType="NVarChar(50)")]
+		public string size_name
+		{
+			get
+			{
+				return this._size_name;
+			}
+			set
+			{
+				if ((this._size_name != value))
+				{
+					this._size_name = value;
 				}
 			}
 		}

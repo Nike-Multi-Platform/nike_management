@@ -57,5 +57,10 @@ namespace LibBLL
         {
             return _userOrdersRepository.GetProductOrder(user_order_id);
         }
+
+        public UserOrderDTO CancelOrder(int user_order_id)
+        {
+            return _userOrdersRepository.CancelOrder(user_order_id);
+        }
     }
 }
