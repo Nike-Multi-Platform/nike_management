@@ -31,6 +31,11 @@ namespace LibBLL
             return _flashSaleRepository.Edit(entity);
         }
 
+        public int Delete(FlashSaleDTO entity)
+        {
+            return _flashSaleRepository.Delete(entity);
+        }
+
 
     }
 }
