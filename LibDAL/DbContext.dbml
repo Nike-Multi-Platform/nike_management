@@ -345,8 +345,8 @@
       <Column Name="payment_method" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="createdAt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="updatedAt" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="order_code" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
-      <Column Name="order_code_return" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="order_code" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="order_code_return" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
       <Column Name="return_expiration_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="is_reviewed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="is_processed" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -368,7 +368,12 @@
     <Type Name="user_order_product">
       <Column Name="user_order_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="product_size_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="thumbnail" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="product_name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="size_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="on_register_flash_sales_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="product_size_user_order_product" Member="product_size" ThisKey="product_size_id" OtherKey="product_size_id" Type="product_size" IsForeignKey="true" />
       <Association Name="user_order_user_order_product" Member="user_order" ThisKey="user_order_id" OtherKey="user_order_id" Type="user_order" IsForeignKey="true" />
     </Type>
@@ -417,5 +422,32 @@
       <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="product_size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.GetTheSizeProduct" Method="GetTheSizeProduct1">
+    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="typeSize" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetTheSizeProductResult1">
+      <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTheSizeProductCurrent" Method="GetTheSizeProductCurrent1">
+    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetTheSizeProductCurrentResult1">
+      <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="product_size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ProcessImportProducts" Method="ProcessImportProducts1">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SaveTempImportProduct" Method="SaveTempImportProduct1">
+    <Parameter Name="receipt_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="product_size_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="import_price" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="quantity" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

@@ -35,10 +35,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Confirm_Order = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lb_status_title = new System.Windows.Forms.Label();
+            this.lb_status = new System.Windows.Forms.Label();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.panel_order_products = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.panel_order_product = new System.Windows.Forms.FlowLayoutPanel();
-            this.lb_status = new System.Windows.Forms.Label();
+            this.btn_cancle_order = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_order_status)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grd_user_order)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel_right)).BeginInit();
@@ -88,6 +89,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btn_Confirm_Order);
             this.flowLayoutPanel1.Controls.Add(this.lb_status_title);
             this.flowLayoutPanel1.Controls.Add(this.lb_status);
+            this.flowLayoutPanel1.Controls.Add(this.btn_cancle_order);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -120,9 +122,18 @@
             this.lb_status_title.Location = new System.Drawing.Point(0, 112);
             this.lb_status_title.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.lb_status_title.Name = "lb_status_title";
-            this.lb_status_title.Size = new System.Drawing.Size(201, 23);
+            this.lb_status_title.Size = new System.Drawing.Size(161, 18);
             this.lb_status_title.TabIndex = 5;
             this.lb_status_title.Text = "Trạng thái giao hàng";
+            // 
+            // lb_status
+            // 
+            this.lb_status.AutoSize = true;
+            this.lb_status.Location = new System.Drawing.Point(3, 140);
+            this.lb_status.Name = "lb_status";
+            this.lb_status.Size = new System.Drawing.Size(44, 16);
+            this.lb_status.TabIndex = 7;
+            this.lb_status.Text = "label2";
             // 
             // kryptonPanel4
             // 
@@ -154,14 +165,14 @@
             this.panel_order_product.Size = new System.Drawing.Size(1004, 352);
             this.panel_order_product.TabIndex = 0;
             // 
-            // lb_status
+            // btn_cancle_order
             // 
-            this.lb_status.AutoSize = true;
-            this.lb_status.Location = new System.Drawing.Point(4, 175);
-            this.lb_status.Name = "lb_status";
-            this.lb_status.Size = new System.Drawing.Size(44, 16);
-            this.lb_status.TabIndex = 7;
-            this.lb_status.Text = "label2";
+            this.btn_cancle_order.Location = new System.Drawing.Point(0, 166);
+            this.btn_cancle_order.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.btn_cancle_order.Name = "btn_cancle_order";
+            this.btn_cancle_order.Size = new System.Drawing.Size(163, 25);
+            this.btn_cancle_order.TabIndex = 0;
+            this.btn_cancle_order.Values.Text = "Hủy đơn hàng";
             // 
             // OrderManagementForm
             // 
@@ -200,5 +211,6 @@
         private System.Windows.Forms.Label lb_status_title;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_status;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_cancle_order;
     }
 }
