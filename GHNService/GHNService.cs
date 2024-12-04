@@ -52,7 +52,6 @@ namespace Nike_Shop_Management.GHNService
                 throw new ArgumentNullException(nameof(orderData), "Order data cannot be null.");
             EnsureValidConfiguration();
             var url = $"{BaseUrl}/shipping-order/create";
-            // clear headers to avoid conflicts
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Token", token);
             client.DefaultRequestHeaders.Add("ShopId", shopId.ToString());
@@ -104,7 +103,6 @@ namespace Nike_Shop_Management.GHNService
         {
             EnsureValidConfiguration();
             var url = $"{BaseUrl}/shipping-order/detail";
-            // clear headers to avoid conflicts
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Token", token);
             var content = new StringContent(JsonConvert.SerializeObject(new { order_code = orderCode }), Encoding.UTF8, "application/json");
@@ -112,8 +110,8 @@ namespace Nike_Shop_Management.GHNService
             try
             {
                 var response = await client.PostAsync(url, content);
-                response.EnsureSuccessStatusCode();
                 var responseString = await response.Content.ReadAsStringAsync();
+                response.EnsureSuccessStatusCode();
                 var jsonResponse = JsonConvert.DeserializeObject<dynamic>(responseString);
                 var res_Data = new GHNOrderData
                 {
@@ -147,28 +145,33 @@ namespace Nike_Shop_Management.GHNService
         public async Task<GHNOrderResponse> CancelOrderGHN(List<string> orderCodes)
         {
             EnsureValidConfiguration();
+            if (orderCodes == null || !orderCodes.Any())
+                throw new ArgumentException("Order codes cannot be null or empty.");
+
             var url = $"{BaseUrl}/switch-status/cancel";
-            // clear headers to avoid conflicts
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Token", token);
             client.DefaultRequestHeaders.Add("ShopId", shopId.ToString());
-            var content = new StringContent(JsonConvert.SerializeObject(new { order_codes = orderCodes, shop_id = ShopId }), Encoding.UTF8, "application/json");
 
+            var content = new StringContent(JsonConvert.SerializeObject(new { order_codes = orderCodes }), Encoding.UTF8, "application/json");
             try
             {
                 var response = await client.PostAsync(url, content);
-                response.EnsureSuccessStatusCode();
                 var responseString = await response.Content.ReadAsStringAsync();
-                var jsonResponse = JsonConvert.DeserializeObject<dynamic>(responseString);
-                var res_Data = new GHNOrderData
+
+                if (!response.IsSuccessStatusCode)
                 {
-                    status = jsonResponse.data.status
-                };
+                    var errorDetails = JsonConvert.DeserializeObject<dynamic>(responseString);
+                    return new GHNOrderResponse
+                    {
+                        Code = response.StatusCode.ToString(),
+                        Message = errorDetails?.message ?? "An error occurred"
+                    };
+                }
                 return new GHNOrderResponse
                 {
                     Code = "200",
                     Message = "Order cancelled successfully",
-                    Data = res_Data
                 };
             }
             catch (HttpRequestException httpEx)
@@ -184,9 +187,8 @@ namespace Nike_Shop_Management.GHNService
                 return new GHNOrderResponse
                 {
                     Code = "500",
-                    Message = "An unexpected error occurred: " + ex.Message
+                    Message = $"An unexpected error occurred: {ex.Message}"
                 };
-
             }
         }
     }

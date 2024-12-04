@@ -130,6 +130,7 @@ namespace LibDAL
                 userOrderDTO.Return_expiration_date = DateTime.Now.AddDays(7);
                 var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
                 userOrder.return_expiration_date = userOrderDTO.Return_expiration_date;
+                userOrder.user_order_status_id = 4;
                 _db.SubmitChanges();
                 return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
             }
@@ -142,6 +143,15 @@ namespace LibDAL
                        .Where(emp => emp.user_order_id == user_order_id)
                        .Select(emp => AutoMapperConfig.Mapper.Map<user_order_product, UserOrderProductDTO>(emp))
                        .ToList();
+        }
+
+        public UserOrderDTO CancelOrder(int user_order_id)
+        { 
+            var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
+            userOrder.user_order_status_id = 5;
+            userOrder.is_canceled_by = 2;
+            _db.SubmitChanges();
+            return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
         }
 
     }
