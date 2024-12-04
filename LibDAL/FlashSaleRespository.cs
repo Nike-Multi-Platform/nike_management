@@ -30,9 +30,10 @@ namespace LibDAL
               {
                   flash_sale_id = t.flash_sale_id,
                   flash_sale_name = t.flash_sale_name,
+                  thumbnail = t.thumbnail,
                   status = t.status,
-                  start_at = t.started_at,
-                  end_at = t.ended_at
+                  Start_at = t.started_at,
+                  End_at = t.ended_at
               })
               .ToList();
         }
@@ -40,8 +41,16 @@ namespace LibDAL
         {
             try
             {
-                var entity = AutoMapperConfig.Mapper.Map<FlashSaleDTO, flash_sale>(flashSale);
-                _db.flash_sales.InsertOnSubmit(entity);
+                _db.flash_sales.InsertOnSubmit(new flash_sale
+                {
+                    flash_sale_name = flashSale.flash_sale_name,
+                    started_at = flashSale.Start_at,
+                    ended_at = flashSale.End_at,
+                    thumbnail = flashSale.thumbnail,
+                    status = flashSale.status,
+                    createdAt = DateTime.Now,
+                    updatedAt = DateTime.Now
+                });
                 _db.SubmitChanges();
                 return 1;
 
@@ -61,10 +70,12 @@ namespace LibDAL
                 if (entity != null)
                 {
                     entity.flash_sale_name = flashSale.flash_sale_name;
-                    entity.started_at = flashSale.start_at;
-                    entity.ended_at = flashSale.end_at;
+                    entity.started_at = flashSale.Start_at;
+                    entity.ended_at = flashSale.End_at;
                     entity.thumbnail = flashSale.thumbnail;
                     entity.status = flashSale.status;
+                    entity.createdAt = DateTime.Now;
+                    entity.updatedAt = DateTime.Now;
                     _db.SubmitChanges();
                     return 1;
                 }
