@@ -47,9 +47,9 @@
             this.kryptonNumericUpDown1 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonNumericUpDown2 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonNumericUpDown2 = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonDataGridView2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -157,6 +157,8 @@
             this.kryptonDataGridView1.RowHeadersWidth = 51;
             this.kryptonDataGridView1.RowTemplate.Height = 24;
             this.kryptonDataGridView1.Size = new System.Drawing.Size(1159, 144);
+            this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.White;
+            this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kryptonDataGridView1.TabIndex = 1;
             this.kryptonDataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView1_CellClick);
             // 
@@ -283,7 +285,7 @@
             0,
             0});
             this.kryptonNumericUpDown1.Name = "kryptonNumericUpDown1";
-            this.kryptonNumericUpDown1.Size = new System.Drawing.Size(219, 26);
+            this.kryptonNumericUpDown1.Size = new System.Drawing.Size(219, 27);
             this.kryptonNumericUpDown1.TabIndex = 1;
             this.kryptonNumericUpDown1.Value = new decimal(new int[] {
             1,
@@ -314,30 +316,6 @@
             this.kryptonLabel4.TabIndex = 0;
             this.kryptonLabel4.Values.Text = "Giá nhập";
             // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.kryptonButton4, 0, 1);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(927, 3);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 2;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(229, 63);
-            this.tableLayoutPanel9.TabIndex = 4;
-            // 
-            // kryptonButton4
-            // 
-            this.kryptonButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton4.Location = new System.Drawing.Point(3, 33);
-            this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(223, 25);
-            this.kryptonButton4.TabIndex = 0;
-            this.kryptonButton4.Values.Text = "Thêm";
-            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
-            // 
             // kryptonNumericUpDown2
             // 
             this.kryptonNumericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -366,6 +344,30 @@
             0,
             0});
             // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.kryptonButton4, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(927, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(229, 63);
+            this.tableLayoutPanel9.TabIndex = 4;
+            // 
+            // kryptonButton4
+            // 
+            this.kryptonButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonButton4.Location = new System.Drawing.Point(3, 33);
+            this.kryptonButton4.Name = "kryptonButton4";
+            this.kryptonButton4.Size = new System.Drawing.Size(223, 25);
+            this.kryptonButton4.TabIndex = 0;
+            this.kryptonButton4.Values.Text = "Thêm";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
+            // 
             // kryptonDataGridView2
             // 
             this.kryptonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -377,8 +379,9 @@
             this.kryptonDataGridView2.RowHeadersWidth = 51;
             this.kryptonDataGridView2.RowTemplate.Height = 24;
             this.kryptonDataGridView2.Size = new System.Drawing.Size(1159, 344);
+            this.kryptonDataGridView2.StateCommon.Background.Color1 = System.Drawing.Color.White;
+            this.kryptonDataGridView2.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kryptonDataGridView2.TabIndex = 3;
-            this.kryptonDataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView2_CellClick);
             this.kryptonDataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView2_CellDoubleClick);
             // 
             // ImportProductManagementForm

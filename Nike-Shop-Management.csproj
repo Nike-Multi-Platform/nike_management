@@ -169,6 +169,12 @@
     <Compile Include="GHNService\GHNOrderResponse.cs" />
     <Compile Include="GHNService\GHNService.cs" />
     <Compile Include="GHNService\GHNServiceConfig.cs" />
+    <Compile Include="GUI\BillImportProductManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BillImportProductManagement.Designer.cs">
+      <DependentUpon>BillImportProductManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EditProductSizeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </Compile>
     <EmbeddedResource Include="CustomControl\U_ProductParentOrder.resx">
       <DependentUpon>U_ProductParentOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BillImportProductManagement.resx">
+      <DependentUpon>BillImportProductManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EditProductImportItemForm.resx">
       <DependentUpon>EditProductImportItemForm.cs</DependentUpon>

@@ -46,23 +46,20 @@ namespace Nike_Shop_Management.GUI
 
         private void kryptonDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Sự kiện khi nhấn vào 1 dòng trong datagridview
             if (e.RowIndex > -1)
             {
-                // gán tên product_name_select để sử dụng ở các sự kiện khác
                 product_name_select = kryptonDataGridView1.Rows[e.RowIndex].Cells["product_parent_name"].Value.ToString();
-                // Lấy product_parent_id của dòng đó
-                int product_parent_id = Convert.ToInt32(kryptonDataGridView1.Rows[e.RowIndex].Cells["product_parent_id"].Value);
-                // Lấy ra những sản phẩm con của product_parent_id đó
-                var productColors = _db.products.Where(t => t.product_parent_id == product_parent_id).ToList();
-                // Hiển thị lên combobox
-                if (productColors.Count > 0)
-                {
-                    kryptonComboBox1.DataSource = productColors;
-                    kryptonComboBox1.DisplayMember = "product_color_shown";
-                    kryptonComboBox1.ValueMember = "product_id";
-                    kryptonComboBox1.SelectedIndex = 0;
-                }
+                // Lấy mã sản phẩm
+                int product_id = Convert.ToInt32(kryptonDataGridView1.Rows[e.RowIndex].Cells["product_parent_id"].Value.ToString());
+
+                // Danh sách màu sản phẩm
+                var product_colors = _db.products.Where(t => t.product_parent_id == product_id).ToList();
+
+                // load vào combobox1
+                kryptonComboBox1.DataSource = null;
+                kryptonComboBox1.DisplayMember = "product_color_shown";
+                kryptonComboBox1.ValueMember = "product_id";
+                kryptonComboBox1.DataSource = product_colors;
             }
         }
 
@@ -71,26 +68,18 @@ namespace Nike_Shop_Management.GUI
             // Kiểm tra xem đã chọn màu chưa
             // Sự kiện mỗi khi chọn 1 màu khác nhau
             // Load các size của màu đó vào combobox 2 gồm mã size tên size
-            if (kryptonComboBox1.SelectedValue != null &&
-    int.TryParse(kryptonComboBox1.SelectedValue.ToString(), out int product_id))
-            {
-                // Sử dụng product_id
-                var productSizes = _db.product_sizes.Where(t => t.product_id == product_id)
-                    .Select(pz => new
-                    {
-                        pz.size_id,
-                        pz.size.size_name
-                    })
-                    .ToList();
-                kryptonComboBox2.DataSource = productSizes;
-                kryptonComboBox2.DisplayMember = "size_name";
-                kryptonComboBox2.ValueMember = "size_id";
-            }
-            else
-            {
-                // Xử lý khi giá trị không hợp lệ
-                //KryptonMessageBox.Show("Vui lòng chọn một màu hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            int product_id = Convert.ToInt32(kryptonComboBox1.SelectedValue);
+            // Sử dụng product_id
+            var productSizes = _db.product_sizes.Where(t => t.product_id == product_id)
+                .Select(pz => new
+                {
+                    pz.size_id,
+                    pz.size.size_name
+                })
+                .ToList();
+            kryptonComboBox2.DataSource = productSizes;
+            kryptonComboBox2.DisplayMember = "size_name";
+            kryptonComboBox2.ValueMember = "size_id";
         }
 
         private void kryptonButton4_Click(object sender, EventArgs e)
@@ -188,7 +177,7 @@ namespace Nike_Shop_Management.GUI
             _db.SubmitChanges();
 
             // Tạo chi tiết phiếu nhập
-            foreach(ProductImportDTO productImportDTO in productImportDTOs)
+            foreach (ProductImportDTO productImportDTO in productImportDTOs)
             {
                 goods_receipt_detail goodsReceiptDetail = new goods_receipt_detail();
                 goodsReceiptDetail.good_receipt_id = goodsReceipt.goods_receipt_id;
@@ -208,24 +197,6 @@ namespace Nike_Shop_Management.GUI
             // Reset lại productImportDTOs
             productImportDTOs = new List<ProductImportDTO>();
             loadProductImportOnDataGridView2();
-        }
-
-        private void kryptonDataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > -1)
-            {
-                //  Trường hợp khi nhấn vào nút xóa
-                if (kryptonDataGridView2.Columns[e.ColumnIndex] is KryptonDataGridViewButtonColumn)
-                {
-                    // Xóa dòng đó ra khỏi list và cập nhật lại datagridview
-                    productImportDTOs.RemoveAt(e.RowIndex);
-                    loadProductImportOnDataGridView2();
-                }
-                else
-                {
-                    // Lấy ra các thông tin của dòng đó và hiển thị lên các control
-                }
-            }
         }
 
         private void kryptonDataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
