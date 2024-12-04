@@ -49,6 +49,7 @@
     <Compile Include="ProductDTO.cs" />
     <Compile Include="ProductIconsDTO.cs" />
     <Compile Include="ProductImgDTO.cs" />
+    <Compile Include="ProductImportDTO.cs" />
     <Compile Include="ProductObjectDTO.cs" />
     <Compile Include="ProductParentDTO.cs" />
     <Compile Include="ProductSizeDTO.cs" />
