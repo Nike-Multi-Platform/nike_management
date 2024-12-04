@@ -146,10 +146,57 @@ namespace LibDAL
         }
 
         public UserOrderDTO CancelOrder(int user_order_id)
-        { 
+        {
             var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
-            userOrder.user_order_status_id = 5;
-            userOrder.is_canceled_by = 2;
+            if (userOrder == null)
+            {
+                throw new Exception("Order not found");
+            }
+
+            userOrder.user_order_status_id = 5; 
+            userOrder.is_canceled_by = 2; 
+            // refund
+            if (userOrder.payment_method == "VNPAY")
+            {
+                // get user wallet 
+                var user_wallet = _db.user_wallets.FirstOrDefault(wallet => wallet.user_id == userOrder.user_id);
+
+                if (user_wallet == null)
+                {
+                    throw new Exception("User wallet not found");
+                }
+                // refund money to user wallet
+                user_wallet.balance += (long) userOrder.final_price;
+                user_wallet.updatedAt = DateTime.Now;
+
+                var user_wallet_transaction = new user_wallet_transaction
+                {
+                    user_wallet_id = user_wallet.user_wallet_id,
+                    amount = (long)userOrder.final_price,
+                    transaction_type = "refund",
+                    transaction_date = DateTime.Now
+                };
+
+                _db.user_wallet_transactions.InsertOnSubmit(user_wallet_transaction);
+            }
+
+            // find product size and update quantity, return register flash sale product
+            var userOrderProducts = _db.user_order_products.Where(product => product.user_order_id == user_order_id).ToList();
+            foreach (var userOrderProduct in userOrderProducts)
+            {
+                var productSize = _db.product_sizes.FirstOrDefault(size => size.product_size_id == userOrderProduct.product_size_id);
+                if (productSize == null)
+                {
+                    throw new Exception("Product size not found");
+                }
+                productSize.soluong += userOrderProduct.amount;
+
+                var registerFlashSaleProduct = _db.register_flash_sale_products.FirstOrDefault(product => product.register_flash_sale_product1 == userOrderProduct.on_register_flash_sales_id);
+                if (registerFlashSaleProduct != null)
+                {
+                    registerFlashSaleProduct.sold -= userOrderProduct.amount;
+                }
+            }
             _db.SubmitChanges();
             return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
         }

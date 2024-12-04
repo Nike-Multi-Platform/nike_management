@@ -64,6 +64,9 @@ namespace MappingLayer
             CreateMap<flash_sale, FlashSaleDTO>();
             CreateMap<FlashSaleDTO, flash_sale>();
 
+            CreateMap<user_wallet, UserWalletDTO>();
+            CreateMap<UserWalletDTO, user_wallet>();
+
 
             CreateMap<SizeDTO, GetTheSizeProductCurrentResult>()
          .ForMember(dest => dest.size_id, opt => opt.MapFrom(src => src.size_id))

@@ -120,6 +120,8 @@ namespace Nike_Shop_Management.GUI
                     {
                         userOrdersManagement.CancelOrder(selectedUserOrder.User_order_id);
                         MessageBox.Show("Hủy đơn hàng thành công");
+                        LoadUserOrder(5);
+                        this.cbo_order_status.SelectedValue = 5;
                     }
                     else
                     {
@@ -270,7 +272,6 @@ namespace Nike_Shop_Management.GUI
                     userOrdersManagement.UpdateOrderCode(selectedUserOrder.User_order_id, order_code);
                     MessageBox.Show("Tạo đơn hàng thành công");
                     LoadUserOrder(2);
-                    // set selected combo box to 2
                     this.cbo_order_status.SelectedValue = 2;
                 }
                 else
@@ -449,6 +450,12 @@ namespace Nike_Shop_Management.GUI
                 HeaderText = "GHN String",
                 Name = "ghn_service",
                 Visible = false
+            });
+            this.grd_user_order.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Transaction_code",
+                HeaderText = "Transaction code",
+                Name = "Transaction_code",
             });
         }
         private void LoadDataPanel(int user_order_id)
