@@ -169,6 +169,12 @@
     <Compile Include="GHNService\GHNOrderResponse.cs" />
     <Compile Include="GHNService\GHNService.cs" />
     <Compile Include="GHNService\GHNServiceConfig.cs" />
+    <Compile Include="GUI\BillImportProductManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BillImportProductManagement.Designer.cs">
+      <DependentUpon>BillImportProductManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EditProductSizeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,12 @@
     </Compile>
     <Compile Include="CloudService\CloudIService.cs" />
     <Compile Include="CloudService\ServiceConfig.cs" />
+    <Compile Include="GUI\EditProductImportItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditProductImportItemForm.Designer.cs">
+      <DependentUpon>EditProductImportItemForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="U_ProductParent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -298,6 +310,12 @@
     <EmbeddedResource Include="CustomControl\U_ProductParentOrder.resx">
       <DependentUpon>U_ProductParentOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BillImportProductManagement.resx">
+      <DependentUpon>BillImportProductManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EditProductImportItemForm.resx">
+      <DependentUpon>EditProductImportItemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EditProductSizeForm.resx">
       <DependentUpon>EditProductSizeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +333,9 @@
     </Compile>
     <EmbeddedResource Include="GUI\FlashSaleManagementForm.resx">
       <DependentUpon>FlashSaleManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ImportProductManagementForm.resx">
+      <DependentUpon>ImportProductManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderManagementForm.resx">
       <DependentUpon>OrderManagementForm.cs</DependentUpon>
