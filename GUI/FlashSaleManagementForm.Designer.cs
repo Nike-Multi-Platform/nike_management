@@ -39,7 +39,6 @@
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
@@ -49,9 +48,13 @@
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnAddTF = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnDeleteTF = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnUpdateTF = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonDataGridView2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -60,6 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
+            this.kryptonPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -68,9 +73,9 @@
             this.btnAdd.Location = new System.Drawing.Point(21, 457);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(77, 53);
+            this.btnAdd.Size = new System.Drawing.Size(88, 53);
             this.btnAdd.TabIndex = 1;
-            this.btnAdd.Values.Text = "Thêm flash sale";
+            this.btnAdd.Values.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // kryptonLabel1
@@ -119,6 +124,7 @@
             this.pickerEndAt.ShowUpDown = true;
             this.pickerEndAt.Size = new System.Drawing.Size(247, 25);
             this.pickerEndAt.TabIndex = 10;
+            this.pickerEndAt.ValueNullable = new System.DateTime(2024, 12, 5, 0, 53, 34, 581);
             // 
             // kryptonLabel2
             // 
@@ -139,6 +145,7 @@
             this.pickerStartAt.ShowUpDown = true;
             this.pickerStartAt.Size = new System.Drawing.Size(241, 25);
             this.pickerStartAt.TabIndex = 9;
+            this.pickerStartAt.ValueNullable = new System.DateTime(2024, 12, 5, 1, 30, 51, 325);
             // 
             // kryptonPanel1
             // 
@@ -165,7 +172,7 @@
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(191, 457);
+            this.btnDelete.Location = new System.Drawing.Point(206, 457);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(77, 53);
@@ -176,22 +183,13 @@
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(104, 457);
+            this.btnUpdate.Location = new System.Drawing.Point(115, 457);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(81, 53);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Values.Text = "Cập nhật";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // u_PictureBox1
-            // 
-            this.u_PictureBox1.Location = new System.Drawing.Point(27, 100);
-            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.u_PictureBox1.Name = "u_PictureBox1";
-            this.u_PictureBox1.PathThumbail = null;
-            this.u_PictureBox1.Size = new System.Drawing.Size(180, 215);
-            this.u_PictureBox1.TabIndex = 11;
             // 
             // kryptonPanel2
             // 
@@ -200,7 +198,7 @@
             this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonForm;
-            this.kryptonPanel2.Size = new System.Drawing.Size(991, 289);
+            this.kryptonPanel2.Size = new System.Drawing.Size(991, 283);
             this.kryptonPanel2.TabIndex = 16;
             // 
             // kryptonDataGridView1
@@ -214,16 +212,16 @@
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.kryptonDataGridView1.RowTemplate.Height = 24;
+            this.kryptonDataGridView1.RowTemplate.Height = 26;
             this.kryptonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(991, 289);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(991, 283);
             this.kryptonDataGridView1.TabIndex = 0;
             this.kryptonDataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView1_CellClick);
             this.kryptonDataGridView1.SelectionChanged += new System.EventHandler(this.kryptonDataGridView1_SelectionChanged);
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(13, 68);
+            this.kryptonLabel3.Location = new System.Drawing.Point(2, 59);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(95, 24);
@@ -234,7 +232,7 @@
             // 
             this.pickerStartTF.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.pickerStartTF.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pickerStartTF.Location = new System.Drawing.Point(137, 66);
+            this.pickerStartTF.Location = new System.Drawing.Point(97, 58);
             this.pickerStartTF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pickerStartTF.Name = "pickerStartTF";
             this.pickerStartTF.ShowUpDown = true;
@@ -245,16 +243,17 @@
             // 
             this.pickerEndTF.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.pickerEndTF.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pickerEndTF.Location = new System.Drawing.Point(500, 66);
+            this.pickerEndTF.Location = new System.Drawing.Point(411, 57);
             this.pickerEndTF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pickerEndTF.Name = "pickerEndTF";
             this.pickerEndTF.ShowUpDown = true;
             this.pickerEndTF.Size = new System.Drawing.Size(211, 25);
             this.pickerEndTF.TabIndex = 12;
+            this.pickerEndTF.ValueNullable = new System.DateTime(2024, 12, 5, 0, 53, 34, 614);
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(376, 68);
+            this.kryptonLabel6.Location = new System.Drawing.Point(314, 60);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(98, 24);
@@ -264,32 +263,57 @@
             // btnAddTF
             // 
             this.btnAddTF.AllowDrop = true;
-            this.btnAddTF.Location = new System.Drawing.Point(716, 59);
+            this.btnAddTF.Location = new System.Drawing.Point(640, 40);
             this.btnAddTF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddTF.Name = "btnAddTF";
-            this.btnAddTF.Size = new System.Drawing.Size(148, 33);
+            this.btnAddTF.Size = new System.Drawing.Size(126, 52);
             this.btnAddTF.TabIndex = 13;
             this.btnAddTF.Values.Text = "Thêm khung giờ";
+            this.btnAddTF.Click += new System.EventHandler(this.btnAddTF_Click);
             // 
             // kryptonPanel3
             // 
+            this.kryptonPanel3.Controls.Add(this.btnDeleteTF);
+            this.kryptonPanel3.Controls.Add(this.btnUpdateTF);
             this.kryptonPanel3.Controls.Add(this.kryptonLabel7);
             this.kryptonPanel3.Controls.Add(this.btnAddTF);
             this.kryptonPanel3.Controls.Add(this.pickerStartTF);
             this.kryptonPanel3.Controls.Add(this.pickerEndTF);
             this.kryptonPanel3.Controls.Add(this.kryptonLabel3);
             this.kryptonPanel3.Controls.Add(this.kryptonLabel6);
-            this.kryptonPanel3.Location = new System.Drawing.Point(3, 289);
+            this.kryptonPanel3.Location = new System.Drawing.Point(0, 289);
             this.kryptonPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonForm;
-            this.kryptonPanel3.Size = new System.Drawing.Size(988, 96);
+            this.kryptonPanel3.Size = new System.Drawing.Size(991, 96);
             this.kryptonPanel3.TabIndex = 17;
+            // 
+            // btnDeleteTF
+            // 
+            this.btnDeleteTF.AllowDrop = true;
+            this.btnDeleteTF.Location = new System.Drawing.Point(861, 40);
+            this.btnDeleteTF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteTF.Name = "btnDeleteTF";
+            this.btnDeleteTF.Size = new System.Drawing.Size(83, 52);
+            this.btnDeleteTF.TabIndex = 16;
+            this.btnDeleteTF.Values.Text = "Xóa";
+            this.btnDeleteTF.Click += new System.EventHandler(this.btnDeleteTF_Click);
+            // 
+            // btnUpdateTF
+            // 
+            this.btnUpdateTF.AllowDrop = true;
+            this.btnUpdateTF.Location = new System.Drawing.Point(772, 40);
+            this.btnUpdateTF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateTF.Name = "btnUpdateTF";
+            this.btnUpdateTF.Size = new System.Drawing.Size(83, 52);
+            this.btnUpdateTF.TabIndex = 15;
+            this.btnUpdateTF.Values.Text = "Cập nhật";
+            this.btnUpdateTF.Click += new System.EventHandler(this.btnUpdateTF_Click);
             // 
             // kryptonLabel7
             // 
             this.kryptonLabel7.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitlePanel;
-            this.kryptonLabel7.Location = new System.Drawing.Point(263, 25);
+            this.kryptonLabel7.Location = new System.Drawing.Point(264, 17);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(284, 35);
@@ -298,11 +322,38 @@
             // 
             // kryptonPanel4
             // 
+            this.kryptonPanel4.Controls.Add(this.kryptonDataGridView2);
             this.kryptonPanel4.Location = new System.Drawing.Point(0, 388);
             this.kryptonPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonPanel4.Name = "kryptonPanel4";
+            this.kryptonPanel4.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonForm;
             this.kryptonPanel4.Size = new System.Drawing.Size(991, 233);
             this.kryptonPanel4.TabIndex = 18;
+            // 
+            // kryptonDataGridView2
+            // 
+            this.kryptonDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kryptonDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kryptonDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kryptonDataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.kryptonDataGridView2.MultiSelect = false;
+            this.kryptonDataGridView2.Name = "kryptonDataGridView2";
+            this.kryptonDataGridView2.ReadOnly = true;
+            this.kryptonDataGridView2.RowHeadersWidth = 51;
+            this.kryptonDataGridView2.RowTemplate.Height = 24;
+            this.kryptonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.kryptonDataGridView2.Size = new System.Drawing.Size(991, 233);
+            this.kryptonDataGridView2.TabIndex = 0;
+            this.kryptonDataGridView2.SelectionChanged += new System.EventHandler(this.kryptonDataGridView2_SelectionChanged);
+            // 
+            // u_PictureBox1
+            // 
+            this.u_PictureBox1.Location = new System.Drawing.Point(27, 100);
+            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.u_PictureBox1.Name = "u_PictureBox1";
+            this.u_PictureBox1.PathThumbail = null;
+            this.u_PictureBox1.Size = new System.Drawing.Size(180, 215);
+            this.u_PictureBox1.TabIndex = 11;
             // 
             // FlashSaleManagementForm
             // 
@@ -326,6 +377,8 @@
             this.kryptonPanel3.ResumeLayout(false);
             this.kryptonPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
+            this.kryptonPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,5 +408,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDeleteTF;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdateTF;
     }
 }
