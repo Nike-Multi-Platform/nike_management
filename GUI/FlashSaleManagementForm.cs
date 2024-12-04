@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 using Nike_Shop_Management.CloudService;
+using System.Drawing;
 
 namespace Nike_Shop_Management.GUI
 {
@@ -12,7 +13,6 @@ namespace Nike_Shop_Management.GUI
     {
         private FlashSaleManager flashSaleManager;
         CloudIService CloudIService;
-
         public FlashSaleManagementForm()
         {
             InitializeComponent();
@@ -47,97 +47,94 @@ namespace Nike_Shop_Management.GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (checkInvalidValue() != 1)
+            {
+                try
+                {
+                    string thumbnailUrl = string.Empty;
+
+                    if (!string.IsNullOrEmpty(u_PictureBox1.PathThumbail))
+                    {
+
+                        try
+                        {
+                            thumbnailUrl = u_PictureBox1.UploadImage(u_PictureBox1.PathThumbail);
+                            u_PictureBox1.PathThumbail = thumbnailUrl;
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi khi load ảnh: {ex.Message}");
+                            return;
+                        }
+                    }
+                    Console.WriteLine("Bắt đầu thêm Flash Sale...");
+                    FlashSaleDTO flashSale = new FlashSaleDTO
+                    {
+                        flash_sale_name = txtFlashSaleName.Text,
+                        thumbnail = thumbnailUrl,
+                        status = "waiting",
+                        Start_at = pickerStartAt.Value,
+                        End_at = pickerEndAt.Value,
+                        CreatedAt = DateTime.UtcNow,
+                        UpdatedAt = DateTime.UtcNow
+                    };
+
+                    int result = flashSaleManager.Add(flashSale);
+                    if (result == 1)
+                    {
+                        MessageBox.Show("Thêm flash sale rồi ha!");
+                        LoadFlashSale();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lỗi rồi lỗi rồi ha!");
+                        return;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khi thêm Flash Sale: {ex.Message}");
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+
+        }
+
+        private int checkInvalidValue()
+        {
             if (string.IsNullOrWhiteSpace(txtFlashSaleName.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên flash sale!");
-                return;
+                return 1;
             }
 
             if (txtFlashSaleName.Text.Length > 50)
             {
                 MessageBox.Show("Tên không quá 50 ký tự");
-                return;
+                return 1;
+            }
+
+            if(pickerStartAt.Value <= DateTime.Now)
+            {
+                MessageBox.Show("Ngày bắt đầu không hợp lệ!");
+                return 1;
             }
 
             if (pickerStartAt.Value >= pickerEndAt.Value)
             {
                 MessageBox.Show("Ngày bắt đầu và kết thúc không hợp lệ!");
-                return;
+                return 1;
             }
 
-            string thumbnailUrl = string.Empty;
-            if (!string.IsNullOrEmpty(u_PictureBox1.PathThumbail))
-            {
-                try
-                {
-                    thumbnailUrl = u_PictureBox1.UploadImage(u_PictureBox1.PathThumbail);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Lỗ khi load ảnh: {ex.Message}");
-                    return;
-                }
-            }
 
-            u_PictureBox1.PathThumbail = thumbnailUrl;
-
-            if (backgroundWorker1.IsBusy)
-            {
-                MessageBox.Show("Please wait until the current operation is complete.");
-                return;
-            }
-
-            btnAdd.Enabled = false;
-            backgroundWorker1.RunWorkerAsync(thumbnailUrl);
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            try
-            {
-                string thumbnailUrl = e.Argument as string; 
-
-                FlashSaleDTO flashSale = new FlashSaleDTO
-                {
-                    flash_sale_name = txtFlashSaleName.Text,
-                    thumbnail = thumbnailUrl, 
-                    status = "waiting",
-                    Start_at = pickerStartAt.Value,
-                    End_at = pickerEndAt.Value,
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow
-                };
-
-                int result = flashSaleManager.Add(flashSale);
-                e.Result = result;
-            }
-            catch (Exception ex)
-            {
-                e.Result = ex;
-            }
-        }
-
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            btnAdd.Enabled = true;
-
-            if (e.Result is Exception ex)
-            {
-                MessageBox.Show($"Error adding flash sale: {ex.Message}");
-                return;
-            }
-
-            int flag = (int)e.Result;
-
-            if (flag == 0)
-            {
-                MessageBox.Show("Failed to add flash sale!");
-            }
-            else
-            {
-                MessageBox.Show("Flash sale added successfully!");
-                LoadFlashSale();
-            }
+            return 0;
         }
 
         private void kryptonDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -167,57 +164,68 @@ namespace Nike_Shop_Management.GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtFlashSaleName.Text))
+            if (checkInvalidValue() != 1)
             {
-                MessageBox.Show("Vui lòng nhập tên flash sale!");
-                return;
-            }
+                string thumbnailUrl = string.Empty;
 
-            if (pickerStartAt.Value >= pickerEndAt.Value)
-            {
-                MessageBox.Show("Ngày bắt đầu và kết thúc không hợp lệ!");
-                return;
-            }
-
-            try
-            {
-                // Get the selected row's ID
-                if (kryptonDataGridView1.SelectedRows.Count > 0)
+                if (!string.IsNullOrEmpty(u_PictureBox1.PathThumbail))
                 {
-                    DataGridViewRow selectedRow = kryptonDataGridView1.SelectedRows[0];
-                    int flashSaleId = Convert.ToInt32(selectedRow.Cells["flash_sale_id"].Value);
 
-                    FlashSaleDTO flashSale = new FlashSaleDTO
+                    try
                     {
-                        flash_sale_id = flashSaleId,
-                        flash_sale_name = txtFlashSaleName.Text,
-                        thumbnail = u_PictureBox1.PathThumbail,
-                        Start_at = pickerStartAt.Value,
-                        End_at = pickerEndAt.Value,
-                        UpdatedAt = DateTime.UtcNow
-                    };
+                        thumbnailUrl = u_PictureBox1.UploadImage(u_PictureBox1.PathThumbail);
+                        u_PictureBox1.PathThumbail = thumbnailUrl;
 
-                    int result = flashSaleManager.Update(flashSale);
-
-                    if (result > 0)
+                    }
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Cập nhật flash sale thành công!");
-                        LoadFlashSale();
+                        MessageBox.Show($"Lỗi khi load ảnh: {ex.Message}");
+                        return;
+                    }
+                }
+                try
+                {
+                    if (kryptonDataGridView1.SelectedRows.Count > 0)
+                    {
+                        DataGridViewRow selectedRow = kryptonDataGridView1.SelectedRows[0];
+                        int flashSaleId = Convert.ToInt32(selectedRow.Cells["flash_sale_id"].Value);
+
+                        FlashSaleDTO flashSale = new FlashSaleDTO();
+
+                        flashSale.flash_sale_id = flashSaleId;
+                        flashSale.flash_sale_name = txtFlashSaleName.Text;
+                        flashSale.thumbnail = thumbnailUrl;
+                        flashSale.Start_at = pickerStartAt.Value;
+                        flashSale.End_at = pickerEndAt.Value;
+                        flashSale.UpdatedAt = DateTime.UtcNow;
+
+                        int result = flashSaleManager.Update(flashSale);
+
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Cập nhật flash sale thành công!");
+                            LoadFlashSale();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật flash sale thất bại!");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Cập nhật flash sale thất bại!");
+                        MessageBox.Show("Vui lòng chọn một flash sale để cập nhật!");
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Vui lòng chọn một flash sale để cập nhật!");
+                    MessageBox.Show($"Lỗi: {ex.Message}");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Lỗi: {ex.Message}");
+                return;
             }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -266,6 +274,29 @@ namespace Nike_Shop_Management.GUI
             }
         }
 
+        private void kryptonDataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (kryptonDataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = kryptonDataGridView1.SelectedRows[0];
+                string status = selectedRow.Cells["status"].Value?.ToString();
 
+                if (status == "active" || status == "ended")
+                {
+                    btnUpdate.Enabled = false;
+                    btnDelete.Enabled = false;
+                }
+                else
+                {
+                    btnUpdate.Enabled = true;
+                    btnDelete.Enabled = true;
+                }
+            }
+            else
+            {
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+        }
     }
 }
