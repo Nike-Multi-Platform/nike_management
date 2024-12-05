@@ -134,13 +134,6 @@ namespace LibDAL
                 _db.SubmitChanges();
                 return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
             }
-            else if (status == "delivered" && userOrderDTO.Return_expiration_date != null && userOrderDTO.Order_code_return != null && userOrderDTO.Order_code_return == null)
-            {
-                var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
-                userOrder.user_order_status_id = 6;
-                _db.SubmitChanges();
-                return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
-            }
             return null;
         }
 
