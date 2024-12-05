@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlashSaleManager.cs" />
+    <Compile Include="FlashSaleTimeFrameManager.cs" />
     <Compile Include="GenericService.cs" />
     <Compile Include="GoodReceiptDetailsManager.cs" />
     <Compile Include="GoodReceiptManager.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="ProductParentManager.cs" />
     <Compile Include="ProductSizeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnRequestManager.cs" />
     <Compile Include="SizeManager.cs" />
     <Compile Include="SubCategoryManager.cs" />
     <Compile Include="SupplierManager.cs" />

@@ -4,10 +4,7 @@ namespace LibDTO
 {
     public class FlashSaleDTO
     {
-        private DateTime createdAt = DateTime.UtcNow;
-        private DateTime updatedAt = DateTime.UtcNow;
-        private DateTime start_at = DateTime.UtcNow;
-        private DateTime end_at = DateTime.UtcNow.AddHours(1);
+        private System.DateTime start_at, end_at, updatedAt, createdAt;
 
         public int flash_sale_id { get; set; }
         public string flash_sale_name { get; set; }

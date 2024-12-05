@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlashSaleDTO.cs" />
+    <Compile Include="FlashSaleTimeFrameDTO.cs" />
     <Compile Include="GoodReceiptDetailsDTO.cs" />
     <Compile Include="GoodsReceiptDTO.cs" />
     <Compile Include="ProductCategoriesDTO.cs" />
@@ -54,6 +55,9 @@
     <Compile Include="ProductParentDTO.cs" />
     <Compile Include="ProductSizeDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnRequestDTO.cs" />
+    <Compile Include="ReturnRequestImgDTO.cs" />
+    <Compile Include="ReturnRequestTypeDTO.cs" />
     <Compile Include="SizeDTO.cs" />
     <Compile Include="SubCategoryDTO.cs" />
     <Compile Include="SupplierDTO.cs" />

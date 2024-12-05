@@ -307,7 +307,7 @@ namespace Nike_Shop_Management.GUI
 
             foreach (var item in userOrders)
             {
-                var order_code = item.Order_code;
+                var order_code = !string.IsNullOrEmpty(item.Order_code_return) ? item.Order_code_return : item.Order_code;
                 var res = await ghn.GetOrderDetailGHN(order_code);
                 if(res.Code == "200")
                 {

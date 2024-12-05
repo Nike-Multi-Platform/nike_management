@@ -66,6 +66,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="FlashSaleRespository.cs" />
+    <Compile Include="FlashSaleTimeFrameResponsitory.cs" />
     <Compile Include="GoodReceiptDetailsRepository.cs" />
     <Compile Include="GoodReceiptRepository.cs" />
     <Compile Include="IRepository.cs" />
@@ -81,6 +82,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReturnRequestRepositoty.cs" />
     <Compile Include="SizeRepository.cs" />
     <Compile Include="SubcategoryRepository.cs" />
     <Compile Include="SupplierRepository.cs" />

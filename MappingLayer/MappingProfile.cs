@@ -64,8 +64,20 @@ namespace MappingLayer
             CreateMap<flash_sale, FlashSaleDTO>();
             CreateMap<FlashSaleDTO, flash_sale>();
 
+            CreateMap<flash_sale_time_frame, FlashSaleTimeFrameDTO>();
+            CreateMap<FlashSaleTimeFrameDTO, flash_sale_time_frame>();
+
             CreateMap<user_wallet, UserWalletDTO>();
             CreateMap<UserWalletDTO, user_wallet>();
+
+            CreateMap<return_request, ReturnRequestDTO>();
+            CreateMap<ReturnRequestDTO, return_request>();
+
+            CreateMap<return_request_img, return_request_img>();
+            CreateMap<return_request_img, ReturnRequestImgDTO>();
+
+            CreateMap<request_type,ReturnRequestTypeDTO>();
+            CreateMap<ReturnRequestTypeDTO, request_type>();
 
 
             CreateMap<SizeDTO, GetTheSizeProductCurrentResult>()

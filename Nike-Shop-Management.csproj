@@ -211,6 +211,12 @@
     <Compile Include="GUI\OrderManagementForm.Designer.cs">
       <DependentUpon>OrderManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\OrdersReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\OrdersReturnForm.Designer.cs">
+      <DependentUpon>OrdersReturnForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ProductDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\OrderManagementForm.resx">
       <DependentUpon>OrderManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\OrdersReturnForm.resx">
+      <DependentUpon>OrdersReturnForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ProductDetailsForm.resx">
       <DependentUpon>ProductDetailsForm.cs</DependentUpon>
