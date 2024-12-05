@@ -102,5 +102,10 @@ namespace Nike_Shop_Management.GUI
         {
             util.OpenChildForm(new GUI.SizeManagement(), panelBody);
         }
+
+        private void btn_RevenueStatistics_Click(object sender, EventArgs e)
+        {
+            util.OpenChildForm(new GUI.StatisticsManagement(), panelBody);
+        }
     }
 }
