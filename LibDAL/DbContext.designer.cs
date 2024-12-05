@@ -7503,6 +7503,8 @@ namespace LibDAL
 		
 		private string _ghn_service;
 		
+		private string _transaction_code;
+		
 		private EntitySet<return_request> _return_requests;
 		
 		private EntitySet<user_order_product> _user_order_products;
@@ -7563,6 +7565,8 @@ namespace LibDAL
     partial void Onfinal_priceChanged();
     partial void Onghn_serviceChanging(string value);
     partial void Onghn_serviceChanged();
+    partial void Ontransaction_codeChanging(string value);
+    partial void Ontransaction_codeChanged();
     #endregion
 		
 		public user_order()
@@ -8058,6 +8062,26 @@ namespace LibDAL
 					this._ghn_service = value;
 					this.SendPropertyChanged("ghn_service");
 					this.Onghn_serviceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_transaction_code", DbType="VarChar(120)")]
+		public string transaction_code
+		{
+			get
+			{
+				return this._transaction_code;
+			}
+			set
+			{
+				if ((this._transaction_code != value))
+				{
+					this.Ontransaction_codeChanging(value);
+					this.SendPropertyChanging();
+					this._transaction_code = value;
+					this.SendPropertyChanged("transaction_code");
+					this.Ontransaction_codeChanged();
 				}
 			}
 		}
