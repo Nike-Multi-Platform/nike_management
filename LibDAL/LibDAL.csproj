@@ -65,6 +65,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="DiscountVoucherResponsitory.cs" />
     <Compile Include="FlashSaleRespository.cs" />
     <Compile Include="FlashSaleTimeFrameResponsitory.cs" />
     <Compile Include="GoodReceiptDetailsRepository.cs" />

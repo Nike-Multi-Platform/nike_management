@@ -41,7 +41,6 @@
             this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pickerStartTF = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.pickerEndTF = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
@@ -149,6 +148,7 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.u_PictureBox1);
             this.kryptonPanel1.Controls.Add(this.btnDelete);
             this.kryptonPanel1.Controls.Add(this.btnUpdate);
             this.kryptonPanel1.Controls.Add(this.txtFlashSaleName);
@@ -156,7 +156,6 @@
             this.kryptonPanel1.Controls.Add(this.btnAdd);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
             this.kryptonPanel1.Controls.Add(this.pickerEndAt);
-            this.kryptonPanel1.Controls.Add(this.u_PictureBox1);
             this.kryptonPanel1.Controls.Add(this.pickerStartAt);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel5);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel4);
@@ -348,12 +347,12 @@
             // 
             // u_PictureBox1
             // 
-            this.u_PictureBox1.Location = new System.Drawing.Point(27, 100);
+            this.u_PictureBox1.Location = new System.Drawing.Point(28, 99);
             this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.u_PictureBox1.Name = "u_PictureBox1";
             this.u_PictureBox1.PathThumbail = null;
-            this.u_PictureBox1.Size = new System.Drawing.Size(180, 215);
-            this.u_PictureBox1.TabIndex = 11;
+            this.u_PictureBox1.Size = new System.Drawing.Size(176, 207);
+            this.u_PictureBox1.TabIndex = 15;
             // 
             // FlashSaleManagementForm
             // 
@@ -366,7 +365,7 @@
             this.Controls.Add(this.kryptonPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FlashSaleManagementForm";
-            this.Text = "Flash Sale Management";
+            this.Text = "Quản lý flash sale";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
@@ -390,14 +389,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker pickerEndAt;
-        private u_PictureBox u_PictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker pickerStartAt;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdate;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems kryptonContextMenuItems1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddTF;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker pickerEndTF;
@@ -411,5 +408,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDeleteTF;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdateTF;
+        private u_PictureBox u_PictureBox1;
     }
 }
