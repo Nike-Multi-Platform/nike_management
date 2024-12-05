@@ -156,6 +156,7 @@
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.RowHeadersWidth = 51;
             this.kryptonDataGridView1.RowTemplate.Height = 24;
+            this.kryptonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.kryptonDataGridView1.Size = new System.Drawing.Size(1159, 144);
             this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -378,6 +379,7 @@
             this.kryptonDataGridView2.Name = "kryptonDataGridView2";
             this.kryptonDataGridView2.RowHeadersWidth = 51;
             this.kryptonDataGridView2.RowTemplate.Height = 24;
+            this.kryptonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.kryptonDataGridView2.Size = new System.Drawing.Size(1159, 344);
             this.kryptonDataGridView2.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView2.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
