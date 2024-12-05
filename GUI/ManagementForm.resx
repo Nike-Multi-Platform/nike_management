@@ -282,6 +282,15 @@
         lgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="kryptonButton2.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAKpJREFUSEvtl0EKhTAMRLt27SHcexIv8W/rITxJnYQRql1US7S/kAeDSYwZKBI0
+        /AUxxgVaX9JCmxzc/EEbr5bSmbTJYdPK1AyZ6cYnrsaIR9ZqNHJMlfHEh2o0ccxzYyvcOMONrejHGPEM
+        Hcys3UX7BcSPjQdIzEUDa0dekvYLiPs56nRX6+5N8pLMdrXu3iQvyXd1B0eNuM3LZYUbZ9C4yQd9m1+Y
+        7whhB0rRXCy4oH3UAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="kryptonPalette1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>517, 17</value>
   </metadata>

@@ -50,6 +50,8 @@
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.panelBody = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonCommand1 = new ComponentFactory.Krypton.Toolkit.KryptonCommand();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.headerPanel)).BeginInit();
             this.headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -120,13 +122,14 @@
             this.sidebar.Controls.Add(this.btn_flashsale);
             this.sidebar.Controls.Add(this.btnImportProduct);
             this.sidebar.Controls.Add(this.kryptonButton1);
+            this.sidebar.Controls.Add(this.kryptonButton2);
             this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.sidebar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.sidebar.Location = new System.Drawing.Point(0, 47);
             this.sidebar.Margin = new System.Windows.Forms.Padding(0);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(233, 653);
+            this.sidebar.Size = new System.Drawing.Size(233, 693);
             this.sidebar.TabIndex = 1;
             // 
             // btn_product
@@ -396,6 +399,30 @@
             this.btnImportProduct.Values.Text = "    Nhập hàng";
             this.btnImportProduct.Click += new System.EventHandler(this.btnImportProduct_Click);
             // 
+            // menuTransition
+            // 
+            this.menuTransition.Interval = 10;
+            // 
+            // sidebarTransition
+            // 
+            this.sidebarTransition.Interval = 10;
+            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
+            // 
+            // panelBody
+            // 
+            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBody.Location = new System.Drawing.Point(233, 47);
+            this.panelBody.Margin = new System.Windows.Forms.Padding(0);
+            this.panelBody.Name = "panelBody";
+            this.panelBody.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.panelBody.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.InputControlRibbon;
+            this.panelBody.Size = new System.Drawing.Size(867, 693);
+            this.panelBody.TabIndex = 5;
+            // 
+            // kryptonCommand1
+            // 
+            this.kryptonCommand1.Text = "kryptonCommand1";
+            // 
             // kryptonButton1
             // 
             this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
@@ -448,12 +475,40 @@
             // kryptonCommand1
             // 
             this.kryptonCommand1.Text = "kryptonCommand1";
+            // kryptonButton2
+            // 
+            this.kryptonButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
+            this.kryptonButton2.Location = new System.Drawing.Point(0, 580);
+            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
+            this.kryptonButton2.Size = new System.Drawing.Size(233, 58);
+            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.kryptonButton2.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.Cyan;
+            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
+            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton2.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.SolidRightLine;
+            this.kryptonButton2.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonButton2.TabIndex = 16;
+            this.kryptonButton2.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton2.Values.Image")));
+            this.kryptonButton2.Values.Text = "Size áo, quần,...";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // ManagementForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.ClientSize = new System.Drawing.Size(1100, 740);
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.headerPanel);
@@ -496,5 +551,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonCommand kryptonCommand1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_OrdersCancle;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

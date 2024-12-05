@@ -199,6 +199,12 @@
     <Compile Include="GUI\AddProductParentForm.Designer.cs">
       <DependentUpon>AddProductParentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EditSizeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EditSizeName.Designer.cs">
+      <DependentUpon>EditSizeName.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FlashSaleManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,12 @@
     </Compile>
     <Compile Include="GUI\EditProductImportItemForm.Designer.cs">
       <DependentUpon>EditProductImportItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SizeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SizeManagement.Designer.cs">
+      <DependentUpon>SizeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="U_ProductParent.cs">
       <SubType>UserControl</SubType>
@@ -346,6 +358,9 @@
     <Compile Include="u_SpinnerLoading.Designer.cs">
       <DependentUpon>u_SpinnerLoading.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\EditSizeName.resx">
+      <DependentUpon>EditSizeName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FlashSaleManagementForm.resx">
       <DependentUpon>FlashSaleManagementForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SizeManagement.resx">
+      <DependentUpon>SizeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="U_ProductParent.resx">
       <DependentUpon>U_ProductParent.cs</DependentUpon>
