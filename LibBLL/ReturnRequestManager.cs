@@ -30,5 +30,26 @@ namespace LibBLL
         {
             return _returnRequestRepositoty.GetReturnRequestTypes();
         }
+
+        public UserOrderDTO AcceptReturn(int return_request_id, int user_order_id, string order_code, int order_status)
+        {
+            return _returnRequestRepositoty.AcceptReturn(return_request_id, user_order_id, order_code, order_status);
+        }
+
+        public UserOrderDTO UpdateReturnOrderCode(int user_order_id, string order_code)
+        {
+            return _returnRequestRepositoty.UpdateReturnOrderCode(user_order_id, order_code);
+        }
+
+        public List<ReturnRequestImgDTO> GetReturnRequestImgs(int return_request_id)
+        {
+            return _returnRequestRepositoty.GetReturnRequestImgs(return_request_id);
+        }
+
+        public ReturnRequestDTO RejectRequest(int return_request_id)
+        {
+            return _returnRequestRepositoty.RejectRequest(return_request_id);
+        }
+
     }
 }

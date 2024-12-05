@@ -104,33 +104,40 @@ namespace LibDAL
             // get user order
             UserOrderDTO userOrderDTO = GetUserOrderByID(user_order_id);
 
-            if (status == "ready_to_pick" && user_order_status_id != 2 && user_order_status_id != 6)
+            if (status == "ready_to_pick" && user_order_status_id != 2 && user_order_status_id != 6 && userOrderDTO.Order_code_return == null)
             {
                 var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
                 userOrder.user_order_status_id = 2;
                 _db.SubmitChanges();
                 return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
             }
-            else if(status == "picked" && user_order_status_id != 3 && user_order_status_id != 6)
+            else if((status == "picked") && user_order_status_id != 3 && user_order_status_id != 6 && userOrderDTO.Order_code_return == null)
             {
                 var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
                 userOrder.user_order_status_id = 3;
                 _db.SubmitChanges();
                 return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
             }
-            else if(status == "cancel" && user_order_status_id != 5 && user_order_status_id != 6)
+            else if(status == "cancel" && user_order_status_id != 5 && user_order_status_id != 6 && userOrderDTO.Order_code_return == null)
             {
                 var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
                 userOrder.user_order_status_id = 6;
                 _db.SubmitChanges();
                 return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
             }
-            else if(status == "delivered" && userOrderDTO.Return_expiration_date == null)
+            else if(status == "delivered" && userOrderDTO.Return_expiration_date == null && userOrderDTO.Order_code_return == null)
             {
                 userOrderDTO.Return_expiration_date = DateTime.Now.AddDays(7);
                 var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
                 userOrder.return_expiration_date = userOrderDTO.Return_expiration_date;
                 userOrder.user_order_status_id = 4;
+                _db.SubmitChanges();
+                return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
+            }
+            else if (status == "delivered" && userOrderDTO.Return_expiration_date != null && userOrderDTO.Order_code_return != null && userOrderDTO.Order_code_return == null)
+            {
+                var userOrder = _db.user_orders.FirstOrDefault(order => order.user_order_id == user_order_id);
+                userOrder.user_order_status_id = 6;
                 _db.SubmitChanges();
                 return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
             }

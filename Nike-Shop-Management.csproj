@@ -163,6 +163,12 @@
   <ItemGroup>
     <Compile Include="CustomControl\CancelButton.cs" />
     <Compile Include="CustomControl\PriceTextBox.cs" />
+    <Compile Include="CustomControl\U_Image.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\U_Image.Designer.cs">
+      <DependentUpon>U_Image.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\U_ProductParentOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     <Compile Include="u_PictureBox.Designer.cs">
       <DependentUpon>u_PictureBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomControl\U_Image.resx">
+      <DependentUpon>U_Image.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\U_ProductParentOrder.resx">
       <DependentUpon>U_ProductParentOrder.cs</DependentUpon>
     </EmbeddedResource>

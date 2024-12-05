@@ -79,6 +79,9 @@ namespace MappingLayer
             CreateMap<request_type,ReturnRequestTypeDTO>();
             CreateMap<ReturnRequestTypeDTO, request_type>();
 
+            CreateMap<return_request_img, ReturnRequestImgDTO>();
+            CreateMap<ReturnRequestImgDTO, return_request_img>();
+
 
             CreateMap<SizeDTO, GetTheSizeProductCurrentResult>()
          .ForMember(dest => dest.size_id, opt => opt.MapFrom(src => src.size_id))
