@@ -127,6 +127,8 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonNumericUpDown1);
             this.Controls.Add(this.kryptonLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "EditProductImportItemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cập nhật";

@@ -1,4 +1,5 @@
-﻿using LibDAL;
+﻿using ComponentFactory.Krypton.Toolkit;
+using LibDAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace Nike_Shop_Management.GUI
         private void BillImportProductManagement_Load(object sender, EventArgs e)
         {
             loadDataGridView();
-            editDataGridView1();
+            //editDataGridView1();
         }
         private void editDataGridView1()
         {
@@ -33,11 +34,17 @@ namespace Nike_Shop_Management.GUI
         private void loadDataGridView()
         {
             var goodReceipts = _db.goods_receipts.ToList();
+            if (goodReceipts.Count < 1)
+            {
+                KryptonMessageBox.Show("Bạn chưa nhập hàng!", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             kryptonDataGridView1.DataSource = goodReceipts;
 
             // Lấy mã phiếu nhập hàng đầu tiên
             int goodReceiptId = Convert.ToInt32(kryptonDataGridView1.Rows[0].Cells["goods_receipt_id"].Value.ToString());
-            
+
             // Lấy thông tin chi tiết phiếu nhập hàng
             var goodReceiptDetails = _db.goods_receipt_details.Where(x => x.good_receipt_id == goodReceiptId).ToList();
 
@@ -55,7 +62,7 @@ namespace Nike_Shop_Management.GUI
 
         private void kryptonDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex > -1)
+            if (e.RowIndex > -1)
             {
                 // Lấy mã phiếu nhập hàng
                 int goodReceiptId = Convert.ToInt32(kryptonDataGridView1.Rows[e.RowIndex].Cells["goods_receipt_id"].Value.ToString());

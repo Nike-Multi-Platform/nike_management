@@ -82,6 +82,10 @@ namespace MappingLayer
             CreateMap<return_request_img, ReturnRequestImgDTO>();
             CreateMap<ReturnRequestImgDTO, return_request_img>();
 
+            CreateMap<discount_voucher, DiscountVoucherDTO>();
+            CreateMap<DiscountVoucherDTO, discount_voucher>();
+
+
 
             CreateMap<SizeDTO, GetTheSizeProductCurrentResult>()
          .ForMember(dest => dest.size_id, opt => opt.MapFrom(src => src.size_id))

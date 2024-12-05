@@ -358,6 +358,7 @@
       <Column Name="discount_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="final_price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="ghn_service" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="transaction_code" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
       <Association Name="user_order_return_request" Member="return_requests" ThisKey="user_order_id" OtherKey="user_order_id" Type="return_request" />
       <Association Name="user_order_user_order_product" Member="user_order_products" ThisKey="user_order_id" OtherKey="user_order_id" Type="user_order_product" />
       <Association Name="user_account_user_order" Member="user_account" ThisKey="user_id" OtherKey="user_id" Type="user_account" IsForeignKey="true" />
