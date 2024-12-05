@@ -73,8 +73,6 @@ namespace LibDAL
                     entity.started_at = flashSale.Start_at;
                     entity.ended_at = flashSale.End_at;
                     entity.thumbnail = flashSale.thumbnail;
-                    entity.status = flashSale.status;
-                    entity.createdAt = DateTime.Now;
                     entity.updatedAt = DateTime.Now;
                     _db.SubmitChanges();
                     return 1;

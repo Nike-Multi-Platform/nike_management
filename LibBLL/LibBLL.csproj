@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FlashSaleManager.cs" />
+    <Compile Include="FlashSaleTimeFrameManager.cs" />
     <Compile Include="GenericService.cs" />
     <Compile Include="GoodReceiptDetailsManager.cs" />
     <Compile Include="GoodReceiptManager.cs" />
