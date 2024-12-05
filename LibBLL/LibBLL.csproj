@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscountVoucherManager.cs" />
     <Compile Include="FlashSaleManager.cs" />
     <Compile Include="FlashSaleTimeFrameManager.cs" />
     <Compile Include="GenericService.cs" />
