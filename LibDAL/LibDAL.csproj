@@ -81,6 +81,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ReturnRequestRepositoty.cs" />
     <Compile Include="SizeRepository.cs" />
     <Compile Include="SubcategoryRepository.cs" />
     <Compile Include="SupplierRepository.cs" />

@@ -67,6 +67,15 @@ namespace MappingLayer
             CreateMap<user_wallet, UserWalletDTO>();
             CreateMap<UserWalletDTO, user_wallet>();
 
+            CreateMap<return_request, ReturnRequestDTO>();
+            CreateMap<ReturnRequestDTO, return_request>();
+
+            CreateMap<return_request_img, return_request_img>();
+            CreateMap<return_request_img, ReturnRequestImgDTO>();
+
+            CreateMap<request_type,ReturnRequestTypeDTO>();
+            CreateMap<ReturnRequestTypeDTO, request_type>();
+
 
             CreateMap<SizeDTO, GetTheSizeProductCurrentResult>()
          .ForMember(dest => dest.size_id, opt => opt.MapFrom(src => src.size_id))

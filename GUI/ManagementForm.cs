@@ -12,6 +12,13 @@ namespace Nike_Shop_Management.GUI
         {
             InitializeComponent();
             btn_order.Click += Btn_order_Click;
+            this.sidebar.AutoScroll = true;
+            btn_OrdersCancle.Click += Btn_OrdersCancle_Click;
+        }
+
+        private void Btn_OrdersCancle_Click(object sender, EventArgs e)
+        {
+            util.OpenChildForm(new OrdersReturnForm(), panelBody);
         }
 
         private void Btn_order_Click(object sender, EventArgs e)
@@ -97,5 +104,7 @@ namespace Nike_Shop_Management.GUI
         {
             util.OpenChildForm(new GUI.BillImportProductManagement(), panelBody);
         }
+
+
     }
 }

@@ -197,6 +197,13 @@ namespace LibDAL
                     registerFlashSaleProduct.sold -= userOrderProduct.amount;
                 }
             }
+
+            // return discount voucher
+            var discount_voucher = _db.discount_vouchers.FirstOrDefault(voucher => voucher.voucher_code == userOrder.vouchers_applied);
+            if (discount_voucher != null)
+            {
+                discount_voucher.quantity += 1;
+            }
             _db.SubmitChanges();
             return AutoMapperConfig.Mapper.Map<user_order, UserOrderDTO>(userOrder);
         }

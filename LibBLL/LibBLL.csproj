@@ -70,6 +70,7 @@
     <Compile Include="ProductParentManager.cs" />
     <Compile Include="ProductSizeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnRequestManager.cs" />
     <Compile Include="SizeManager.cs" />
     <Compile Include="SubCategoryManager.cs" />
     <Compile Include="SupplierManager.cs" />
