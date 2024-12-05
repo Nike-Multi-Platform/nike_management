@@ -170,7 +170,8 @@ namespace Nike_Shop_Management.GUI
 
             int rowIndex = e.RowIndex;
             selectedUserOrder = userOrders.ElementAt(rowIndex);
-            var res = await ghn.GetOrderDetailGHN(selectedUserOrder.Order_code);
+            string order_code = !string.IsNullOrEmpty(selectedUserOrder.Order_code_return) ? selectedUserOrder.Order_code_return : selectedUserOrder.Order_code;
+            var res = await ghn.GetOrderDetailGHN(order_code);
             if (res.Code == "200")
             {
                 this.lb_status.Visible = true;
@@ -292,6 +293,7 @@ namespace Nike_Shop_Management.GUI
         private async void LoadUserOrder(int sorted)
         {
             this.grd_user_order.AutoGenerateColumns = false;
+            this.grd_user_order.ReadOnly = true;
             userOrders = null;
             int checkUpdate = 0;
             if (sorted == 0)

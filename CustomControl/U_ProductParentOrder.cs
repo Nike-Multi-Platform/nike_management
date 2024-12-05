@@ -87,7 +87,8 @@ namespace Nike_Shop_Management.CustomControl
         public void PaintData(UserOrderProductDTO productsOrder)
         {
             lbl_product_name.Text = productsOrder.product_name;
-            lbl_price.Text = productsOrder.price.ToString();
+            string formatVND = string.Format("{0:#,##0}", productsOrder.price);
+            lbl_price.Text = formatVND + " VND";
             amount.Text = productsOrder.amount.ToString();
             lb_size_name.Text = productsOrder.size_name;
             LoadImgFromUrl(productsOrder.thumbnail);
