@@ -23,7 +23,7 @@ namespace Nike_Shop_Management.GUI
         private void BillImportProductManagement_Load(object sender, EventArgs e)
         {
             loadDataGridView();
-            editDataGridView1();
+            //editDataGridView1();
         }
         private void editDataGridView1()
         {
