@@ -108,7 +108,7 @@
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(228, 89);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(112, 35);
+            this.kryptonButton1.Size = new System.Drawing.Size(130, 43);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(218)))));
             this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -121,6 +121,7 @@
             this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.TabIndex = 2;
+            this.kryptonButton1.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_save_30;
             this.kryptonButton1.Values.Text = "Lưu";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
@@ -128,7 +129,7 @@
             // 
             this.kryptonButton2.Location = new System.Drawing.Point(364, 89);
             this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(112, 35);
+            this.kryptonButton2.Size = new System.Drawing.Size(124, 43);
             this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -149,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 138);
+            this.ClientSize = new System.Drawing.Size(500, 153);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonNumericUpDown2);

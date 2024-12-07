@@ -69,8 +69,10 @@ namespace Nike_Shop_Management.GUI
             this.btnLeftToRight.Margin = new System.Windows.Forms.Padding(4);
             this.btnLeftToRight.Name = "btnLeftToRight";
             this.btnLeftToRight.Size = new System.Drawing.Size(135, 35);
-            this.btnLeftToRight.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnLeftToRight.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btnLeftToRight.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.btnLeftToRight.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.btnLeftToRight.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnLeftToRight.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnLeftToRight.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLeftToRight.TabIndex = 6;
             this.btnLeftToRight.Values.Text = ">>";
@@ -81,8 +83,10 @@ namespace Nike_Shop_Management.GUI
             this.btnRightToLeft.Margin = new System.Windows.Forms.Padding(4);
             this.btnRightToLeft.Name = "btnRightToLeft";
             this.btnRightToLeft.Size = new System.Drawing.Size(135, 35);
-            this.btnRightToLeft.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.btnRightToLeft.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.btnRightToLeft.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
+            this.btnRightToLeft.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.btnRightToLeft.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnRightToLeft.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnRightToLeft.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRightToLeft.TabIndex = 7;
             this.btnRightToLeft.Values.Text = "<<";
