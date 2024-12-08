@@ -81,7 +81,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 625);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -89,14 +89,14 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 360F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 464F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 578);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 558);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1159, 44);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1159, 64);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -109,30 +109,52 @@
             this.tableLayoutPanel3.Controls.Add(this.kryptonButton2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.kryptonButton1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(802, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(698, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(354, 38);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(458, 58);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // kryptonButton3
             // 
             this.kryptonButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonButton3.Location = new System.Drawing.Point(239, 3);
+            this.kryptonButton3.Location = new System.Drawing.Point(307, 3);
             this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(112, 32);
+            this.kryptonButton3.Size = new System.Drawing.Size(148, 52);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateCommon.Border.Rounding = 10;
+            this.kryptonButton3.StateCommon.Border.Width = 1;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton3.TabIndex = 2;
+            this.kryptonButton3.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_logout_32;
             this.kryptonButton3.Values.Text = "Thoát";
             this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // kryptonButton2
             // 
             this.kryptonButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonButton2.Location = new System.Drawing.Point(121, 3);
+            this.kryptonButton2.Location = new System.Drawing.Point(155, 3);
             this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(112, 32);
+            this.kryptonButton2.Size = new System.Drawing.Size(146, 52);
+            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.StateCommon.Border.Rounding = 10;
+            this.kryptonButton2.StateCommon.Border.Width = 1;
+            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton2.TabIndex = 1;
+            this.kryptonButton2.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_excel_32;
             this.kryptonButton2.Values.Text = "Xuất đơn(chưa)";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
@@ -141,8 +163,18 @@
             this.kryptonButton1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonButton1.Location = new System.Drawing.Point(3, 3);
             this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(112, 32);
+            this.kryptonButton1.Size = new System.Drawing.Size(146, 52);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(160)))), ((int)(((byte)(73)))));
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.Rounding = 10;
+            this.kryptonButton1.StateCommon.Border.Width = 1;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.TabIndex = 0;
+            this.kryptonButton1.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_add_file_32;
             this.kryptonButton1.Values.Text = "Tạo đơn nhập";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
@@ -157,7 +189,7 @@
             this.kryptonDataGridView1.RowHeadersWidth = 51;
             this.kryptonDataGridView1.RowTemplate.Height = 24;
             this.kryptonDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(1159, 144);
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(1159, 138);
             this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kryptonDataGridView1.TabIndex = 1;
@@ -177,7 +209,7 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel8, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel9, 4, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 153);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 147);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -206,6 +238,8 @@
             this.kryptonLabel1.Location = new System.Drawing.Point(3, 3);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(219, 24);
+            this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Màu sắc";
             // 
@@ -249,6 +283,8 @@
             this.kryptonLabel2.Location = new System.Drawing.Point(3, 3);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(219, 24);
+            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel2.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel2.TabIndex = 1;
             this.kryptonLabel2.Values.Text = "Kích cỡ";
             // 
@@ -273,6 +309,8 @@
             this.kryptonLabel3.Location = new System.Drawing.Point(3, 3);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(219, 24);
+            this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel3.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel3.TabIndex = 0;
             this.kryptonLabel3.Values.Text = "Số lượng";
             // 
@@ -314,6 +352,8 @@
             this.kryptonLabel4.Location = new System.Drawing.Point(3, 3);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(72, 24);
+            this.kryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel4.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel4.TabIndex = 0;
             this.kryptonLabel4.Values.Text = "Giá nhập";
             // 
@@ -375,12 +415,12 @@
             this.kryptonDataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.kryptonDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kryptonDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonDataGridView2.Location = new System.Drawing.Point(3, 228);
+            this.kryptonDataGridView2.Location = new System.Drawing.Point(3, 222);
             this.kryptonDataGridView2.Name = "kryptonDataGridView2";
             this.kryptonDataGridView2.RowHeadersWidth = 51;
             this.kryptonDataGridView2.RowTemplate.Height = 24;
             this.kryptonDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kryptonDataGridView2.Size = new System.Drawing.Size(1159, 344);
+            this.kryptonDataGridView2.Size = new System.Drawing.Size(1159, 330);
             this.kryptonDataGridView2.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView2.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.kryptonDataGridView2.TabIndex = 3;

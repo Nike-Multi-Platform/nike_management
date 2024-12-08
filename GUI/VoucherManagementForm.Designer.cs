@@ -28,10 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VoucherManagementForm));
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnAddQuantity = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtAddQuantity = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.cboVoucherType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtMaxDiscountValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtDiscountValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.txtMinOrderValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
+            this.pickerEndAt = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.txtVoucherCode = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtVoucherName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -42,37 +64,16 @@
             this.txtUsage = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.pickerEndAt = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.txtMinOrderValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.txtDiscountValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel9 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtMaxDiscountValue = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.kryptonLabel12 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.cboVoucherType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.btnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonLabel13 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel14 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtAddQuantity = new ComponentFactory.Krypton.Toolkit.KryptonNumericUpDown();
-            this.btnAddQuantity = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
             this.kryptonPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
-            this.kryptonPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cboVoucherType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboVoucherType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            this.kryptonPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPanel1
@@ -146,6 +147,278 @@
             this.kryptonPanel4.Size = new System.Drawing.Size(1263, 309);
             this.kryptonPanel4.TabIndex = 4;
             // 
+            // kryptonPanel3
+            // 
+            this.kryptonPanel3.Controls.Add(this.btnAddQuantity);
+            this.kryptonPanel3.Controls.Add(this.kryptonLabel14);
+            this.kryptonPanel3.Controls.Add(this.txtAddQuantity);
+            this.kryptonPanel3.Controls.Add(this.kryptonLabel13);
+            this.kryptonPanel3.Enabled = false;
+            this.kryptonPanel3.Location = new System.Drawing.Point(992, 6);
+            this.kryptonPanel3.Name = "kryptonPanel3";
+            this.kryptonPanel3.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonForm;
+            this.kryptonPanel3.Size = new System.Drawing.Size(259, 204);
+            this.kryptonPanel3.TabIndex = 25;
+            // 
+            // btnAddQuantity
+            // 
+            this.btnAddQuantity.Location = new System.Drawing.Point(107, 125);
+            this.btnAddQuantity.Name = "btnAddQuantity";
+            this.btnAddQuantity.Size = new System.Drawing.Size(120, 48);
+            this.btnAddQuantity.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnAddQuantity.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(160)))), ((int)(((byte)(73)))));
+            this.btnAddQuantity.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.btnAddQuantity.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddQuantity.StateCommon.Border.Rounding = 10;
+            this.btnAddQuantity.StateCommon.Border.Width = 1;
+            this.btnAddQuantity.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAddQuantity.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnAddQuantity.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddQuantity.TabIndex = 25;
+            this.btnAddQuantity.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_add_file_32;
+            this.btnAddQuantity.Values.Text = "Thêm";
+            this.btnAddQuantity.Click += new System.EventHandler(this.btnAddQuantity_Click);
+            // 
+            // kryptonLabel14
+            // 
+            this.kryptonLabel14.Location = new System.Drawing.Point(25, 63);
+            this.kryptonLabel14.Name = "kryptonLabel14";
+            this.kryptonLabel14.Size = new System.Drawing.Size(76, 24);
+            this.kryptonLabel14.TabIndex = 18;
+            this.kryptonLabel14.Values.Text = "Số lượng:";
+            // 
+            // txtAddQuantity
+            // 
+            this.txtAddQuantity.Location = new System.Drawing.Point(107, 63);
+            this.txtAddQuantity.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.txtAddQuantity.Name = "txtAddQuantity";
+            this.txtAddQuantity.Size = new System.Drawing.Size(120, 26);
+            this.txtAddQuantity.TabIndex = 17;
+            // 
+            // kryptonLabel13
+            // 
+            this.kryptonLabel13.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kryptonLabel13.Location = new System.Drawing.Point(68, 3);
+            this.kryptonLabel13.Name = "kryptonLabel13";
+            this.kryptonLabel13.Size = new System.Drawing.Size(172, 35);
+            this.kryptonLabel13.TabIndex = 16;
+            this.kryptonLabel13.Values.Text = "Thêm Voucher";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(840, 181);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(109, 56);
+            this.btnDelete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btnDelete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+            this.btnDelete.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.btnDelete.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnDelete.StateCommon.Border.Rounding = 10;
+            this.btnDelete.StateCommon.Border.Width = 1;
+            this.btnDelete.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnDelete.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.TabIndex = 24;
+            this.btnDelete.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_delete_30;
+            this.btnDelete.Values.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.Location = new System.Drawing.Point(705, 181);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(129, 56);
+            this.btnUpdate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btnUpdate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.btnUpdate.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.btnUpdate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnUpdate.StateCommon.Border.Rounding = 10;
+            this.btnUpdate.StateCommon.Border.Width = 1;
+            this.btnUpdate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnUpdate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnUpdate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.TabIndex = 23;
+            this.btnUpdate.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_edit_30;
+            this.btnUpdate.Values.Text = "Cập nhật";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(582, 181);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(109, 56);
+            this.btnAdd.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnAdd.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(160)))), ((int)(((byte)(73)))));
+            this.btnAdd.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.btnAdd.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAdd.StateCommon.Border.Rounding = 10;
+            this.btnAdd.StateCommon.Border.Width = 1;
+            this.btnAdd.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAdd.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnAdd.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.TabIndex = 22;
+            this.btnAdd.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Values.Image")));
+            this.btnAdd.Values.Text = "Thêm";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // cboVoucherType
+            // 
+            this.cboVoucherType.DropDownWidth = 143;
+            this.cboVoucherType.Items.AddRange(new object[] {
+            "Theo phần trăm",
+            "Số tiền giảm"});
+            this.cboVoucherType.Location = new System.Drawing.Point(140, 132);
+            this.cboVoucherType.Name = "cboVoucherType";
+            this.cboVoucherType.Size = new System.Drawing.Size(143, 25);
+            this.cboVoucherType.TabIndex = 21;
+            // 
+            // kryptonLabel12
+            // 
+            this.kryptonLabel12.Location = new System.Drawing.Point(313, 133);
+            this.kryptonLabel12.Name = "kryptonLabel12";
+            this.kryptonLabel12.Size = new System.Drawing.Size(105, 27);
+            this.kryptonLabel12.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel12.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel12.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel12.TabIndex = 20;
+            this.kryptonLabel12.Values.Text = "Giảm tối đa:";
+            // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(20, 133);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(110, 27);
+            this.kryptonLabel11.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel11.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel11.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel11.TabIndex = 19;
+            this.kryptonLabel11.Values.Text = "Loại voucher";
+            // 
+            // txtMaxDiscountValue
+            // 
+            this.txtMaxDiscountValue.Location = new System.Drawing.Point(424, 131);
+            this.txtMaxDiscountValue.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.txtMaxDiscountValue.Name = "txtMaxDiscountValue";
+            this.txtMaxDiscountValue.Size = new System.Drawing.Size(120, 26);
+            this.txtMaxDiscountValue.TabIndex = 18;
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(582, 97);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(62, 27);
+            this.kryptonLabel8.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel8.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel8.TabIndex = 17;
+            this.kryptonLabel8.Values.Text = "Mô tả:";
+            // 
+            // kryptonLabel9
+            // 
+            this.kryptonLabel9.Location = new System.Drawing.Point(582, 66);
+            this.kryptonLabel9.Name = "kryptonLabel9";
+            this.kryptonLabel9.Size = new System.Drawing.Size(124, 27);
+            this.kryptonLabel9.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel9.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel9.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel9.TabIndex = 16;
+            this.kryptonLabel9.Values.Text = "Ngày kết thúc:";
+            // 
+            // kryptonLabel10
+            // 
+            this.kryptonLabel10.Location = new System.Drawing.Point(582, 33);
+            this.kryptonLabel10.Name = "kryptonLabel10";
+            this.kryptonLabel10.Size = new System.Drawing.Size(121, 27);
+            this.kryptonLabel10.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel10.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel10.TabIndex = 15;
+            this.kryptonLabel10.Values.Text = "Ngày bắt đầu:";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(313, 97);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(106, 27);
+            this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel5.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel5.TabIndex = 14;
+            this.kryptonLabel5.Values.Text = "Giá trị giảm:";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(313, 66);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(118, 27);
+            this.kryptonLabel6.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel6.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel6.TabIndex = 13;
+            this.kryptonLabel6.Values.Text = "Đơn tối thiểu:";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(313, 33);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(109, 27);
+            this.kryptonLabel7.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel7.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel7.TabIndex = 12;
+            this.kryptonLabel7.Values.Text = "Số lần dùng:";
+            // 
+            // txtDiscountValue
+            // 
+            this.txtDiscountValue.Location = new System.Drawing.Point(424, 98);
+            this.txtDiscountValue.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.txtDiscountValue.Name = "txtDiscountValue";
+            this.txtDiscountValue.Size = new System.Drawing.Size(120, 26);
+            this.txtDiscountValue.TabIndex = 11;
+            // 
+            // txtMinOrderValue
+            // 
+            this.txtMinOrderValue.Location = new System.Drawing.Point(424, 66);
+            this.txtMinOrderValue.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.txtMinOrderValue.Name = "txtMinOrderValue";
+            this.txtMinOrderValue.Size = new System.Drawing.Size(120, 26);
+            this.txtMinOrderValue.TabIndex = 10;
+            // 
+            // pickerEndAt
+            // 
+            this.pickerEndAt.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            this.pickerEndAt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.pickerEndAt.Location = new System.Drawing.Point(705, 66);
+            this.pickerEndAt.Name = "pickerEndAt";
+            this.pickerEndAt.Size = new System.Drawing.Size(244, 25);
+            this.pickerEndAt.TabIndex = 9;
+            // 
             // txtVoucherCode
             // 
             this.txtVoucherCode.Location = new System.Drawing.Point(140, 97);
@@ -158,7 +431,10 @@
             // 
             this.kryptonLabel4.Location = new System.Drawing.Point(20, 100);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(95, 24);
+            this.kryptonLabel4.Size = new System.Drawing.Size(107, 27);
+            this.kryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel4.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel4.TabIndex = 7;
             this.kryptonLabel4.Values.Text = "Mã voucher:";
             // 
@@ -173,7 +449,10 @@
             // 
             this.kryptonLabel3.Location = new System.Drawing.Point(20, 69);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(99, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(111, 27);
+            this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel3.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel3.TabIndex = 5;
             this.kryptonLabel3.Values.Text = "Tên voucher:";
             // 
@@ -218,7 +497,10 @@
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(20, 34);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(30, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(33, 27);
+            this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabel2.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 0;
             this.kryptonLabel2.Values.Text = "ID:";
             // 
@@ -231,206 +513,6 @@
             this.kryptonPanel2.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonForm;
             this.kryptonPanel2.Size = new System.Drawing.Size(1263, 521);
             this.kryptonPanel2.TabIndex = 5;
-            // 
-            // pickerEndAt
-            // 
-            this.pickerEndAt.CustomFormat = "dd/MM/yyyy HH:mm:ss";
-            this.pickerEndAt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.pickerEndAt.Location = new System.Drawing.Point(705, 66);
-            this.pickerEndAt.Name = "pickerEndAt";
-            this.pickerEndAt.Size = new System.Drawing.Size(244, 25);
-            this.pickerEndAt.TabIndex = 9;
-            // 
-            // txtMinOrderValue
-            // 
-            this.txtMinOrderValue.Location = new System.Drawing.Point(424, 66);
-            this.txtMinOrderValue.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.txtMinOrderValue.Name = "txtMinOrderValue";
-            this.txtMinOrderValue.Size = new System.Drawing.Size(120, 26);
-            this.txtMinOrderValue.TabIndex = 10;
-            // 
-            // txtDiscountValue
-            // 
-            this.txtDiscountValue.Location = new System.Drawing.Point(424, 98);
-            this.txtDiscountValue.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.txtDiscountValue.Name = "txtDiscountValue";
-            this.txtDiscountValue.Size = new System.Drawing.Size(120, 26);
-            this.txtDiscountValue.TabIndex = 11;
-            // 
-            // kryptonLabel5
-            // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(313, 97);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(94, 24);
-            this.kryptonLabel5.TabIndex = 14;
-            this.kryptonLabel5.Values.Text = "Giá trị giảm:";
-            // 
-            // kryptonLabel6
-            // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(313, 66);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(105, 24);
-            this.kryptonLabel6.TabIndex = 13;
-            this.kryptonLabel6.Values.Text = "Đơn tối thiểu:";
-            // 
-            // kryptonLabel7
-            // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(313, 33);
-            this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(97, 24);
-            this.kryptonLabel7.TabIndex = 12;
-            this.kryptonLabel7.Values.Text = "Số lần dùng:";
-            // 
-            // kryptonLabel8
-            // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(582, 97);
-            this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(55, 24);
-            this.kryptonLabel8.TabIndex = 17;
-            this.kryptonLabel8.Values.Text = "Mô tả:";
-            // 
-            // kryptonLabel9
-            // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(582, 66);
-            this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(110, 24);
-            this.kryptonLabel9.TabIndex = 16;
-            this.kryptonLabel9.Values.Text = "Ngày kết thúc:";
-            // 
-            // kryptonLabel10
-            // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(582, 33);
-            this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(107, 24);
-            this.kryptonLabel10.TabIndex = 15;
-            this.kryptonLabel10.Values.Text = "Ngày bắt đầu:";
-            // 
-            // kryptonLabel11
-            // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(20, 133);
-            this.kryptonLabel11.Name = "kryptonLabel11";
-            this.kryptonLabel11.Size = new System.Drawing.Size(98, 24);
-            this.kryptonLabel11.TabIndex = 19;
-            this.kryptonLabel11.Values.Text = "Loại voucher";
-            // 
-            // txtMaxDiscountValue
-            // 
-            this.txtMaxDiscountValue.Location = new System.Drawing.Point(424, 131);
-            this.txtMaxDiscountValue.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.txtMaxDiscountValue.Name = "txtMaxDiscountValue";
-            this.txtMaxDiscountValue.Size = new System.Drawing.Size(120, 26);
-            this.txtMaxDiscountValue.TabIndex = 18;
-            // 
-            // kryptonLabel12
-            // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(313, 133);
-            this.kryptonLabel12.Name = "kryptonLabel12";
-            this.kryptonLabel12.Size = new System.Drawing.Size(94, 24);
-            this.kryptonLabel12.TabIndex = 20;
-            this.kryptonLabel12.Values.Text = "Giảm tối đa:";
-            // 
-            // cboVoucherType
-            // 
-            this.cboVoucherType.DropDownWidth = 143;
-            this.cboVoucherType.Items.AddRange(new object[] {
-            "Theo phần trăm",
-            "Số tiền giảm"});
-            this.cboVoucherType.Location = new System.Drawing.Point(140, 132);
-            this.cboVoucherType.Name = "cboVoucherType";
-            this.cboVoucherType.Size = new System.Drawing.Size(143, 25);
-            this.cboVoucherType.TabIndex = 21;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(594, 181);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(109, 56);
-            this.btnAdd.TabIndex = 22;
-            this.btnAdd.Values.Text = "Thêm";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(719, 181);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(109, 56);
-            this.btnUpdate.TabIndex = 23;
-            this.btnUpdate.Values.Text = "Cập nhật";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(840, 181);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 56);
-            this.btnDelete.TabIndex = 24;
-            this.btnDelete.Values.Text = "Xóa";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // kryptonPanel3
-            // 
-            this.kryptonPanel3.Controls.Add(this.btnAddQuantity);
-            this.kryptonPanel3.Controls.Add(this.kryptonLabel14);
-            this.kryptonPanel3.Controls.Add(this.txtAddQuantity);
-            this.kryptonPanel3.Controls.Add(this.kryptonLabel13);
-            this.kryptonPanel3.Enabled = false;
-            this.kryptonPanel3.Location = new System.Drawing.Point(992, 6);
-            this.kryptonPanel3.Name = "kryptonPanel3";
-            this.kryptonPanel3.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonForm;
-            this.kryptonPanel3.Size = new System.Drawing.Size(259, 204);
-            this.kryptonPanel3.TabIndex = 25;
-            // 
-            // kryptonLabel13
-            // 
-            this.kryptonLabel13.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel13.Location = new System.Drawing.Point(68, 3);
-            this.kryptonLabel13.Name = "kryptonLabel13";
-            this.kryptonLabel13.Size = new System.Drawing.Size(172, 35);
-            this.kryptonLabel13.TabIndex = 16;
-            this.kryptonLabel13.Values.Text = "Thêm Voucher";
-            // 
-            // kryptonLabel14
-            // 
-            this.kryptonLabel14.Location = new System.Drawing.Point(25, 63);
-            this.kryptonLabel14.Name = "kryptonLabel14";
-            this.kryptonLabel14.Size = new System.Drawing.Size(76, 24);
-            this.kryptonLabel14.TabIndex = 18;
-            this.kryptonLabel14.Values.Text = "Số lượng:";
-            // 
-            // txtAddQuantity
-            // 
-            this.txtAddQuantity.Location = new System.Drawing.Point(107, 63);
-            this.txtAddQuantity.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.txtAddQuantity.Name = "txtAddQuantity";
-            this.txtAddQuantity.Size = new System.Drawing.Size(120, 26);
-            this.txtAddQuantity.TabIndex = 17;
-            // 
-            // btnAddQuantity
-            // 
-            this.btnAddQuantity.Location = new System.Drawing.Point(107, 103);
-            this.btnAddQuantity.Name = "btnAddQuantity";
-            this.btnAddQuantity.Size = new System.Drawing.Size(120, 48);
-            this.btnAddQuantity.TabIndex = 25;
-            this.btnAddQuantity.Values.Text = "Thêm";
-            this.btnAddQuantity.Click += new System.EventHandler(this.btnAddQuantity_Click);
             // 
             // VoucherManagementForm
             // 
@@ -450,12 +532,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
             this.kryptonPanel4.ResumeLayout(false);
             this.kryptonPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
-            this.kryptonPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cboVoucherType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).EndInit();
             this.kryptonPanel3.ResumeLayout(false);
             this.kryptonPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboVoucherType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            this.kryptonPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
