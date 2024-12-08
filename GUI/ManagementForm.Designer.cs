@@ -91,7 +91,7 @@
             this.FormLabel.Location = new System.Drawing.Point(75, 12);
             this.FormLabel.Margin = new System.Windows.Forms.Padding(0);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(206, 24);
+            this.FormLabel.Size = new System.Drawing.Size(166, 20);
             this.FormLabel.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormLabel.TabIndex = 1;
             this.FormLabel.Values.Text = "Nike Shop Management";
@@ -158,7 +158,7 @@
             this.btn_product.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_product.TabIndex = 5;
             this.btn_product.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_product.Values.Image")));
-            this.btn_product.Values.Text = "    Quản lý nhân viên";
+            this.btn_product.Values.Text = "     Quản lý nhân viên";
             this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
             // 
             // kryptonPalette1
@@ -195,7 +195,7 @@
             this.btn_ParentProduct.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_ParentProduct.TabIndex = 7;
             this.btn_ParentProduct.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_ParentProduct.Values.Image")));
-            this.btn_ParentProduct.Values.Text = "    Quản lý sản phẩm";
+            this.btn_ParentProduct.Values.Text = "     Quản lý sản phẩm";
             this.btn_ParentProduct.Click += new System.EventHandler(this.btn_ParentProduct_Click);
             // 
             // btn_customer
@@ -224,7 +224,7 @@
             this.btn_customer.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_customer.TabIndex = 9;
             this.btn_customer.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_customer.Values.Image")));
-            this.btn_customer.Values.Text = "    Quản lý khách hàng";
+            this.btn_customer.Values.Text = "     Quản lý khách hàng";
             this.btn_customer.Click += new System.EventHandler(this.btn_customer_Click);
             // 
             // btn_RevenueStatistics
@@ -253,7 +253,7 @@
             this.btn_RevenueStatistics.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_RevenueStatistics.TabIndex = 10;
             this.btn_RevenueStatistics.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_RevenueStatistics.Values.Image")));
-            this.btn_RevenueStatistics.Values.Text = "   Thống kê doanh thu";
+            this.btn_RevenueStatistics.Values.Text = "     Thống kê doanh thu";
             this.btn_RevenueStatistics.Click += new System.EventHandler(this.btn_RevenueStatistics_Click);
             // 
             // btnProductObject
@@ -282,7 +282,7 @@
             this.btnProductObject.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btnProductObject.TabIndex = 11;
             this.btnProductObject.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnProductObject.Values.Image")));
-            this.btnProductObject.Values.Text = "    Đối tượng sản phẩm";
+            this.btnProductObject.Values.Text = "     Đối tượng sản phẩm";
             this.btnProductObject.Click += new System.EventHandler(this.btnProductObject_Click);
             // 
             // btn_order
@@ -311,7 +311,7 @@
             this.btn_order.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_order.TabIndex = 12;
             this.btn_order.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_order.Values.Image")));
-            this.btn_order.Values.Text = "    Đơn hàng";
+            this.btn_order.Values.Text = "     Đơn hàng";
             // 
             // btn_OrdersCancle
             // 
@@ -339,7 +339,7 @@
             this.btn_OrdersCancle.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_OrdersCancle.TabIndex = 16;
             this.btn_OrdersCancle.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_OrdersCancle.Values.Image")));
-            this.btn_OrdersCancle.Values.Text = "    Hủy / Trả";
+            this.btn_OrdersCancle.Values.Text = "     Hủy / Trả";
             // 
             // btn_flashsale
             // 
@@ -367,7 +367,7 @@
             this.btn_flashsale.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btn_flashsale.TabIndex = 13;
             this.btn_flashsale.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_flashsale.Values.Image")));
-            this.btn_flashsale.Values.Text = "    Flash sale";
+            this.btn_flashsale.Values.Text = "     Flash sale";
             this.btn_flashsale.Click += new System.EventHandler(this.btn_flashsale_Click);
             // 
             // btnImportProduct
@@ -396,7 +396,7 @@
             this.btnImportProduct.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.btnImportProduct.TabIndex = 14;
             this.btnImportProduct.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnImportProduct.Values.Image")));
-            this.btnImportProduct.Values.Text = "    Nhập hàng";
+            this.btnImportProduct.Values.Text = "     Nhập hàng";
             this.btnImportProduct.Click += new System.EventHandler(this.btnImportProduct_Click);
             // 
             // kryptonButton1
@@ -425,32 +425,9 @@
             this.kryptonButton1.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.kryptonButton1.TabIndex = 15;
             this.kryptonButton1.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton1.Values.Image")));
-            this.kryptonButton1.Values.Text = "    Xem các đơn nhập";
+            this.kryptonButton1.Values.Text = "     Xem các đơn nhập";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // menuTransition
-            // 
-            this.menuTransition.Interval = 10;
-            // 
-            // sidebarTransition
-            // 
-            this.sidebarTransition.Interval = 10;
-            this.sidebarTransition.Tick += new System.EventHandler(this.sidebarTransition_Tick);
-            // 
-            // panelBody
-            // 
-            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBody.Location = new System.Drawing.Point(233, 47);
-            this.panelBody.Margin = new System.Windows.Forms.Padding(0);
-            this.panelBody.Name = "panelBody";
-            this.panelBody.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.panelBody.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.InputControlRibbon;
-            this.panelBody.Size = new System.Drawing.Size(867, 653);
-            this.panelBody.TabIndex = 5;
-            // 
-            // kryptonCommand1
-            // 
-            this.kryptonCommand1.Text = "kryptonCommand1";
             // kryptonButton2
             // 
             this.kryptonButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
@@ -477,7 +454,7 @@
             this.kryptonButton2.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.kryptonButton2.TabIndex = 16;
             this.kryptonButton2.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton2.Values.Image")));
-            this.kryptonButton2.Values.Text = "Size áo, quần,...";
+            this.kryptonButton2.Values.Text = "     Size áo, quần,...";
             this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
             // menuTransition
