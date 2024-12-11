@@ -145,16 +145,16 @@ namespace Nike_Shop_Management.GUI
                 }
                 if (flagTotal)
                 {
-                    MessageBox.Show("Suseccfull");
+                    MessageBox.Show("Thêm thành công");
                 }
                 else
                 {
-                    MessageBox.Show("failed ori ku oi");
+                    MessageBox.Show("Thêm thất bại");
                 }
             }
             else
             {
-                MessageBox.Show("some wrong");
+                MessageBox.Show("Có lỗi xảy ra");
             }
         }
     }

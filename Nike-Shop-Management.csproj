@@ -170,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomControl\CancelButton.cs" />
+    <Compile Include="CustomControl\NumberTextBox.cs" />
     <Compile Include="CustomControl\PriceTextBox.cs" />
     <Compile Include="CustomControl\U_Image.cs">
       <SubType>UserControl</SubType>

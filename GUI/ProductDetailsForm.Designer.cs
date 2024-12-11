@@ -71,7 +71,7 @@ namespace Nike_Shop_Management.GUI
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(49, 582);
+            this.listView1.Location = new System.Drawing.Point(234, 403);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1111, 172);
@@ -92,7 +92,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(228, 523);
+            this.kryptonLabel2.Location = new System.Drawing.Point(795, 334);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(94, 24);
@@ -104,7 +104,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(228, 465);
+            this.kryptonLabel3.Location = new System.Drawing.Point(795, 276);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(118, 24);
@@ -116,23 +116,23 @@ namespace Nike_Shop_Management.GUI
             // 
             // txTotalStock
             // 
-            this.txTotalStock.Location = new System.Drawing.Point(750, 522);
+            this.txTotalStock.Location = new System.Drawing.Point(1254, 323);
             this.txTotalStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txTotalStock.Name = "txTotalStock";
-            this.txTotalStock.Size = new System.Drawing.Size(208, 27);
+            this.txTotalStock.Size = new System.Drawing.Size(190, 27);
             this.txTotalStock.TabIndex = 13;
             // 
             // txSolds
             // 
-            this.txSolds.Location = new System.Drawing.Point(750, 471);
+            this.txSolds.Location = new System.Drawing.Point(1254, 272);
             this.txSolds.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSolds.Name = "txSolds";
-            this.txSolds.Size = new System.Drawing.Size(208, 27);
+            this.txSolds.Size = new System.Drawing.Size(190, 27);
             this.txSolds.TabIndex = 12;
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(638, 523);
+            this.kryptonLabel4.Location = new System.Drawing.Point(1124, 324);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(52, 24);
@@ -144,7 +144,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(638, 468);
+            this.kryptonLabel5.Location = new System.Drawing.Point(1124, 269);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(91, 24);
@@ -156,7 +156,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(638, 420);
+            this.kryptonLabel6.Location = new System.Drawing.Point(1124, 221);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(121, 24);
@@ -192,7 +192,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(228, 410);
+            this.kryptonLabel9.Location = new System.Drawing.Point(795, 221);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(78, 24);
@@ -204,7 +204,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // txColorShown
             // 
-            this.txColorShown.Location = new System.Drawing.Point(340, 410);
+            this.txColorShown.Location = new System.Drawing.Point(907, 221);
             this.txColorShown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txColorShown.Name = "txColorShown";
             this.txColorShown.Size = new System.Drawing.Size(211, 27);
@@ -212,7 +212,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(838, 43);
+            this.kryptonLabel12.Location = new System.Drawing.Point(795, 44);
             this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel12.Name = "kryptonLabel12";
             this.kryptonLabel12.Size = new System.Drawing.Size(120, 24);
@@ -224,7 +224,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(194, 793);
+            this.btnAdd.Location = new System.Drawing.Point(229, 607);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(161, 45);
@@ -245,13 +245,16 @@ namespace Nike_Shop_Management.GUI
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(384, 793);
+            this.btnEdit.Location = new System.Drawing.Point(419, 607);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(147, 45);
             this.btnEdit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btnEdit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             this.btnEdit.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.btnEdit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnEdit.StateCommon.Border.Rounding = 10;
             this.btnEdit.StateCommon.Border.Width = 1;
             this.btnEdit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
@@ -273,7 +276,7 @@ namespace Nike_Shop_Management.GUI
             // comboSupplier
             // 
             this.comboSupplier.DropDownWidth = 208;
-            this.comboSupplier.Location = new System.Drawing.Point(953, 42);
+            this.comboSupplier.Location = new System.Drawing.Point(910, 43);
             this.comboSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboSupplier.Name = "comboSupplier";
             this.comboSupplier.Size = new System.Drawing.Size(208, 25);
@@ -281,7 +284,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // txSizeAndFit
             // 
-            this.txSizeAndFit.Location = new System.Drawing.Point(340, 523);
+            this.txSizeAndFit.Location = new System.Drawing.Point(907, 334);
             this.txSizeAndFit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSizeAndFit.Name = "txSizeAndFit";
             this.txSizeAndFit.Size = new System.Drawing.Size(211, 27);
@@ -289,7 +292,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // txStylecode
             // 
-            this.txStylecode.Location = new System.Drawing.Point(340, 467);
+            this.txStylecode.Location = new System.Drawing.Point(907, 278);
             this.txStylecode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txStylecode.Name = "txStylecode";
             this.txStylecode.Size = new System.Drawing.Size(211, 27);
@@ -316,7 +319,7 @@ namespace Nike_Shop_Management.GUI
             // comboSize
             // 
             this.comboSize.DropDownWidth = 211;
-            this.comboSize.Location = new System.Drawing.Point(953, 98);
+            this.comboSize.Location = new System.Drawing.Point(910, 99);
             this.comboSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboSize.Name = "comboSize";
             this.comboSize.Size = new System.Drawing.Size(211, 25);
@@ -324,7 +327,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(838, 98);
+            this.kryptonLabel1.Location = new System.Drawing.Point(795, 99);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(69, 24);
@@ -336,7 +339,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(838, 149);
+            this.kryptonLabel10.Location = new System.Drawing.Point(795, 150);
             this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel10.Name = "kryptonLabel10";
             this.kryptonLabel10.Size = new System.Drawing.Size(81, 24);
@@ -348,7 +351,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // lbl_quantity
             // 
-            this.lbl_quantity.Location = new System.Drawing.Point(953, 149);
+            this.lbl_quantity.Location = new System.Drawing.Point(910, 150);
             this.lbl_quantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbl_quantity.Name = "lbl_quantity";
             this.lbl_quantity.Size = new System.Drawing.Size(6, 2);
@@ -362,13 +365,16 @@ namespace Nike_Shop_Management.GUI
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(559, 794);
+            this.btnDelete.Location = new System.Drawing.Point(594, 608);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(131, 44);
             this.btnDelete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btnDelete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
             this.btnDelete.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.btnDelete.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnDelete.StateCommon.Border.Rounding = 10;
             this.btnDelete.StateCommon.Border.Width = 1;
             this.btnDelete.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
@@ -382,7 +388,7 @@ namespace Nike_Shop_Management.GUI
             // 
             this.btnEditSize.BackgroundImage = global::Nike_Shop_Management.Properties.Resources.edit_tool;
             this.btnEditSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditSize.Location = new System.Drawing.Point(1170, 98);
+            this.btnEditSize.Location = new System.Drawing.Point(1127, 99);
             this.btnEditSize.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditSize.Name = "btnEditSize";
             this.btnEditSize.Size = new System.Drawing.Size(31, 28);
@@ -392,21 +398,24 @@ namespace Nike_Shop_Management.GUI
             // 
             // tx_price
             // 
-            this.tx_price.Location = new System.Drawing.Point(750, 420);
+            this.tx_price.Location = new System.Drawing.Point(1254, 221);
             this.tx_price.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_price.Name = "tx_price";
-            this.tx_price.Size = new System.Drawing.Size(211, 27);
+            this.tx_price.Size = new System.Drawing.Size(190, 27);
             this.tx_price.TabIndex = 77;
             // 
             // cancelButton1
             // 
-            this.cancelButton1.Location = new System.Drawing.Point(721, 797);
+            this.cancelButton1.Location = new System.Drawing.Point(756, 611);
             this.cancelButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelButton1.Name = "cancelButton1";
             this.cancelButton1.Size = new System.Drawing.Size(157, 41);
             this.cancelButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(158)))), ((int)(((byte)(158)))));
             this.cancelButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.cancelButton1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.cancelButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.cancelButton1.StateCommon.Border.Rounding = 10;
             this.cancelButton1.StateCommon.Border.Width = 1;
             this.cancelButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
@@ -429,7 +438,7 @@ namespace Nike_Shop_Management.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 924);
+            this.ClientSize = new System.Drawing.Size(1468, 709);
             this.Controls.Add(this.btnEditSize);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tx_price);

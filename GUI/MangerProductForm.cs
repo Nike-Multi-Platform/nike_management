@@ -28,6 +28,8 @@ namespace Nike_Shop_Management.GUI
 
             btnAdd.Click += BtnAdd_Click;
             btnSearch.Click += BtnSearch_Click;
+            panel_product_parent.Width = 1000;
+            panel_product_parent.AutoScroll = true;
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
