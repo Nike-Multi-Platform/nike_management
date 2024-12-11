@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Nike_DB" Class="DbContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI;Initial Catalog=Nike_DB;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="LibDAL.Properties.Settings" SettingsPropertyName="Nike_DBConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.bag" Member="bags">
     <Type Name="bag">
       <Column Name="bag_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -185,6 +184,7 @@
       <Column Name="product_review_content" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="product_review_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="product_review_rate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="product_size_name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="product_product_review" Member="product" ThisKey="product_id" OtherKey="product_id" Type="product" IsForeignKey="true" />
       <Association Name="user_account_product_review" Member="user_account" ThisKey="user_id" OtherKey="user_id" Type="user_account" IsForeignKey="true" />
     </Type>
