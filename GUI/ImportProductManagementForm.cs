@@ -189,6 +189,11 @@ namespace Nike_Shop_Management.GUI
                 _db.goods_receipt_details.InsertOnSubmit(goodsReceiptDetail);
                 // Cập nhật lại tổng tiền của phiếu nhập
                 goodsReceipt.total_price += productImportDTO.total_price;
+
+                // Cập nhật lại số lượng tồn kho
+                // Tìm product_size
+                var product_size = _db.product_sizes.Where(t => t.product_id == productImportDTO.product_id && t.size_id == productImportDTO.product_size_id).FirstOrDefault();
+                product_size.soluong += productImportDTO.quantity;
             }
 
             _db.SubmitChanges();
