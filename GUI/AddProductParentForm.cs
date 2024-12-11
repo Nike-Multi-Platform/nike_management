@@ -122,16 +122,22 @@ namespace Nike_Shop_Management.GUI
             productParentDTO.sub_categories_id = selectedSubcategory.sub_categories_id;
             productParentDTO.product_icons_id = 1;
             productParentDTO.thumbnail = linkHolder;
+            productParentDTO.Height = int.Parse(txHeight.Text);
+            productParentDTO.Weight = int.Parse(txWeight.Text);
+            productParentDTO.Width = int.Parse(txWidth.Text);
+            productParentDTO.Length = int.Parse(txLength.Text);
+            productParentDTO.CreatedAt = DateTime.Now;
+            productParentDTO.UpdatedAt = DateTime.Now;
             int flag = ppM.InsertProductParents(productParentDTO);
             if (flag == 1)
             {
-                MessageBox.Show("Add Product secssfull");
+                MessageBox.Show("Add Product succesfully");
                 this.Close();
 
             }
             else
             {
-                MessageBox.Show("hehe failed");
+                MessageBox.Show("Add product failed");
             }
         }
 

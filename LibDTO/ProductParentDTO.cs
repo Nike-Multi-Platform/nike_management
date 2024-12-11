@@ -15,6 +15,10 @@ namespace LibDTO
         private int height;
         private int width;
         private int length;
+        private DateTime createdAt;
+        private DateTime updatedAt;
+        public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
+        public DateTime UpdatedAt { get => updatedAt; set => updatedAt = value; }
         public int Weight { get => weight; set => weight = value; }
         public int Height { get => height; set => height = value; }
         public int Width { get => width; set => width = value; }
