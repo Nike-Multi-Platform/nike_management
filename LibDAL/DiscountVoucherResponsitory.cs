@@ -11,7 +11,7 @@ namespace LibDAL
     public class DiscountVoucherResponsitory
     {
         DbContextDataContext _db = new DbContextDataContext();
-
+        
         public DiscountVoucherResponsitory()
         {
             _db = new DbContextDataContext();

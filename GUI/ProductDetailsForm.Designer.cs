@@ -64,6 +64,7 @@ namespace Nike_Shop_Management.GUI
             this.tx_price = new Nike_Shop_Management.CustomControl.PriceTextBox();
             this.cancelButton1 = new Nike_Shop_Management.CustomControl.CancelButton();
             this.u_PictureBox = new Nike_Shop_Management.u_PictureBox();
+            this.lblQuality = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.comboSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboSize)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +84,7 @@ namespace Nike_Shop_Management.GUI
             this.lbl_.Location = new System.Drawing.Point(220, 11);
             this.lbl_.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbl_.Name = "lbl_";
-            this.lbl_.Size = new System.Drawing.Size(129, 24);
+            this.lbl_.Size = new System.Drawing.Size(104, 20);
             this.lbl_.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.lbl_.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.lbl_.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,7 +96,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel2.Location = new System.Drawing.Point(795, 334);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(94, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(76, 20);
             this.kryptonLabel2.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel2.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,7 +108,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel3.Location = new System.Drawing.Point(795, 276);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(118, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(96, 20);
             this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel3.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -116,10 +117,11 @@ namespace Nike_Shop_Management.GUI
             // 
             // txTotalStock
             // 
-            this.txTotalStock.Location = new System.Drawing.Point(1254, 323);
+            this.txTotalStock.Enabled = false;
+            this.txTotalStock.Location = new System.Drawing.Point(1254, 334);
             this.txTotalStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txTotalStock.Name = "txTotalStock";
-            this.txTotalStock.Size = new System.Drawing.Size(190, 27);
+            this.txTotalStock.Size = new System.Drawing.Size(190, 23);
             this.txTotalStock.TabIndex = 13;
             // 
             // txSolds
@@ -127,15 +129,15 @@ namespace Nike_Shop_Management.GUI
             this.txSolds.Location = new System.Drawing.Point(1254, 272);
             this.txSolds.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSolds.Name = "txSolds";
-            this.txSolds.Size = new System.Drawing.Size(190, 27);
+            this.txSolds.Size = new System.Drawing.Size(190, 23);
             this.txSolds.TabIndex = 12;
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(1124, 324);
+            this.kryptonLabel4.Location = new System.Drawing.Point(1127, 337);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(52, 24);
+            this.kryptonLabel4.Size = new System.Drawing.Size(43, 20);
             this.kryptonLabel4.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel4.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,7 +149,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel5.Location = new System.Drawing.Point(1124, 269);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(91, 24);
+            this.kryptonLabel5.Size = new System.Drawing.Size(74, 20);
             this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel5.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +161,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel6.Location = new System.Drawing.Point(1124, 221);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(121, 24);
+            this.kryptonLabel6.Size = new System.Drawing.Size(98, 20);
             this.kryptonLabel6.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel6.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,7 +173,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel7.Location = new System.Drawing.Point(545, 170);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(70, 24);
+            this.kryptonLabel7.Size = new System.Drawing.Size(57, 20);
             this.kryptonLabel7.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel7.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel7.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -183,7 +185,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel8.Location = new System.Drawing.Point(220, 170);
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(70, 24);
+            this.kryptonLabel8.Size = new System.Drawing.Size(57, 20);
             this.kryptonLabel8.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel8.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel8.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,7 +197,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel9.Location = new System.Drawing.Point(795, 221);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(78, 24);
+            this.kryptonLabel9.Size = new System.Drawing.Size(64, 20);
             this.kryptonLabel9.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel9.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel9.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -207,7 +209,7 @@ namespace Nike_Shop_Management.GUI
             this.txColorShown.Location = new System.Drawing.Point(907, 221);
             this.txColorShown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txColorShown.Name = "txColorShown";
-            this.txColorShown.Size = new System.Drawing.Size(211, 27);
+            this.txColorShown.Size = new System.Drawing.Size(211, 23);
             this.txColorShown.TabIndex = 14;
             // 
             // kryptonLabel12
@@ -215,7 +217,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel12.Location = new System.Drawing.Point(795, 44);
             this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel12.Name = "kryptonLabel12";
-            this.kryptonLabel12.Size = new System.Drawing.Size(120, 24);
+            this.kryptonLabel12.Size = new System.Drawing.Size(97, 20);
             this.kryptonLabel12.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel12.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel12.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -279,7 +281,7 @@ namespace Nike_Shop_Management.GUI
             this.comboSupplier.Location = new System.Drawing.Point(910, 43);
             this.comboSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboSupplier.Name = "comboSupplier";
-            this.comboSupplier.Size = new System.Drawing.Size(208, 25);
+            this.comboSupplier.Size = new System.Drawing.Size(208, 21);
             this.comboSupplier.TabIndex = 36;
             // 
             // txSizeAndFit
@@ -287,7 +289,7 @@ namespace Nike_Shop_Management.GUI
             this.txSizeAndFit.Location = new System.Drawing.Point(907, 334);
             this.txSizeAndFit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSizeAndFit.Name = "txSizeAndFit";
-            this.txSizeAndFit.Size = new System.Drawing.Size(211, 27);
+            this.txSizeAndFit.Size = new System.Drawing.Size(211, 23);
             this.txSizeAndFit.TabIndex = 37;
             // 
             // txStylecode
@@ -295,7 +297,7 @@ namespace Nike_Shop_Management.GUI
             this.txStylecode.Location = new System.Drawing.Point(907, 278);
             this.txStylecode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txStylecode.Name = "txStylecode";
-            this.txStylecode.Size = new System.Drawing.Size(211, 27);
+            this.txStylecode.Size = new System.Drawing.Size(211, 23);
             this.txStylecode.TabIndex = 38;
             // 
             // tx_description
@@ -322,7 +324,7 @@ namespace Nike_Shop_Management.GUI
             this.comboSize.Location = new System.Drawing.Point(910, 99);
             this.comboSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboSize.Name = "comboSize";
-            this.comboSize.Size = new System.Drawing.Size(211, 25);
+            this.comboSize.Size = new System.Drawing.Size(211, 21);
             this.comboSize.TabIndex = 41;
             // 
             // kryptonLabel1
@@ -330,7 +332,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel1.Location = new System.Drawing.Point(795, 99);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(69, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(57, 20);
             this.kryptonLabel1.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel1.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -342,7 +344,7 @@ namespace Nike_Shop_Management.GUI
             this.kryptonLabel10.Location = new System.Drawing.Point(795, 150);
             this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(81, 24);
+            this.kryptonLabel10.Size = new System.Drawing.Size(66, 20);
             this.kryptonLabel10.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonLabel10.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonLabel10.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -401,7 +403,7 @@ namespace Nike_Shop_Management.GUI
             this.tx_price.Location = new System.Drawing.Point(1254, 221);
             this.tx_price.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_price.Name = "tx_price";
-            this.tx_price.Size = new System.Drawing.Size(190, 27);
+            this.tx_price.Size = new System.Drawing.Size(190, 23);
             this.tx_price.TabIndex = 77;
             // 
             // cancelButton1
@@ -434,11 +436,24 @@ namespace Nike_Shop_Management.GUI
             this.u_PictureBox.Size = new System.Drawing.Size(176, 220);
             this.u_PictureBox.TabIndex = 1;
             // 
+            // lblQuality
+            // 
+            this.lblQuality.Location = new System.Drawing.Point(910, 150);
+            this.lblQuality.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblQuality.Name = "lblQuality";
+            this.lblQuality.Size = new System.Drawing.Size(66, 20);
+            this.lblQuality.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.lblQuality.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.lblQuality.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuality.TabIndex = 80;
+            this.lblQuality.Values.Text = "Số lượng";
+            // 
             // ProductDetailsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 709);
+            this.Controls.Add(this.lblQuality);
             this.Controls.Add(this.btnEditSize);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.tx_price);
@@ -516,5 +531,6 @@ namespace Nike_Shop_Management.GUI
         private CustomControl.PriceTextBox tx_price;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private Button btnEditSize;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblQuality;
     }
 }

@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Nike_DB" Class="DbContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MSI\SQLEXPRESS;Initial Catalog=Nike_DB;Integrated Security=True" SettingsObjectName="LibDAL.Properties.Settings" SettingsPropertyName="Nike_DBConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.bag" Member="bags">
     <Type Name="bag">
       <Column Name="bag_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -397,8 +398,13 @@
       <Association Name="user_account_user_wallet" Member="user_account" ThisKey="user_id" OtherKey="user_id" Type="user_account" IsForeignKey="true" />
     </Type>
   </Table>
-  <Function Name="dbo.ProcessImportProducts" Method="ProcessImportProducts">
-    <Return Type="System.Int32" />
+  <Function Name="dbo.GetTheSizeProduct" Method="GetTheSizeProduct">
+    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="typeSize" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetTheSizeProductResult">
+      <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.SaveTempImportProduct" Method="SaveTempImportProduct">
     <Parameter Name="receipt_id" Type="System.Int32" DbType="Int" />
@@ -408,47 +414,15 @@
     <Parameter Name="quantity" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.GetTheSizeProduct" Method="GetTheSizeProduct">
-    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="typeSize" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GetTheSizeProductResult">
-      <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.GetTheSizeProductCurrent" Method="GetTheSizeProductCurrent">
     <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
     <ElementType Name="GetTheSizeProductCurrentResult">
-      <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="product_size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetTheSizeProduct" Method="GetTheSizeProduct1">
-    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="typeSize" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GetTheSizeProductResult1">
-      <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GetTheSizeProductCurrent" Method="GetTheSizeProductCurrent1">
-    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GetTheSizeProductCurrentResult1">
       <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="product_size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ProcessImportProducts" Method="ProcessImportProducts1">
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SaveTempImportProduct" Method="SaveTempImportProduct1">
-    <Parameter Name="receipt_id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="product_id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="product_size_id" Type="System.Int32" DbType="Int" />
-    <Parameter Name="import_price" Type="System.Decimal" DbType="Money" />
-    <Parameter Name="quantity" Type="System.Int32" DbType="Int" />
+  <Function Name="dbo.ProcessImportProducts" Method="ProcessImportProducts">
     <Return Type="System.Int32" />
   </Function>
 </Database>

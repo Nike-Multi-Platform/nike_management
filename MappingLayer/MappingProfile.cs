@@ -76,7 +76,7 @@ namespace MappingLayer
             CreateMap<return_request_img, return_request_img>();
             CreateMap<return_request_img, ReturnRequestImgDTO>();
 
-            CreateMap<request_type,ReturnRequestTypeDTO>();
+            CreateMap<request_type, ReturnRequestTypeDTO>();
             CreateMap<ReturnRequestTypeDTO, request_type>();
 
             CreateMap<return_request_img, ReturnRequestImgDTO>();

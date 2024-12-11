@@ -73,9 +73,13 @@ namespace LibDAL
                 if (existingProductParent != null)
                 {
                     existingProductParent.product_parent_name = productParent.product_parent_name;
-                    //   existingProductParent.product_object_id = productParent.product_object_id;
-                    //    existingProductParent.product_category_id = productParent.product_category_id;
+                    //existingProductParent.produc = productParent.product_object_id;
+                     existingProductParent.sub_categories_id = productParent.sub_categories_id;
                     existingProductParent.thumbnail = productParent.thumbnail;
+                    existingProductParent.weight = productParent.Weight;
+                    existingProductParent.height = productParent.Height;
+                    existingProductParent.length = productParent.Length;
+                    existingProductParent.width = productParent.Width;
                     if (decimal.TryParse(productParent.product_price, out decimal price))
                     {
                         existingProductParent.product_price = price;

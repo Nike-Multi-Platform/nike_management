@@ -31,20 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\LibDAL\bin\Debug\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="LibConstants">
-      <HintPath>..\LibDAL\bin\Debug\LibConstants.dll</HintPath>
-    </Reference>
-    <Reference Include="LibDAL">
-      <HintPath>..\LibDAL\bin\Debug\LibDAL.dll</HintPath>
+      <HintPath>D:\barovinh\nike-application\LibBLL\bin\Debug\LibConstants.dll</HintPath>
     </Reference>
     <Reference Include="LibDTO">
       <HintPath>..\LibDTO\bin\Debug\LibDTO.dll</HintPath>
-    </Reference>
-    <Reference Include="MappingLayer">
-      <HintPath>..\LibDAL\bin\Debug\MappingLayer.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -82,6 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibDAL\LibDAL.csproj">
+      <Project>{7C03307F-9F78-47B9-B203-196E5AC42F28}</Project>
+      <Name>LibDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

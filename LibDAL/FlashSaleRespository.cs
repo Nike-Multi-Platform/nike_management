@@ -11,7 +11,7 @@ namespace LibDAL
     public class FlashSaleRespository
     {
         DbContextDataContext _db = new DbContextDataContext();
-
+        
         public FlashSaleRespository()
         {
             _db = new DbContextDataContext();

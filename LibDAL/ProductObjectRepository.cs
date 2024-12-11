@@ -36,6 +36,7 @@ namespace LibDAL
         {
             try
             {
+
                 var existEntiy = _db.product_objects.Where(temp => temp.product_object_id == id).FirstOrDefault();
                 if (existEntiy != null)
                 {

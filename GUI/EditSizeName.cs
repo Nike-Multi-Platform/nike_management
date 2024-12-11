@@ -40,7 +40,7 @@ namespace Nike_Shop_Management.GUI
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            if(this.kryptonTextBox1.Text.Length < 1)
+            if (this.kryptonTextBox1.Text.Length < 1)
             {
                 MessageBox.Show("Tên size không được để trống");
                 return;

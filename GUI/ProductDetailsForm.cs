@@ -144,6 +144,7 @@ namespace Nike_Shop_Management.GUI
                 tx_description.Text = productColorsDTO.product_description;
                 tx_description2.Text = productColorsDTO.product_description2;
                 tx_more_info.Text = productColorsDTO.product_more_info;
+       
             }
             flag = true;
         }

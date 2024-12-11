@@ -27,7 +27,7 @@ namespace Nike_Shop_Management.GUI
             btnShowMore.Click += BtnShowMore_Click;
 
             btnAdd.Click += BtnAdd_Click;
-            btnSearch.Click += BtnSearch_Click;
+            //btnSearch.Click += BtnSearch_Click;
             panel_product_parent.Width = 1000;
             panel_product_parent.AutoScroll = true;
         }
@@ -159,7 +159,10 @@ namespace Nike_Shop_Management.GUI
             ComboSubCategoriesFilter.DisplayMember = "sub_categories_name";
             ComboSubCategoriesFilter.ValueMember = "sub_categories_id";
             ComboSubCategoriesFilter.Enabled = true;
-
+            comboSubCategories.DataSource = list;
+            comboSubCategories.DisplayMember = "sub_categories_name";
+            comboSubCategories.ValueMember = "sub_categories_id";
+            comboSubCategories.Enabled = true;
         }
 
         private void ComboProductObjectFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -187,6 +190,10 @@ namespace Nike_Shop_Management.GUI
             comboProductCategoriesFileter.DataSource = list;
             comboProductCategoriesFileter.DisplayMember = "categories_name";
             comboProductCategoriesFileter.ValueMember = "categories_id";
+
+            comboProductCategories.DataSource = list;
+            comboProductCategories.DisplayMember = "categories_name";
+            comboProductCategories.ValueMember = "categories_id";
         }
 
         public void InitData()
@@ -201,6 +208,10 @@ namespace Nike_Shop_Management.GUI
             comboProductObjectFilter.DataSource = list;
             comboProductObjectFilter.DisplayMember = "product_object_name";
             comboProductObjectFilter.ValueMember = "product_object_id";
+            comboProductObject.DataSource = list;
+            comboProductObject.DisplayMember = "product_object_name";
+            comboProductObject.ValueMember = "product_object_id";
+
         }
 
         public void PaintDataDetails(ProductParentDTO productParent)
@@ -213,6 +224,10 @@ namespace Nike_Shop_Management.GUI
                 txProductName.Text = productParent.product_parent_name.ToString();
                 lbl_count_types.Text = productDTOs.Count.ToString();
                 linkHolder = productParent.thumbnail;
+                txWeight.Text = productParent.Weight.ToString();
+                txHeight.Text = productParent.Height.ToString();
+                txLength.Text = productParent.Length.ToString();
+                txWidth.Text = productParent.Width.ToString();
             }
             else
             {
@@ -252,8 +267,13 @@ namespace Nike_Shop_Management.GUI
                     is_new_release = true,
                     product_icons_id = 1,
                     product_parent_name = txProductName.Text,
-                    sub_categories_id = productParentClicked.sub_categories_id
-                });
+                    Width = int.Parse(txWidth.Text),
+                    Height = int.Parse(txHeight.Text),
+                    Length = int.Parse(txLength.Text),
+                    Weight = int.Parse(txWeight.Text),
+                    sub_categories_id = int.Parse(comboSubCategories.SelectedValue.ToString()),
+
+                }) ;
                 if (flag == 1)
                 {
                     MessageBox.Show("Edit successful");

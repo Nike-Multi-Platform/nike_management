@@ -129,7 +129,7 @@ namespace LibDAL
     #endregion
 		
 		public DbContextDataContext() : 
-				base(global::LibDAL.Properties.Settings.Default.Nike_DBConnectionString3, mappingSource)
+				base(global::LibDAL.Properties.Settings.Default.Nike_DBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -414,11 +414,11 @@ namespace LibDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ProcessImportProducts")]
-		public int ProcessImportProducts()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTheSizeProduct")]
+		public ISingleResult<GetTheSizeProductResult> GetTheSizeProduct([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> typeSize)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), product_id, typeSize);
+			return ((ISingleResult<GetTheSizeProductResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SaveTempImportProduct")]
@@ -428,13 +428,6 @@ namespace LibDAL
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTheSizeProduct")]
-		public ISingleResult<GetTheSizeProductResult> GetTheSizeProduct([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> typeSize)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), product_id, typeSize);
-			return ((ISingleResult<GetTheSizeProductResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTheSizeProductCurrent")]
 		public ISingleResult<GetTheSizeProductCurrentResult> GetTheSizeProductCurrent([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id)
 		{
@@ -442,31 +435,10 @@ namespace LibDAL
 			return ((ISingleResult<GetTheSizeProductCurrentResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTheSizeProduct")]
-		public ISingleResult<GetTheSizeProductResult1> GetTheSizeProduct1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> typeSize)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), product_id, typeSize);
-			return ((ISingleResult<GetTheSizeProductResult1>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTheSizeProductCurrent")]
-		public ISingleResult<GetTheSizeProductCurrentResult1> GetTheSizeProductCurrent1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), product_id);
-			return ((ISingleResult<GetTheSizeProductCurrentResult1>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ProcessImportProducts")]
-		public int ProcessImportProducts1()
+		public int ProcessImportProducts()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SaveTempImportProduct")]
-		public int SaveTempImportProduct1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> receipt_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> product_size_id, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Money")] System.Nullable<decimal> import_price, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> quantity)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), receipt_id, product_id, product_size_id, import_price, quantity);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -4214,6 +4186,8 @@ namespace LibDAL
 		
 		private System.Nullable<double> _product_review_rate;
 		
+		private string _product_size_name;
+		
 		private EntityRef<product> _product;
 		
 		private EntityRef<user_account> _user_account;
@@ -4236,6 +4210,8 @@ namespace LibDAL
     partial void Onproduct_review_timeChanged();
     partial void Onproduct_review_rateChanging(System.Nullable<double> value);
     partial void Onproduct_review_rateChanged();
+    partial void Onproduct_size_nameChanging(string value);
+    partial void Onproduct_size_nameChanged();
     #endregion
 		
 		public product_review()
@@ -4389,6 +4365,26 @@ namespace LibDAL
 					this._product_review_rate = value;
 					this.SendPropertyChanged("product_review_rate");
 					this.Onproduct_review_rateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_product_size_name", DbType="NVarChar(255)")]
+		public string product_size_name
+		{
+			get
+			{
+				return this._product_size_name;
+			}
+			set
+			{
+				if ((this._product_size_name != value))
+				{
+					this.Onproduct_size_nameChanging(value);
+					this.SendPropertyChanging();
+					this._product_size_name = value;
+					this.SendPropertyChanged("product_size_name");
+					this.Onproduct_size_nameChanged();
 				}
 			}
 		}
@@ -8925,119 +8921,13 @@ namespace LibDAL
 	public partial class GetTheSizeProductCurrentResult
 	{
 		
-		private string _size_name;
-		
 		private int _size_id;
+		
+		private string _size_name;
 		
 		private int _product_size_id;
 		
 		public GetTheSizeProductCurrentResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_name", DbType="NVarChar(50)")]
-		public string size_name
-		{
-			get
-			{
-				return this._size_name;
-			}
-			set
-			{
-				if ((this._size_name != value))
-				{
-					this._size_name = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_id", DbType="Int NOT NULL")]
-		public int size_id
-		{
-			get
-			{
-				return this._size_id;
-			}
-			set
-			{
-				if ((this._size_id != value))
-				{
-					this._size_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_product_size_id", DbType="Int NOT NULL")]
-		public int product_size_id
-		{
-			get
-			{
-				return this._product_size_id;
-			}
-			set
-			{
-				if ((this._product_size_id != value))
-				{
-					this._product_size_id = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetTheSizeProductResult1
-	{
-		
-		private int _size_id;
-		
-		private string _size_name;
-		
-		public GetTheSizeProductResult1()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_id", DbType="Int NOT NULL")]
-		public int size_id
-		{
-			get
-			{
-				return this._size_id;
-			}
-			set
-			{
-				if ((this._size_id != value))
-				{
-					this._size_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_size_name", DbType="NVarChar(50)")]
-		public string size_name
-		{
-			get
-			{
-				return this._size_name;
-			}
-			set
-			{
-				if ((this._size_name != value))
-				{
-					this._size_name = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetTheSizeProductCurrentResult1
-	{
-		
-		private int _size_id;
-		
-		private string _size_name;
-		
-		private int _product_size_id;
-		
-		public GetTheSizeProductCurrentResult1()
 		{
 		}
 		
