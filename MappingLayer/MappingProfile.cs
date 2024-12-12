@@ -6,7 +6,6 @@ namespace MappingLayer
 {
     public class MappingProfile : Profile
     {
-        // ánh xạ DTO -> ENTIRY
         public MappingProfile()
         {
             CreateMap<UserAccountDTO, user_account>();

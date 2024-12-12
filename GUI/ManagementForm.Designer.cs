@@ -35,7 +35,7 @@
             this.FormLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btn_Menu = new System.Windows.Forms.PictureBox();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_product = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_nhanvien = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.btn_ParentProduct = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_customer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -111,7 +111,7 @@
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.sidebar.Controls.Add(this.btn_product);
+            this.sidebar.Controls.Add(this.btn_nhanvien);
             this.sidebar.Controls.Add(this.btn_ParentProduct);
             this.sidebar.Controls.Add(this.btn_customer);
             this.sidebar.Controls.Add(this.btn_RevenueStatistics);
@@ -131,35 +131,35 @@
             this.sidebar.Size = new System.Drawing.Size(233, 693);
             this.sidebar.TabIndex = 1;
             // 
-            // btn_product
+            // btn_nhanvien
             // 
-            this.btn_product.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
-            this.btn_product.Location = new System.Drawing.Point(0, 0);
-            this.btn_product.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_product.Name = "btn_product";
-            this.btn_product.Palette = this.kryptonPalette1;
-            this.btn_product.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.btn_product.Size = new System.Drawing.Size(233, 58);
-            this.btn_product.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_product.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.btn_product.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
-            this.btn_product.StateCommon.Border.Color1 = System.Drawing.Color.Cyan;
-            this.btn_product.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn_product.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btn_nhanvien.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.ListItem;
+            this.btn_nhanvien.Location = new System.Drawing.Point(0, 0);
+            this.btn_nhanvien.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_nhanvien.Name = "btn_nhanvien";
+            this.btn_nhanvien.Palette = this.kryptonPalette1;
+            this.btn_nhanvien.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.btn_nhanvien.Size = new System.Drawing.Size(233, 58);
+            this.btn_nhanvien.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_nhanvien.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.btn_nhanvien.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            this.btn_nhanvien.StateCommon.Border.Color1 = System.Drawing.Color.Cyan;
+            this.btn_nhanvien.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn_nhanvien.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btn_product.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
-            this.btn_product.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
-            this.btn_product.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.btn_product.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btn_product.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btn_product.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_product.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.SolidRightLine;
-            this.btn_product.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.btn_product.TabIndex = 5;
-            this.btn_product.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_product.Values.Image")));
-            this.btn_product.Values.Text = "     Quản lý nhân viên";
-            this.btn_product.Click += new System.EventHandler(this.btn_product_Click);
+            this.btn_nhanvien.StateCommon.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.btn_nhanvien.StateCommon.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.btn_nhanvien.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.btn_nhanvien.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btn_nhanvien.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btn_nhanvien.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhanvien.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.SolidRightLine;
+            this.btn_nhanvien.StatePressed.Back.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.btn_nhanvien.TabIndex = 5;
+            this.btn_nhanvien.Values.Image = ((System.Drawing.Image)(resources.GetObject("btn_product.Values.Image")));
+            this.btn_nhanvien.Values.Text = "     Quản lý nhân viên";
+            this.btn_nhanvien.Click += new System.EventHandler(this.Btn_nhanvien);
             // 
             // kryptonPalette1
             // 
@@ -515,7 +515,7 @@
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Timer sidebarTransition;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_product;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_nhanvien;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel panelBody;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_ParentProduct;

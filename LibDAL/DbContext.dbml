@@ -420,6 +420,7 @@
       <Column Name="size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="size_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="product_size_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ProcessImportProducts" Method="ProcessImportProducts">
