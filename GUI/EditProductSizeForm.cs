@@ -27,9 +27,14 @@ namespace Nike_Shop_Management.GUI
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            bool flagT = true;
             foreach (var item in listCurrentTemp)
             {
-                pzM.Delete(item);
+                if (pzM.Delete(item) == 0)
+                {
+                    MessageBox.Show("Khong the xoa size", item.ToString());
+                    return;
+                }
             }
 
             for (int i = 0; i < ListSizeCurrent.RowCount - 1; i++)
@@ -42,15 +47,27 @@ namespace Nike_Shop_Management.GUI
                 else
                 {
                     // thêm vào nè
-                    pzM.Add(new ProductSizeDTO()
+                    int flag =  pzM.Add(new ProductSizeDTO()
                     {
                         product_id = ProductID,
                         size_id = int.Parse(ListSizeCurrent[0, i].Value.ToString()),
-                        soluong = 0
-                    });
+                        soluong = 1
+                    }) ;
+                    if(flag==0)
+                    {
+                        flagT = false;
+                        break;
+                    }
                 }
             }
-            MessageBox.Show("Finished");
+            if(!flagT)
+            {
+                MessageBox.Show("Cap nhat Size that bai");
+            }
+            else
+            {
+                MessageBox.Show("Cap nhat size thanh cong!");
+            }
             this.Close();
         }
 

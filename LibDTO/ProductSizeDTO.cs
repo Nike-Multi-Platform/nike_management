@@ -7,7 +7,7 @@
         public int size_id { get; set; }
         public int soluong { get; set; }
 
-        public ProductDTO Product { get; set; }
+        //public ProductDTO Product { get; set; }
 
 
     }

@@ -63,9 +63,9 @@ namespace LibDAL
                 }
                 return 0;
             }
-            catch (Exception)
+            catch (Exception e )
             {
-
+        //        throw e;
                 return 0;
             }
         }
@@ -79,9 +79,9 @@ namespace LibDAL
                 _db.SubmitChanges();
                 return 1;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+            //    throw e;
                 return 0;
             }
         }
