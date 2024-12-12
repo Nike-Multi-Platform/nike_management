@@ -222,7 +222,7 @@ namespace Nike_Shop_Management.GUI
                 u_PictureBox.LoadImgFromUrl(productParent.thumbnail);
                 txProductPrice.Text = productParent.product_price.ToString();
                 txProductName.Text = productParent.product_parent_name.ToString();
-                lbl_count_types.Text = productDTOs.Count.ToString();
+                //lbl_count_types.Text = productDTOs.Count.ToString();
                 linkHolder = productParent.thumbnail;
                 txWeight.Text = productParent.Weight.ToString();
                 txHeight.Text = productParent.Height.ToString();
@@ -234,7 +234,7 @@ namespace Nike_Shop_Management.GUI
                 u_PictureBox.LoadImgFromUrl("");
                 txProductName.Text = "";
                 txProductPrice.Text = "";
-                lbl_count_types.Text = "0";
+                //lbl_count_types.Text = "0";
             }
 
         }
