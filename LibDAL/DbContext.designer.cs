@@ -8927,6 +8927,8 @@ namespace LibDAL
 		
 		private int _product_size_id;
 		
+		private System.Nullable<int> _soluong;
+		
 		public GetTheSizeProductCurrentResult()
 		{
 		}
@@ -8975,6 +8977,22 @@ namespace LibDAL
 				if ((this._product_size_id != value))
 				{
 					this._product_size_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
+		public System.Nullable<int> soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
 				}
 			}
 		}

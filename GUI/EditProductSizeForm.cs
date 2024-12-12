@@ -99,7 +99,7 @@ namespace Nike_Shop_Management.GUI
                 }
 
                 ListSizeInventory.Rows.Remove(valueSelected);
-                ListSizeCurrent.Rows.Add(new object[] { valueSelected.Cells[0].Value.ToString(), valueSelected.Cells[1].Value.ToString(), valueSelected.Cells[2].Value != null ? valueSelected.Cells[2].Value.ToString() : null });
+                ListSizeCurrent.Rows.Add(new object[] { valueSelected.Cells[0].Value.ToString(), valueSelected.Cells[1].Value.ToString(), valueSelected.Cells[2].Value != null ? valueSelected.Cells[2].Value.ToString() : null, 0 });
             }
         }
 
@@ -117,17 +117,19 @@ namespace Nike_Shop_Management.GUI
             ListSizeCurrent.Columns.Add("size_id", "Size ID");
             ListSizeCurrent.Columns.Add("size_name", "Size Name");
             ListSizeCurrent.Columns.Add("product_size_id", "Product_size_id");
+            ListSizeCurrent.Columns.Add("soluong", "Quality");
+
             //  ListSizeCurrent.Columns[2].Visible = false;
             foreach (var item in listInventory)
             {
-                ListSizeInventory.Rows.Add(new object[] { item.size_id, item.size_name, null });
+                ListSizeInventory.Rows.Add(new object[] { item.size_id, item.size_name, null, });
             }
 
             ProductColorManager pcM = new ProductColorManager();
             listCurrent = pcM.GetProductSizesByID(product_id);
             foreach (var item in listCurrent)
             {
-                ListSizeCurrent.Rows.Add(new object[] { item.size_id, item.size_name, item.product_size_id });
+                ListSizeCurrent.Rows.Add(new object[] { item.size_id, item.size_name, item.product_size_id ,item.soluong });
             }
 
 

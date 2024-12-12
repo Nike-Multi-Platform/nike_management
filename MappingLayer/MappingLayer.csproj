@@ -35,7 +35,7 @@
       <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="LibDAL">
-      <HintPath>..\LibDAL\bin\Debug\LibDAL.dll</HintPath>
+      <HintPath>..\LibDAL\obj\Debug\LibDAL.dll</HintPath>
     </Reference>
     <Reference Include="LibDTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
