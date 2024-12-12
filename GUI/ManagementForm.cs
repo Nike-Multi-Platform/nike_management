@@ -88,9 +88,10 @@ namespace Nike_Shop_Management.GUI
 
         private void btn_customer_Click(object sender, EventArgs e)
         {
-            UserAccountManager p = new UserAccountManager();
+            /*UserAccountManager p = new UserAccountManager();
             GenericService<UserAccountDTO> o = new GenericService<UserAccountDTO>(p);
-            util.OpenChildForm(new GUI.Test.test_templates_crud_co_ban<UserAccountDTO>(o), panelBody);
+            util.OpenChildForm(new GUI.Test.test_templates_crud_co_ban<UserAccountDTO>(o), panelBody);*/
+            util.OpenChildForm(new GUI.CustomerAccountManagementForm(), panelBody);
         }
 
         private void btnImportProduct_Click(object sender, EventArgs e)
@@ -117,9 +118,20 @@ namespace Nike_Shop_Management.GUI
 
         private void Btn_nhanvien(object sender, EventArgs e)
         {
-            UserAccountManager p = new UserAccountManager();
+            /*UserAccountManager p = new UserAccountManager();
             GenericService<UserAccountDTO> o = new GenericService<UserAccountDTO>(p);
-            util.OpenChildForm(new GUI.Test.test_templates_crud_co_ban<UserAccountDTO>(o), panelBody);
+            util.OpenChildForm(new GUI.Test.test_templates_crud_co_ban<UserAccountDTO>(o), panelBody);*/
+            util.OpenChildForm(new GUI.EmployeeAccountManagementForm(), panelBody);
+        }
+
+        private void btnVoucher_Click(object sender, EventArgs e)
+        {
+            util.OpenChildForm(new GUI.VoucherManagementForm(), panelBody);
+        }
+
+        private void ManagementForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

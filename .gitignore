@@ -397,3 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 GHNService/GHNServiceConfig.config
+Configs/nike-d3392-firebase-adminsdk-t6ndk-9ec16d6644.json

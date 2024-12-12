@@ -290,53 +290,53 @@ namespace Nike_Shop_Management.GUI
         {
             if (string.IsNullOrWhiteSpace(txtVoucherCode.Text))
             {
-                MessageBox.Show("Mã voucher không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Mã voucher không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (string.IsNullOrWhiteSpace(txtVoucherName.Text))
             {
-                MessageBox.Show("Tên voucher không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Tên voucher không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (cboVoucherType.SelectedIndex == -1)
             {
-                MessageBox.Show("Loại voucher không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Loại voucher không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (txtUsage.Value <= 0 || txtUsage.Value > quantity)
             {
-                MessageBox.Show("Số lần sử dụng không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Số lần sử dụng không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (txtMinOrderValue.Value < 0 || txtMinOrderValue.Value >= txtMaxDiscountValue.Value)
             {
-                MessageBox.Show("Gía trị đơn hàng tối thiểu không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Gía trị đơn hàng tối thiểu không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return 1;
             }
             if (txtDiscountValue.Value <= 0)
             {
-                MessageBox.Show("Giá trị giảm giá không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Giá trị giảm giá không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (txtMaxDiscountValue.Value < txtDiscountValue.Value)
             {
-                MessageBox.Show("Giá trị giảm giá tối đa không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Giá trị giảm giá tối đa không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (string.IsNullOrWhiteSpace(txtDescription.Text))
             {
-                MessageBox.Show("Mô tả không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Mô tả không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (pickerStartAt.Value < DateTime.Now)
             {
-                MessageBox.Show("Ngày bắt đầu không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Ngày bắt đầu không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             if (pickerStartAt.Value >= pickerEndAt.Value)
             {
-                MessageBox.Show("Ngày kết thúc không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Ngày kết thúc không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
 
