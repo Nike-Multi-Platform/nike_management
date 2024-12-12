@@ -362,19 +362,16 @@ namespace Nike_Shop_Management.GUI
         {
             if (kryptonDataGridView1.SelectedRows.Count > 0)
             {
-                // Lấy thông tin Flash Sale đang được chọn
                 DataGridViewRow selectedRow = kryptonDataGridView1.SelectedRows[0];
                 int flashSaleId = Convert.ToInt32(selectedRow.Cells["flash_sale_id"].Value);
                 DateTime flashSaleStart = DateTime.Parse(selectedRow.Cells["start_at"].Value?.ToString() ?? DateTime.Now.ToString());
                 DateTime flashSaleEnd = DateTime.Parse(selectedRow.Cells["end_at"].Value?.ToString() ?? DateTime.Now.ToString());
 
-                // Kiểm tra giá trị Time Frame
                 if (checkInvalidValueTF(flashSaleStart, flashSaleEnd) != 1)
                 {
                     try
                     {
 
-                        // Tạo đối tượng Time Frame
                         FlashSaleTimeFrameDTO timeFrame = new FlashSaleTimeFrameDTO
                         {
                             flash_sale_id = flashSaleId,
@@ -385,13 +382,12 @@ namespace Nike_Shop_Management.GUI
                             UpdateAt = DateTime.UtcNow
                         };
 
-                        // Gọi phương thức thêm Time Frame từ Manager
                         int result = flashSaleTimeFrameManager.Add(timeFrame);
 
                         if (result == 1)
                         {
                             MessageBox.Show("Thêm khung thời gian thành công!");
-                            LoadFlashSaleTimeFrame(flashSaleId); // Tải lại danh sách Time Frame
+                            LoadFlashSaleTimeFrame(flashSaleId);
                         }
                         else if (result == 2)
                         {

@@ -38,7 +38,6 @@
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pickerStartAt = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -55,6 +54,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.kryptonDataGridView2 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -70,10 +70,10 @@
             // btnAdd
             // 
             this.btnAdd.AllowDrop = true;
-            this.btnAdd.Location = new System.Drawing.Point(9, 457);
+            this.btnAdd.Location = new System.Drawing.Point(42, 457);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 53);
+            this.btnAdd.Size = new System.Drawing.Size(100, 56);
             this.btnAdd.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.btnAdd.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(160)))), ((int)(((byte)(73)))));
             this.btnAdd.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -186,30 +186,21 @@
             this.kryptonPanel1.Controls.Add(this.kryptonLabel5);
             this.kryptonPanel1.Controls.Add(this.kryptonLabel4);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.kryptonPanel1.Location = new System.Drawing.Point(1014, 0);
+            this.kryptonPanel1.Location = new System.Drawing.Point(1070, 0);
             this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonFormClose;
-            this.kryptonPanel1.Size = new System.Drawing.Size(354, 621);
+            this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonNavigatorStack;
+            this.kryptonPanel1.Size = new System.Drawing.Size(329, 621);
             this.kryptonPanel1.TabIndex = 15;
-            // 
-            // u_PictureBox1
-            // 
-            this.u_PictureBox1.Location = new System.Drawing.Point(28, 99);
-            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.u_PictureBox1.Name = "u_PictureBox1";
-            this.u_PictureBox1.PathThumbail = null;
-            this.u_PictureBox1.Size = new System.Drawing.Size(176, 207);
-            this.u_PictureBox1.TabIndex = 15;
             // 
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(254, 457);
+            this.btnDelete.Location = new System.Drawing.Point(110, 526);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(88, 53);
+            this.btnDelete.Size = new System.Drawing.Size(94, 56);
             this.btnDelete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btnDelete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
             this.btnDelete.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -228,10 +219,10 @@
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(115, 457);
+            this.btnUpdate.Location = new System.Drawing.Point(159, 457);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(133, 53);
+            this.btnUpdate.Size = new System.Drawing.Size(129, 56);
             this.btnUpdate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btnUpdate.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
             this.btnUpdate.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -443,11 +434,20 @@
             this.kryptonDataGridView2.TabIndex = 0;
             this.kryptonDataGridView2.SelectionChanged += new System.EventHandler(this.kryptonDataGridView2_SelectionChanged);
             // 
+            // u_PictureBox1
+            // 
+            this.u_PictureBox1.Location = new System.Drawing.Point(28, 99);
+            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.u_PictureBox1.Name = "u_PictureBox1";
+            this.u_PictureBox1.PathThumbail = null;
+            this.u_PictureBox1.Size = new System.Drawing.Size(176, 207);
+            this.u_PictureBox1.TabIndex = 15;
+            // 
             // FlashSaleManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1368, 621);
+            this.ClientSize = new System.Drawing.Size(1399, 621);
             this.Controls.Add(this.kryptonPanel4);
             this.Controls.Add(this.kryptonPanel3);
             this.Controls.Add(this.kryptonPanel2);

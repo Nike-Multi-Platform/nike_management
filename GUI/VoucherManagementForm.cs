@@ -84,10 +84,8 @@ namespace Nike_Shop_Management.GUI
             {
                 try
                 {
-                    // Get the selected voucher
                     DiscountVoucherDTO discountVoucher = (DiscountVoucherDTO)kryptonDataGridView1.SelectedRows[0].DataBoundItem;
 
-                    // Populate the form fields
                     txtId.Text = discountVoucher.discount_voucher_id.ToString();
                     txtVoucherCode.Text = discountVoucher.voucher_code;
                     txtVoucherName.Text = discountVoucher.voucer_name;
@@ -107,11 +105,9 @@ namespace Nike_Shop_Management.GUI
                     pickerStartAt.Value = discountVoucher.Start_at;
                     pickerEndAt.Value = discountVoucher.End_at;
 
-                    // Determine the voucher's status and enable/disable buttons accordingly
                     DateTime now = DateTime.Now;
                     if (now >= discountVoucher.Start_at && now <= discountVoucher.End_at)
                     {
-                        // Voucher is active, disable update and delete
                         btnUpdate.Enabled = false;
                         btnDelete.Enabled = false;
 
@@ -119,7 +115,6 @@ namespace Nike_Shop_Management.GUI
                     }
                     else if (now > discountVoucher.End_at)
                     {
-                        // Voucher has ended, disable update and delete
                         btnUpdate.Enabled = false;
                         btnDelete.Enabled = false;
 
@@ -127,7 +122,6 @@ namespace Nike_Shop_Management.GUI
                     }
                     else
                     {
-                        // Voucher has not yet started, enable update and delete
                         btnUpdate.Enabled = true;
                         btnDelete.Enabled = true;
 

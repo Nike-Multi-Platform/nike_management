@@ -8,8 +8,11 @@ namespace MappingLayer
     {
         public MappingProfile()
         {
-            CreateMap<UserAccountDTO, user_account>();
-            CreateMap<user_account, UserAccountDTO>();
+            CreateMap<user_account, UserAccountDTO>()
+                .ForMember(dest => dest.user_role_id, opt => opt.MapFrom(src => src.role_id));
+
+            CreateMap<UserAccountDTO, user_account>()
+                .ForMember(dest => dest.role_id, opt => opt.MapFrom(src => src.user_role_id));
 
             CreateMap<ProductParentDTO, product_parent>();
             CreateMap<product_parent, ProductParentDTO>();
