@@ -220,6 +220,7 @@ namespace Nike_Shop_Management.GUI
             {
                 List<ProductColorsDTO> productDTOs = ppM.GetProductColors(productParent.product_parent_id);
                 u_PictureBox.LoadImgFromUrl(productParent.thumbnail);
+                u_PictureBox.PathThumbail = productParent.thumbnail;
                 txProductPrice.Text = productParent.product_price.ToString();
                 txProductName.Text = productParent.product_parent_name.ToString();
                 lbl_count_types.Text = productDTOs.Count.ToString();
@@ -250,7 +251,8 @@ namespace Nike_Shop_Management.GUI
             {
                 linkHolder = u_PictureBox.PathThumbail;
             }
-            u_PictureBox.UploadImage(linkHolder);
+      //      linkHolderTemp = u_PictureBox.PathThumbail;
+            u_PictureBox.UploadImage(u_PictureBox.PathThumbail);
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
