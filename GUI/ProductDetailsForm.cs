@@ -20,6 +20,7 @@ namespace Nike_Shop_Management.GUI
         ProductColorManager pcM = new ProductColorManager();
         public int Product_id { get; set; }
         public int ProductParentID { get; set; }
+        List<ProductImgDTO> listImg;
         List<GetTheSizeProductCurrentResult> listSize;
         public ProductDetailsForm()
         {
@@ -145,8 +146,33 @@ namespace Nike_Shop_Management.GUI
                 tx_description2.Text = productColorsDTO.product_description2;
                 tx_more_info.Text = productColorsDTO.product_more_info;
        
+              listImg = new ProductImgManager().getByID(productColorsDTO.product_id);
+                if(listImg.Count>0)
+                {
+                    PaintImg();
+                }
             }
-            flag = true;
+             flag = true;
+        }
+        public void PaintImg()
+        {
+            panel_anh_detail.Controls.Clear();
+            foreach (var item in listImg)
+            {
+                u_pictureBoxDetail u_temp = new u_pictureBoxDetail();
+                u_temp.PathThumbail = item.product_img_file_name;
+                u_temp.LoadImgFromUrl(item.product_img_file_name);
+                if (panel_anh_detail.Controls.Count > 0)
+                {
+                    Control lastControl = panel_anh_detail.Controls[panel_anh_detail.Controls.Count - 1];
+                    u_temp.Location = new Point(lastControl.Location.X, lastControl.Location.Y + lastControl.Height);
+                }
+                else
+                {
+                    u_temp.Location = new Point(10, 10);
+                }
+                panel_anh_detail.Controls.Add(u_temp);
+            }
         }
         public void PaintData(int product_parent_id)
         {

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using LibConstants;
 using static System.Windows.Forms.CheckedListBox;
+using System.Drawing;
 
 namespace Nike_Shop_Management.GUI
 {
@@ -18,8 +19,60 @@ namespace Nike_Shop_Management.GUI
             InitializeComponent();
             InitData();
             btnAdd.Click += BtnAdd_Click;
+            btnAddMoreImg.Click += BtnAddMoreImg_Click;
         }
 
+        private void BtnAddMoreImg_Click(object sender, EventArgs e)
+        {
+            if (panel_anh_detail.Controls.Count >= 5)
+            {
+                MessageBox.Show("Bạn chỉ được thêm tối đa 5 hình.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+                 panel_anh_detail.AutoScroll = true;
+
+                u_pictureBoxDetail u_temp = new u_pictureBoxDetail();
+                u_temp.Name = $"pictureBox_{panel_anh_detail.Controls.Count + 1}";
+                u_temp.Padding = Padding.Empty;
+                if (panel_anh_detail.Controls.Count > 0)
+                {
+                    Control lastControl = panel_anh_detail.Controls[panel_anh_detail.Controls.Count - 1];
+                    u_temp.Location = new Point(lastControl.Location.X, lastControl.Location.Y + lastControl.Height);
+                }
+                else
+                {
+                    u_temp.Location = new Point(10, 10);
+                }
+
+                u_temp.DeleteClicked += U_temp_DeleteClicked;
+
+                panel_anh_detail.Controls.Add(u_temp);
+           }
+          
+        
+
+        private void U_temp_DeleteClicked(object sender, EventArgs e)
+        {
+            if (sender is u_pictureBoxDetail u_temp)
+            {
+                panel_anh_detail.Controls.Remove(u_temp);
+                UpdateLocation(); // Cập nhật vị trí sau khi xóa
+            }
+        }
+
+        public void UpdateLocation()
+        {
+            int startX = 10;
+            int startY = 10;
+
+            for (int i = 0; i < panel_anh_detail.Controls.Count; i++)
+            {
+                Control control = panel_anh_detail.Controls[i];
+                control.Location = new Point(startX, startY + i * (control.Height));
+             
+            }
+        }
         private void BtnAdd_Click(object sender, EventArgs e)
         {
 
@@ -143,6 +196,27 @@ namespace Nike_Shop_Management.GUI
                         break;
                     }
                 }
+                ProductImgManager pIM = new ProductImgManager();
+
+                foreach (var item in panel_anh_detail.Controls)
+                {
+                    if(item is u_pictureBoxDetail)
+                    {
+                        u_pictureBoxDetail temp = (u_pictureBoxDetail)item;
+                        ProductImgDTO imgDTO = new ProductImgDTO();
+                        temp.UploadImage(temp.PathThumbail);
+                        imgDTO.product_id = productColorsDTO.product_id;
+                        string fileNameWithoutExtensionT = System.IO.Path.GetFileNameWithoutExtension(u_PictureBox.PathThumbail);
+                        string linkHolderT = "Nike-application/" + fileNameWithoutExtensionT;
+                        imgDTO.product_img_file_name = linkHolderT;
+                        if(pIM.Add(imgDTO)==0)
+                        {
+                            MessageBox.Show("Thêm thất bại");
+                            return;
+                        }
+                    }
+                }
+
                 if (flagTotal)
                 {
                     MessageBox.Show("Thêm thành công");

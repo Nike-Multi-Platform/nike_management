@@ -59,6 +59,7 @@
     <Compile Include="ProductCategoriesManager.cs" />
     <Compile Include="ProductColorManager.cs" />
     <Compile Include="ProductIconsManager.cs" />
+    <Compile Include="ProductImgManager.cs" />
     <Compile Include="ProductObjectManager.cs" />
     <Compile Include="ProductParentManager.cs" />
     <Compile Include="ProductSizeManager.cs" />
