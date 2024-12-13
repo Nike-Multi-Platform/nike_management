@@ -35,6 +35,7 @@
             this.txt_phone = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cbb_gender = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_address = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -61,7 +62,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSearch = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txt_search = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -161,6 +161,15 @@
             this.cbb_gender.Name = "cbb_gender";
             this.cbb_gender.Size = new System.Drawing.Size(177, 25);
             this.cbb_gender.TabIndex = 18;
+            // 
+            // u_PictureBox1
+            // 
+            this.u_PictureBox1.Location = new System.Drawing.Point(64, 63);
+            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.u_PictureBox1.Name = "u_PictureBox1";
+            this.u_PictureBox1.PathThumbail = null;
+            this.u_PictureBox1.Size = new System.Drawing.Size(176, 207);
+            this.u_PictureBox1.TabIndex = 17;
             // 
             // kryptonLabel11
             // 
@@ -314,7 +323,17 @@
             this.btn_save.Location = new System.Drawing.Point(0, 0);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(166, 67);
+            this.btn_save.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_save.StateCommon.Back.Color2 = System.Drawing.Color.Aqua;
+            this.btn_save.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassNormalStump;
+            this.btn_save.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterLeft;
+            this.btn_save.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_save.StateCommon.Border.Rounding = 10;
+            this.btn_save.StateCommon.Border.Width = 1;
             this.btn_save.TabIndex = 0;
+            this.btn_save.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_save_30;
             this.btn_save.Values.Text = "Lưu";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
@@ -333,7 +352,15 @@
             this.btn_resetPassword.Location = new System.Drawing.Point(0, 0);
             this.btn_resetPassword.Name = "btn_resetPassword";
             this.btn_resetPassword.Size = new System.Drawing.Size(143, 67);
+            this.btn_resetPassword.StateCommon.Back.Color1 = System.Drawing.Color.Lime;
+            this.btn_resetPassword.StateCommon.Back.Color2 = System.Drawing.Color.Lime;
+            this.btn_resetPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_resetPassword.StateCommon.Border.Rounding = 10;
+            this.btn_resetPassword.StateCommon.Border.Width = 1;
             this.btn_resetPassword.TabIndex = 0;
+            this.btn_resetPassword.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_info_30;
             this.btn_resetPassword.Values.Text = "Đặt lại mật khẩu";
             this.btn_resetPassword.Click += new System.EventHandler(this.btn_resetPassword_Click);
             // 
@@ -386,28 +413,28 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(408, 22);
+            this.btnSearch.Location = new System.Drawing.Point(400, 12);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(91, 37);
+            this.btnSearch.Size = new System.Drawing.Size(96, 37);
+            this.btnSearch.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSearch.StateCommon.Border.Rounding = 5;
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Values.Text = "Tìm";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(11, 22);
+            this.txt_search.Location = new System.Drawing.Point(3, 16);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(391, 27);
+            this.txt_search.Size = new System.Drawing.Size(391, 33);
+            this.txt_search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txt_search.StateCommon.Border.Rounding = 10;
             this.txt_search.TabIndex = 0;
-            // 
-            // u_PictureBox1
-            // 
-            this.u_PictureBox1.Location = new System.Drawing.Point(64, 63);
-            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.u_PictureBox1.Name = "u_PictureBox1";
-            this.u_PictureBox1.PathThumbail = null;
-            this.u_PictureBox1.Size = new System.Drawing.Size(176, 207);
-            this.u_PictureBox1.TabIndex = 17;
             // 
             // CustomerAccountManagementForm
             // 

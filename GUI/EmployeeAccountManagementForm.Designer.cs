@@ -36,6 +36,7 @@
             this.kryptonLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cbb_gender = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             this.txt_address = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_email = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -65,7 +66,6 @@
             this.btn_edit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_delete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.u_PictureBox1 = new Nike_Shop_Management.u_PictureBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_user)).BeginInit();
@@ -182,6 +182,15 @@
             this.cbb_gender.Size = new System.Drawing.Size(213, 25);
             this.cbb_gender.TabIndex = 18;
             // 
+            // u_PictureBox1
+            // 
+            this.u_PictureBox1.Location = new System.Drawing.Point(142, 44);
+            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.u_PictureBox1.Name = "u_PictureBox1";
+            this.u_PictureBox1.PathThumbail = null;
+            this.u_PictureBox1.Size = new System.Drawing.Size(177, 235);
+            this.u_PictureBox1.TabIndex = 17;
+            // 
             // txt_address
             // 
             this.txt_address.Location = new System.Drawing.Point(884, 162);
@@ -238,7 +247,7 @@
             // 
             // txt_lastname
             // 
-            this.txt_lastname.Location = new System.Drawing.Point(530, 215);
+            this.txt_lastname.Location = new System.Drawing.Point(530, 209);
             this.txt_lastname.Name = "txt_lastname";
             this.txt_lastname.Size = new System.Drawing.Size(163, 27);
             this.txt_lastname.TabIndex = 8;
@@ -283,7 +292,6 @@
             // 
             // txt_id
             // 
-            this.txt_id.Enabled = false;
             this.txt_id.Location = new System.Drawing.Point(530, 40);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(163, 27);
@@ -293,9 +301,9 @@
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(389, 43);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(30, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(107, 24);
             this.kryptonLabel2.TabIndex = 1;
-            this.kryptonLabel2.Values.Text = "ID:";
+            this.kryptonLabel2.Values.Text = "Mã nhân viên:";
             // 
             // kryptonLabel1
             // 
@@ -354,18 +362,28 @@
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(440, 3);
+            this.btn_search.Location = new System.Drawing.Point(458, 3);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(134, 36);
+            this.btn_search.Size = new System.Drawing.Size(116, 36);
+            this.btn_search.StateCommon.Back.Color1 = System.Drawing.Color.Silver;
+            this.btn_search.StateCommon.Back.Color2 = System.Drawing.Color.Silver;
+            this.btn_search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_search.StateCommon.Border.Rounding = 10;
             this.btn_search.TabIndex = 1;
             this.btn_search.Values.Text = "Tìm";
             this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(3, 3);
+            this.txt_search.Location = new System.Drawing.Point(3, 6);
             this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(431, 27);
+            this.txt_search.Size = new System.Drawing.Size(449, 33);
+            this.txt_search.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txt_search.StateCommon.Border.Rounding = 10;
             this.txt_search.TabIndex = 0;
             // 
             // panel2
@@ -394,8 +412,11 @@
             this.btn_add.Location = new System.Drawing.Point(0, 0);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(146, 39);
+            this.btn_add.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btn_add.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.btn_add.TabIndex = 0;
-            this.btn_add.Values.Text = "Thêm nhân viên";
+            this.btn_add.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_add_30;
+            this.btn_add.Values.Text = "Thêm";
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // panel6
@@ -413,7 +434,10 @@
             this.btn_edit.Location = new System.Drawing.Point(0, 0);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(140, 39);
+            this.btn_edit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.btn_edit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
             this.btn_edit.TabIndex = 0;
+            this.btn_edit.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_edit_30;
             this.btn_edit.Values.Text = "Cập nhật";
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
@@ -432,18 +456,12 @@
             this.btn_delete.Location = new System.Drawing.Point(0, 0);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(122, 39);
+            this.btn_delete.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btn_delete.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.btn_delete.TabIndex = 0;
+            this.btn_delete.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_delete_30;
             this.btn_delete.Values.Text = "Xóa";
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
-            // 
-            // u_PictureBox1
-            // 
-            this.u_PictureBox1.Location = new System.Drawing.Point(142, 44);
-            this.u_PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.u_PictureBox1.Name = "u_PictureBox1";
-            this.u_PictureBox1.PathThumbail = null;
-            this.u_PictureBox1.Size = new System.Drawing.Size(177, 235);
-            this.u_PictureBox1.TabIndex = 17;
             // 
             // EmployeeAccountManagementForm
             // 

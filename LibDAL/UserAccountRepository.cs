@@ -33,9 +33,28 @@ namespace LibDAL
         public UserAccountDTO GetAccount(string email, string password)
         {
             //return objectMapper.AccountMapperToEnity(_db.user_accounts.Where(o => o.user_email == email && o.user_password == password).FirstOrDefault());
-            user_account u = _db.user_accounts.Where(o => o.user_email == email && o.user_id == password).FirstOrDefault();
+            user_account u = _db.user_accounts.Where(o => o.user_email == email && o.password == password).FirstOrDefault();
             return AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(u);
         }
+
+        public int Login(string username, string password)
+        {
+            try
+            {
+                var user = _db.user_accounts
+                    .FirstOrDefault(o => o.user_username == username
+                                         && o.password == password
+                                         && (o.role_id == 3 || o.role_id == 2));
+
+                return user != null ? 1 : 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred during login: {ex.Message}");
+                return -1;
+            }
+        }
+
         public List<UserAccountDTO> GetListAccounts()
         {
             List<UserAccountDTO> l = _db.user_accounts.Select(emp => AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(emp)).ToList();
@@ -98,7 +117,7 @@ namespace LibDAL
                                             user.user_phone_number.Contains(inputSearch) ||
                                             user.user_address.Contains(inputSearch) ||
                                             user.user_first_name.Contains(inputSearch) ||
-                                            user.user_last_name.Contains(inputSearch) ).ToList().Select(o => AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(o)).ToList();
+                                            user.user_last_name.Contains(inputSearch)).ToList().Select(o => AutoMapperConfig.Mapper.Map<user_account, UserAccountDTO>(o)).ToList();
 
                 if (result != null)
                 {
