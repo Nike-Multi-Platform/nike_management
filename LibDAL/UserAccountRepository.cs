@@ -54,12 +54,13 @@ namespace LibDAL
                 var existingUser = _db.user_accounts.FirstOrDefault(u => u.user_id == user.user_id);
                 if (existingUser != null)
                 {
-                    existingUser.user_first_name = user.user_username;
-                    existingUser.user_last_name = user.user_email;
+                    existingUser.user_first_name = user.user_first_name;
+                    existingUser.user_last_name = user.user_last_name;
                     existingUser.password = user.user_password;
                     existingUser.user_gender = user.user_gender;
                     existingUser.user_address = user.user_address;
                     existingUser.user_url = user.user_url;
+                    existingUser.user_phone_number = user.user_phone_number;
                     _db.SubmitChanges();
                     return 1;
                 }
@@ -111,7 +112,6 @@ namespace LibDAL
                 return null;
             }
         }
-
 
     }
 }

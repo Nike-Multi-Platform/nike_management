@@ -9,6 +9,10 @@ namespace LibBLL
     {
         private readonly UserAccountRepository _accountRepository;
 
+        public UserAccountManager()
+        { 
+        }
+
         public UserAccountManager(UserAccountRepository accountRepository)
         {
             _accountRepository = accountRepository;
@@ -19,10 +23,10 @@ namespace LibBLL
         /// <param name="user"></param>
         /// <returns>1 nếu thành công, 0 thì thêm thất bại liên hệ thằng Vinh debug cho</returns>
         /// 
-        public UserAccountManager()
+/*        public UserAccountManager()
         {
             _accountRepository = new UserAccountRepository(new DbContextDataContext());
-        }
+        }*/
         public int InsertUser(UserAccountDTO user)
         {
             // logic here!
@@ -148,5 +152,6 @@ namespace LibBLL
         {
             throw new NotImplementedException();
         }
+
     }
 }

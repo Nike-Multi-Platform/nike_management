@@ -9,7 +9,7 @@
         private string gender;
         private string email;
         private string phone_number, address, first_name, last_name, url;
-
+        private int role_id;
         public string user_id { get => id; set => id = value; }
         public string user_username { get => username; set => username = value; }
         public string user_password { get => password; set => password = value; }
@@ -20,7 +20,7 @@
         public string user_first_name { get => first_name; set => first_name = value; }
         public string user_last_name { get => last_name; set => last_name = value; }
         public string user_url { get => url; set => url = value; }
-
+        public int user_role_id { get => role_id; set => role_id = value; }
 
     }
 }

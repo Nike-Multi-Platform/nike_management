@@ -288,7 +288,7 @@
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(313, 133);
+            this.kryptonLabel12.Location = new System.Drawing.Point(300, 133);
             this.kryptonLabel12.Name = "kryptonLabel12";
             this.kryptonLabel12.Size = new System.Drawing.Size(105, 27);
             this.kryptonLabel12.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
@@ -355,7 +355,7 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(313, 97);
+            this.kryptonLabel5.Location = new System.Drawing.Point(300, 97);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(106, 27);
             this.kryptonLabel5.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
@@ -366,7 +366,7 @@
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(313, 66);
+            this.kryptonLabel6.Location = new System.Drawing.Point(300, 66);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(118, 27);
             this.kryptonLabel6.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
@@ -377,7 +377,7 @@
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(313, 33);
+            this.kryptonLabel7.Location = new System.Drawing.Point(300, 33);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(109, 27);
             this.kryptonLabel7.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
