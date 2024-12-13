@@ -74,6 +74,7 @@
     <Compile Include="ProductCategoriesRepository.cs" />
     <Compile Include="ProductColorRepository.cs" />
     <Compile Include="ProductIconsRepository.cs" />
+    <Compile Include="ProductImgRepository.cs" />
     <Compile Include="ProductObjectRepository.cs" />
     <Compile Include="ProductParentRepository.cs" />
     <Compile Include="ProductSizeRepository.cs" />
