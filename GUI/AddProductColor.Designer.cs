@@ -51,7 +51,10 @@ namespace Nike_Shop_Management.GUI
             this.u_PictureBox = new Nike_Shop_Management.u_PictureBox();
             this.cancelButton1 = new Nike_Shop_Management.CustomControl.CancelButton();
             this.txSalePrices = new Nike_Shop_Management.CustomControl.PriceTextBox();
+            this.btnAddMoreImg = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panel_anh_detail = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.comboSupplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panel_anh_detail)).BeginInit();
             this.SuspendLayout();
             // 
             // backgroundWorker1
@@ -61,7 +64,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // tx_description2
             // 
-            this.tx_description2.Location = new System.Drawing.Point(515, 219);
+            this.tx_description2.Location = new System.Drawing.Point(755, 180);
             this.tx_description2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_description2.Name = "tx_description2";
             this.tx_description2.Size = new System.Drawing.Size(237, 180);
@@ -70,7 +73,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // tx_description
             // 
-            this.tx_description.Location = new System.Drawing.Point(232, 219);
+            this.tx_description.Location = new System.Drawing.Point(472, 180);
             this.tx_description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_description.Name = "tx_description";
             this.tx_description.Size = new System.Drawing.Size(233, 180);
@@ -79,7 +82,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // txStylecode
             // 
-            this.txStylecode.Location = new System.Drawing.Point(419, 491);
+            this.txStylecode.Location = new System.Drawing.Point(659, 452);
             this.txStylecode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txStylecode.Name = "txStylecode";
             this.txStylecode.Size = new System.Drawing.Size(211, 27);
@@ -87,7 +90,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // txSizeAndFit
             // 
-            this.txSizeAndFit.Location = new System.Drawing.Point(419, 546);
+            this.txSizeAndFit.Location = new System.Drawing.Point(659, 507);
             this.txSizeAndFit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSizeAndFit.Name = "txSizeAndFit";
             this.txSizeAndFit.Size = new System.Drawing.Size(211, 27);
@@ -96,7 +99,7 @@ namespace Nike_Shop_Management.GUI
             // comboSupplier
             // 
             this.comboSupplier.DropDownWidth = 208;
-            this.comboSupplier.Location = new System.Drawing.Point(915, 67);
+            this.comboSupplier.Location = new System.Drawing.Point(1155, 28);
             this.comboSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboSupplier.Name = "comboSupplier";
             this.comboSupplier.Size = new System.Drawing.Size(213, 25);
@@ -104,7 +107,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // tx_more_info
             // 
-            this.tx_more_info.Location = new System.Drawing.Point(232, 67);
+            this.tx_more_info.Location = new System.Drawing.Point(472, 28);
             this.tx_more_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tx_more_info.Name = "tx_more_info";
             this.tx_more_info.Size = new System.Drawing.Size(521, 101);
@@ -113,7 +116,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(955, 620);
+            this.btnAdd.Location = new System.Drawing.Point(1195, 581);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(161, 44);
@@ -134,7 +137,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel12
             // 
-            this.kryptonLabel12.Location = new System.Drawing.Point(789, 67);
+            this.kryptonLabel12.Location = new System.Drawing.Point(1029, 28);
             this.kryptonLabel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel12.Name = "kryptonLabel12";
             this.kryptonLabel12.Size = new System.Drawing.Size(119, 27);
@@ -146,7 +149,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(541, 187);
+            this.kryptonLabel7.Location = new System.Drawing.Point(781, 148);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel7.Name = "kryptonLabel7";
             this.kryptonLabel7.Size = new System.Drawing.Size(72, 27);
@@ -158,7 +161,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(217, 187);
+            this.kryptonLabel8.Location = new System.Drawing.Point(457, 148);
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel8.Name = "kryptonLabel8";
             this.kryptonLabel8.Size = new System.Drawing.Size(72, 27);
@@ -170,7 +173,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(232, 434);
+            this.kryptonLabel9.Location = new System.Drawing.Point(472, 395);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
             this.kryptonLabel9.Size = new System.Drawing.Size(139, 27);
@@ -182,7 +185,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // txColorShown
             // 
-            this.txColorShown.Location = new System.Drawing.Point(419, 434);
+            this.txColorShown.Location = new System.Drawing.Point(659, 395);
             this.txColorShown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txColorShown.Name = "txColorShown";
             this.txColorShown.Size = new System.Drawing.Size(211, 27);
@@ -190,7 +193,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(789, 127);
+            this.kryptonLabel6.Location = new System.Drawing.Point(1029, 88);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel6.Name = "kryptonLabel6";
             this.kryptonLabel6.Size = new System.Drawing.Size(71, 27);
@@ -202,7 +205,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(232, 491);
+            this.kryptonLabel3.Location = new System.Drawing.Point(472, 452);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(117, 27);
@@ -214,7 +217,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(232, 546);
+            this.kryptonLabel2.Location = new System.Drawing.Point(472, 507);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(164, 27);
@@ -226,7 +229,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // lbl_
             // 
-            this.lbl_.Location = new System.Drawing.Point(217, 27);
+            this.lbl_.Location = new System.Drawing.Point(457, -12);
             this.lbl_.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbl_.Name = "lbl_";
             this.lbl_.Size = new System.Drawing.Size(131, 27);
@@ -238,7 +241,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(789, 186);
+            this.kryptonLabel1.Location = new System.Drawing.Point(1029, 147);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(68, 27);
@@ -250,7 +253,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // checked_list_Size
             // 
-            this.checked_list_Size.Location = new System.Drawing.Point(797, 219);
+            this.checked_list_Size.Location = new System.Drawing.Point(1037, 180);
             this.checked_list_Size.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checked_list_Size.Name = "checked_list_Size";
             this.checked_list_Size.Size = new System.Drawing.Size(319, 179);
@@ -258,7 +261,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // u_PictureBox
             // 
-            this.u_PictureBox.Location = new System.Drawing.Point(11, 90);
+            this.u_PictureBox.Location = new System.Drawing.Point(30, 28);
             this.u_PictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.u_PictureBox.Name = "u_PictureBox";
             this.u_PictureBox.PathThumbail = null;
@@ -268,7 +271,7 @@ namespace Nike_Shop_Management.GUI
             // 
             // cancelButton1
             // 
-            this.cancelButton1.Location = new System.Drawing.Point(767, 621);
+            this.cancelButton1.Location = new System.Drawing.Point(1007, 582);
             this.cancelButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancelButton1.Name = "cancelButton1";
             this.cancelButton1.Size = new System.Drawing.Size(137, 42);
@@ -288,17 +291,36 @@ namespace Nike_Shop_Management.GUI
             // 
             // txSalePrices
             // 
-            this.txSalePrices.Location = new System.Drawing.Point(915, 124);
+            this.txSalePrices.Location = new System.Drawing.Point(1155, 85);
             this.txSalePrices.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txSalePrices.Name = "txSalePrices";
             this.txSalePrices.Size = new System.Drawing.Size(213, 27);
             this.txSalePrices.TabIndex = 76;
             // 
+            // btnAddMoreImg
+            // 
+            this.btnAddMoreImg.Location = new System.Drawing.Point(37, 630);
+            this.btnAddMoreImg.Name = "btnAddMoreImg";
+            this.btnAddMoreImg.Size = new System.Drawing.Size(178, 70);
+            this.btnAddMoreImg.TabIndex = 1;
+            this.btnAddMoreImg.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_add_30;
+            this.btnAddMoreImg.Values.Text = "";
+            // 
+            // panel_anh_detail
+            // 
+            this.panel_anh_detail.AutoScroll = true;
+            this.panel_anh_detail.Location = new System.Drawing.Point(30, 273);
+            this.panel_anh_detail.Name = "panel_anh_detail";
+            this.panel_anh_detail.Size = new System.Drawing.Size(413, 351);
+            this.panel_anh_detail.TabIndex = 77;
+            // 
             // AddProductColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 697);
+            this.ClientSize = new System.Drawing.Size(1397, 697);
+            this.Controls.Add(this.btnAddMoreImg);
+            this.Controls.Add(this.panel_anh_detail);
             this.Controls.Add(this.txSalePrices);
             this.Controls.Add(this.cancelButton1);
             this.Controls.Add(this.checked_list_Size);
@@ -326,6 +348,7 @@ namespace Nike_Shop_Management.GUI
             this.Text = "AddProductColor";
             this.Load += new System.EventHandler(this.AddProductColor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.comboSupplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panel_anh_detail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +378,7 @@ namespace Nike_Shop_Management.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonCheckedListBox checked_list_Size;
         private CustomControl.CancelButton cancelButton1;
         private CustomControl.PriceTextBox txSalePrices;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddMoreImg;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel panel_anh_detail;
     }
 }

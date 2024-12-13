@@ -270,6 +270,12 @@
     <Compile Include="GUI\VoucherManagementForm.Designer.cs">
       <DependentUpon>VoucherManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="u_pictureBoxDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="u_pictureBoxDetail.Designer.cs">
+      <DependentUpon>u_pictureBoxDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="U_ProductParent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\VoucherManagementForm.resx">
       <DependentUpon>VoucherManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="u_pictureBoxDetail.resx">
+      <DependentUpon>u_pictureBoxDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="U_ProductParent.resx">
       <DependentUpon>U_ProductParent.cs</DependentUpon>
