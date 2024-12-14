@@ -24,9 +24,9 @@ namespace LibDAL
                 _db.SubmitChanges();
                 return 1;
             }
-            catch (Exception)
+            catch (Exception e )
             {
-
+                throw e;
                 return 0;
             }
         }
@@ -51,9 +51,10 @@ namespace LibDAL
                     _db.SubmitChanges();
                     return 1;
                 }
+
                 else
                 {
-                    return 0;
+                    return Add(img);
                 }
 
             }

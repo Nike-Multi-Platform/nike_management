@@ -31,7 +31,7 @@ namespace LibDAL
                            var userOrderStatus = _db.user_order_status.FirstOrDefault(status => status.user_order_status_id == userOrderDto.User_order_status_id);
                            userOrderDto.UserOrderStatusDTO = AutoMapperConfig.Mapper.Map<user_order_status, UserOrderStatusDTO>(userOrderStatus);
                            return userOrderDto;
-                       })
+                       }).OrderByDescending(t => t.CreatedAt)
                        .ToList();
         }
 

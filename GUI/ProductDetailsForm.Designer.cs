@@ -66,6 +66,7 @@ namespace Nike_Shop_Management.GUI
             this.u_PictureBox = new Nike_Shop_Management.u_PictureBox();
             this.lblQuality = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel_anh_detail = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnAddMoreImg = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.comboSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel_anh_detail)).BeginInit();
@@ -458,11 +459,21 @@ namespace Nike_Shop_Management.GUI
             this.panel_anh_detail.Size = new System.Drawing.Size(228, 351);
             this.panel_anh_detail.TabIndex = 81;
             // 
+            // btnAddMoreImg
+            // 
+            this.btnAddMoreImg.Location = new System.Drawing.Point(12, 648);
+            this.btnAddMoreImg.Name = "btnAddMoreImg";
+            this.btnAddMoreImg.Size = new System.Drawing.Size(178, 70);
+            this.btnAddMoreImg.TabIndex = 82;
+            this.btnAddMoreImg.Values.Image = global::Nike_Shop_Management.Properties.Resources.icons8_add_30;
+            this.btnAddMoreImg.Values.Text = "";
+            // 
             // ProductDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1568, 709);
+            this.ClientSize = new System.Drawing.Size(1568, 724);
+            this.Controls.Add(this.btnAddMoreImg);
             this.Controls.Add(this.panel_anh_detail);
             this.Controls.Add(this.lblQuality);
             this.Controls.Add(this.btnEditSize);
@@ -545,5 +556,6 @@ namespace Nike_Shop_Management.GUI
         private Button btnEditSize;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblQuality;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel panel_anh_detail;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddMoreImg;
     }
 }
