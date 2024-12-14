@@ -30,27 +30,30 @@ namespace Nike_Shop_Management.GUI
                 return;
             }
 
-                 panel_anh_detail.AutoScroll = true;
+            u_pictureBoxDetail u_temp = new u_pictureBoxDetail
+            {
+                Name = $"pictureBox_{panel_anh_detail.Controls.Count + 1}",
+                Padding = Padding.Empty
+            };
 
-                u_pictureBoxDetail u_temp = new u_pictureBoxDetail();
-                u_temp.Name = $"pictureBox_{panel_anh_detail.Controls.Count + 1}";
-                u_temp.Padding = Padding.Empty;
-                if (panel_anh_detail.Controls.Count > 0)
-                {
-                    Control lastControl = panel_anh_detail.Controls[panel_anh_detail.Controls.Count - 1];
-                    u_temp.Location = new Point(lastControl.Location.X, lastControl.Location.Y + lastControl.Height);
-                }
-                else
-                {
-                    u_temp.Location = new Point(10, 10);
-                }
+            int startX = 10;
+            int startY = 10;
 
-                u_temp.DeleteClicked += U_temp_DeleteClicked;
+            if (panel_anh_detail.Controls.Count > 0)
+            {
+                Control lastControl = panel_anh_detail.Controls[panel_anh_detail.Controls.Count - 1];
 
-                panel_anh_detail.Controls.Add(u_temp);
-           }
-          
-        
+                startY = lastControl.Location.Y + lastControl.Height + 5;
+            }
+
+            u_temp.Location = new Point(startX, startY);
+
+            u_temp.DeleteClicked += U_temp_DeleteClicked;
+            panel_anh_detail.Controls.Add(u_temp);
+        }
+
+
+
 
         private void U_temp_DeleteClicked(object sender, EventArgs e)
         {

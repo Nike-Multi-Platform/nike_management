@@ -17,6 +17,7 @@ namespace Nike_Shop_Management
         public int flag = 0;
         CloudIService CloudIService;
         ServiceConfig ServiceConfig;
+        public int product_img_id;
         public u_pictureBoxDetail()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Nike_Shop_Management
         }
 
         public string PathThumbail { get; set; }
+        public event EventHandler EditedClick;
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog()
@@ -38,8 +40,9 @@ namespace Nike_Shop_Management
                 Picture.Image = Image.FromFile(openFileDialog.FileName);
                 PathThumbail = Path.GetFullPath(openFileDialog.FileName);
                 //CloudIService.UploadImage()
-            //    ClickChanged?.Invoke(sender, EventArgs.Empty);
+                //    ClickChanged?.Invoke(sender, EventArgs.Empty);
             }
+            EditedClick?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>

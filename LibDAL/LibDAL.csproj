@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
-      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+      <HintPath>..\MappingLayer\bin\Debug\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="LibConstants">
       <HintPath>..\LibConstants\bin\Debug\LibConstants.dll</HintPath>
