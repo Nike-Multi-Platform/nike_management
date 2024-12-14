@@ -80,7 +80,15 @@ namespace Nike_Shop_Management.DAL
         {
             productParentDTO = productParent;
             lbl_product_name.Text = productParent.product_parent_name;
-            lbl_price.Text = productParent.product_price;
+            if (decimal.TryParse(productParentDTO.product_price, out decimal price))
+            {
+                string formatVND = string.Format("{0:#,##0}", price);
+                lbl_price.Text = formatVND + " VND";
+            }
+            else
+            {
+                lbl_price.Text = productParentDTO.product_price;
+            }
             LoadImgFromUrl(productParent.thumbnail);
         }
         public void LoadImgFromUrl(string path)
