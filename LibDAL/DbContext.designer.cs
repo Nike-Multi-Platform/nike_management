@@ -6594,7 +6594,7 @@ namespace LibDAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_gender", DbType="NVarChar(5) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_user_gender", DbType="NVarChar(6) NOT NULL", CanBeNull=false)]
 		public string user_gender
 		{
 			get

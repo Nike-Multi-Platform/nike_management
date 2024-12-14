@@ -22,6 +22,9 @@ namespace Nike_Shop_Management.GUI
         public int ProductParentID { get; set; }
         List<ProductImgDTO> listImg;
         List<GetTheSizeProductCurrentResult> listSize;
+        List<ProductImgDTO> listTemp = new List<ProductImgDTO>();
+        List<u_pictureBoxDetail> listU_Img = new List<u_pictureBoxDetail>();
+        List<ProductImgDTO> listRemoveImg = new List<ProductImgDTO>();
         public ProductDetailsForm()
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace Nike_Shop_Management.GUI
 
         private void BtnEditSize_Click(object sender, EventArgs e)
         {
-            if(listView1.SelectedItems.Count > 0)
+            if (listView1.SelectedItems.Count > 0)
             {
                 EditProductSizeForm edit = new EditProductSizeForm();
                 TypeSize typeSize = pcM.GetTypeSize(ProductParentID);
@@ -47,8 +50,8 @@ namespace Nike_Shop_Management.GUI
                 MessageBox.Show("CHua chon sp");
                 return;
             }
-          
-            
+
+
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace Nike_Shop_Management.GUI
                         pcM.DeleteProductSize(item.product_size_id);
                     }
                     int flag = pcM.Delete(Product_id);
-                    if(flag==1)
+                    if (flag == 1)
                     {
                         MessageBox.Show("Deleted");
                         return;
@@ -82,7 +85,9 @@ namespace Nike_Shop_Management.GUI
             TypeSize typeSize = pcM.GetTypeSize(ProductParentID);
             ad.SetConditionSize(typeSize);
             ad.ProductParentID = ProductParentID;
+            this.Hide();
             ad.ShowDialog();
+            this.Close();
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
@@ -115,6 +120,7 @@ namespace Nike_Shop_Management.GUI
             {
                 ListViewItem selectedItem = listView1.SelectedItems[0];
                 u_PictureBox.LoadImgFromUrl(selectedItem.SubItems[1].Text);
+                u_PictureBox.PathThumbail = selectedItem.SubItems[1].Text;
                 BindingData(int.Parse(listView1.SelectedItems[0].Text), int.Parse(selectedItem.SubItems[2].Text));
             }
         }
@@ -145,35 +151,100 @@ namespace Nike_Shop_Management.GUI
                 tx_description.Text = productColorsDTO.product_description;
                 tx_description2.Text = productColorsDTO.product_description2;
                 tx_more_info.Text = productColorsDTO.product_more_info;
-       
-              listImg = new ProductImgManager().getByID(productColorsDTO.product_id);
-                if(listImg.Count>0)
+
+                listImg = new ProductImgManager().getByID(productColorsDTO.product_id);
+                if (listImg.Count > 0)
                 {
                     PaintImg();
                 }
             }
-             flag = true;
+            flag = true;
         }
         public void PaintImg()
         {
             panel_anh_detail.Controls.Clear();
+            int startX = 10;
+            int startY = 10;
             foreach (var item in listImg)
             {
-                u_pictureBoxDetail u_temp = new u_pictureBoxDetail();
-                u_temp.PathThumbail = item.product_img_file_name;
+                u_pictureBoxDetail u_temp = new u_pictureBoxDetail
+                {
+                    PathThumbail = item.product_img_file_name
+                };
                 u_temp.LoadImgFromUrl(item.product_img_file_name);
-                if (panel_anh_detail.Controls.Count > 0)
-                {
-                    Control lastControl = panel_anh_detail.Controls[panel_anh_detail.Controls.Count - 1];
-                    u_temp.Location = new Point(lastControl.Location.X, lastControl.Location.Y + lastControl.Height);
-                }
-                else
-                {
-                    u_temp.Location = new Point(10, 10);
-                }
+                u_temp.Location = new Point(startX, startY);
+                startY += u_temp.Height + 5;
+                u_temp.DeleteClicked += U_temp_DeleteClicked;
+                u_temp.EditedClick += U_temp_EditedClick;
+                u_temp.Tag = item;
+                u_temp.product_img_id = item.product_img_id;
                 panel_anh_detail.Controls.Add(u_temp);
+
+            }
+
+        }
+
+        private void U_temp_EditedClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var u = sender as u_pictureBoxDetail;
+                if (u == null)
+                {
+                    return;
+                }
+
+                var existImg = listImg.Find(t => t.product_img_id == u.product_img_id);
+               
+                listImg.Remove(existImg);
+                listU_Img.Add(u);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
+
+
+
+        private void U_temp_DeleteClicked(object sender, EventArgs e)
+        {
+            try
+            {
+                var u = sender as u_pictureBoxDetail;
+                if (u == null)
+                {
+                    MessageBox.Show("Error: Invalid control triggered the delete action.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var imgProduct = u.Tag as ProductImgDTO;
+                if (imgProduct == null)
+                {
+                    MessageBox.Show("Error: Unable to identify the image to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                var confirmResult = MessageBox.Show(
+                    "Bạn có chắc chắn muốn xóa hình ảnh này không?",
+                    "Xác nhận xóa",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    listRemoveImg.Add(imgProduct);
+                    listImg.Remove(imgProduct);
+                    PaintImg();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void PaintData(int product_parent_id)
         {
             listView1.Items.Clear();
@@ -228,16 +299,18 @@ namespace Nike_Shop_Management.GUI
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             string fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(u_PictureBox.PathThumbail);
-            string linkHolder = "Nike-application/" + fileNameWithoutExtension;
+             string linkHolder = "Nike-application/" + fileNameWithoutExtension;
             productColorsDTO.product_color_shown = txColorShown.Text;
             productColorsDTO.product_description = tx_description.Text;
             productColorsDTO.product_description2 = tx_description2.Text;
             productColorsDTO.product_img = linkHolder;
             productColorsDTO.product_more_info = tx_more_info.Text;
             productColorsDTO.product_size_and_fit = txSizeAndFit.Text;
-            productColorsDTO.product_style_code = txStylecode.Text;
+            productColorsDTO.product_style_code = txStylecode.Text;        
             productColorsDTO.sale_prices = tx_price.Text;
             productColorsDTO.supplier_id = 1;
+            updateImg();
+            deleteImg();
             int flag = pcM.Update(productColorsDTO);
             if (flag == 1)
             {
@@ -248,7 +321,50 @@ namespace Nike_Shop_Management.GUI
             {
                 MessageBox.Show("failed");
             }
-
+        }
+        public int updateImg()
+        {
+            ProductImgManager pim = new ProductImgManager();
+            if (listU_Img.Count > 0)
+            {
+                foreach (var item in listU_Img)
+                {
+                    item.UploadImage(item.PathThumbail);
+                    string fileNameWithoutExtension = System.IO.Path.GetFileNameWithoutExtension(item.PathThumbail);
+                    string linkHolder = "Nike-application/" + fileNameWithoutExtension;
+                    listTemp.Add(new ProductImgDTO()
+                    {
+                        product_img_id = item.product_img_id,
+                        product_img_file_name = linkHolder
+                    }) ;
+                }
+                if (listTemp.Count > 0)
+                {
+                    foreach (var item in listTemp)
+                    {
+                        if (pim.Update(item) == 0)
+                        {
+                            return -1;
+                        }
+                    }
+                }
+            }
+            return 0;
+        }
+        public int deleteImg()
+        {
+            if(listRemoveImg.Count>0)
+            {
+                ProductImgManager pim = new ProductImgManager();
+                foreach (var item in listRemoveImg)
+                {
+                    if(pim.Delete(item)==0)
+                    {
+                        return -1;
+                    }
+                }
+            }
+            return 0;
         }
     }
 }

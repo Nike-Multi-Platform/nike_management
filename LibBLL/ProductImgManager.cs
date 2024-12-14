@@ -28,5 +28,14 @@ namespace LibBLL
         {
             return productImgRepository.getByIDRef(id);
         }
+
+        public int Update(ProductImgDTO img)
+        {
+            return productImgRepository.Update(img);
+        }
+        public int Delete(ProductImgDTO img)
+        {
+            return productImgRepository.Delete(img);
+        }
     }
 }
