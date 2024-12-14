@@ -20,7 +20,7 @@ namespace Nike_Shop_Management.GUI
         ProductColorManager pcM = new ProductColorManager();
         public int Product_id { get; set; }
         public int ProductParentID { get; set; }
-        List<ProductImgDTO> listImg;
+        List<ProductImgDTO> listImg = new List<ProductImgDTO>();
         List<GetTheSizeProductCurrentResult> listSize;
         List<ProductImgDTO> listTemp = new List<ProductImgDTO>();
         List<u_pictureBoxDetail> listU_Img = new List<u_pictureBoxDetail>();
@@ -34,6 +34,15 @@ namespace Nike_Shop_Management.GUI
             btnDelete.Click += BtnDelete_Click;
             btnEditSize.Click += BtnEditSize_Click;
             comboSize.SelectedValueChanged += ComboSize_SelectedValueChanged;
+            btnAddMoreImg.Click += BtnAddMoreImg_Click;
+        }
+
+        private void BtnAddMoreImg_Click(object sender, EventArgs e)
+        {
+            ProductImgDTO u = new ProductImgDTO();
+            u.product_id = Product_id;
+            listImg.Add(u);
+            PaintImg();
         }
 
         private void BtnEditSize_Click(object sender, EventArgs e)
@@ -309,8 +318,8 @@ namespace Nike_Shop_Management.GUI
             productColorsDTO.product_style_code = txStylecode.Text;        
             productColorsDTO.sale_prices = tx_price.Text;
             productColorsDTO.supplier_id = 1;
-            updateImg();
             deleteImg();
+            updateImg();
             int flag = pcM.Update(productColorsDTO);
             if (flag == 1)
             {
@@ -335,7 +344,8 @@ namespace Nike_Shop_Management.GUI
                     listTemp.Add(new ProductImgDTO()
                     {
                         product_img_id = item.product_img_id,
-                        product_img_file_name = linkHolder
+                        product_img_file_name = linkHolder,
+                        product_id = Product_id
                     }) ;
                 }
                 if (listTemp.Count > 0)
@@ -366,5 +376,6 @@ namespace Nike_Shop_Management.GUI
             }
             return 0;
         }
+
     }
 }
