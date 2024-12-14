@@ -21,8 +21,7 @@ namespace Nike_Shop_Management.GUI
             comboProductObjectFilter.SelectedIndexChanged += ComboProductObjectFilter_SelectedIndexChanged;
             comboProductCategoriesFileter.SelectedIndexChanged += ComboProductCategoriesFileter_SelectedValueChanged;
             ComboSubCategoriesFilter.SelectedIndexChanged += ComboSubCategoriesFilter_SelectedIndexChanged;
-            ComboDateFilter.SelectedIndexChanged += ComboDateFilter_SelectedIndexChanged;
-            comboPriceFilter.SelectedIndexChanged += ComboPriceFilter_SelectedIndexChanged;
+        
             btnEdit.Click += BtnEdit_Click;
             btnShowMore.Click += BtnShowMore_Click;
 
@@ -32,24 +31,9 @@ namespace Nike_Shop_Management.GUI
             panel_product_parent.AutoScroll = true;
         }
 
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {
-            // search thì cx dậy lun nha :< 
+       
 
-        }
-
-        private void ComboPriceFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // code phần sort ở đây nha. ý tưởng là duyệt vào cái panel lấy ra cái danh sách  hoặc là dùng cái list danh sách biến toàn cục để sort
-        }
-
-        private void ComboDateFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // code phần sort ở đây nha. ý tưởng là duyệt vào cái panel lấy ra cái danh sách  hoặc là dùng cái list danh sách biến toàn cục để sort
-
-        }
-
-
+      
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             AddProductParentForm addProductParentForm = new AddProductParentForm();
@@ -159,10 +143,7 @@ namespace Nike_Shop_Management.GUI
             ComboSubCategoriesFilter.DisplayMember = "sub_categories_name";
             ComboSubCategoriesFilter.ValueMember = "sub_categories_id";
             ComboSubCategoriesFilter.Enabled = true;
-            comboSubCategories.DataSource = list;
-            comboSubCategories.DisplayMember = "sub_categories_name";
-            comboSubCategories.ValueMember = "sub_categories_id";
-            comboSubCategories.Enabled = true;
+
         }
 
         private void ComboProductObjectFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,10 +171,6 @@ namespace Nike_Shop_Management.GUI
             comboProductCategoriesFileter.DataSource = list;
             comboProductCategoriesFileter.DisplayMember = "categories_name";
             comboProductCategoriesFileter.ValueMember = "categories_id";
-
-            comboProductCategories.DataSource = list;
-            comboProductCategories.DisplayMember = "categories_name";
-            comboProductCategories.ValueMember = "categories_id";
         }
 
         public void InitData()
@@ -208,12 +185,10 @@ namespace Nike_Shop_Management.GUI
             comboProductObjectFilter.DataSource = list;
             comboProductObjectFilter.DisplayMember = "product_object_name";
             comboProductObjectFilter.ValueMember = "product_object_id";
-            comboProductObject.DataSource = list;
-            comboProductObject.DisplayMember = "product_object_name";
-            comboProductObject.ValueMember = "product_object_id";
+
 
         }
-
+        
         public void PaintDataDetails(ProductParentDTO productParent)
         {
             if (productParent != null)
@@ -235,6 +210,10 @@ namespace Nike_Shop_Management.GUI
                 u_PictureBox.LoadImgFromUrl("");
                 txProductName.Text = "";
                 txProductPrice.Text = "";
+                txHeight.Text = "";
+                txLength.Text = "";
+                txWeight.Text = "";
+                txWidth.Text = "";
                 //lbl_count_types.Text = "0";
             }
 
@@ -273,8 +252,6 @@ namespace Nike_Shop_Management.GUI
                     Height = int.Parse(txHeight.Text),
                     Length = int.Parse(txLength.Text),
                     Weight = int.Parse(txWeight.Text),
-                    sub_categories_id = int.Parse(comboSubCategories.SelectedValue.ToString()),
-
                 }) ;
                 if (flag == 1)
                 {

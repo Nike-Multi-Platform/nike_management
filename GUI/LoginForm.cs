@@ -19,6 +19,7 @@ namespace Nike_Shop_Management.GUI
         {
             _accountManager = new UserAccountManager();
             InitializeComponent();
+            this.AcceptButton = this.btnLogin;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
