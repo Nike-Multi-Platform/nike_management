@@ -32,9 +32,12 @@ namespace Nike_Shop_Management.GUI
             btnAdd.Click += BtnAdd_Click;
             btnEdit.Click += BtnEdit_Click;
             btnDelete.Click += BtnDelete_Click;
-            btnEditSize.Click += BtnEditSize_Click;
-            comboSize.SelectedValueChanged += ComboSize_SelectedValueChanged;
+            //btnEditSize.Click += BtnEditSize_Click;
+            //comboSize.SelectedValueChanged += ComboSize_SelectedValueChanged;
             btnAddMoreImg.Click += BtnAddMoreImg_Click;
+            btnLeftToRight.Click += BtnLeftToRight_Click;
+            btnRightToLeft.Click += BtnRightToLeft_Click;
+            //btnSave.Click += BtnSave_Click;
         }
 
         private void BtnAddMoreImg_Click(object sender, EventArgs e)
@@ -49,10 +52,10 @@ namespace Nike_Shop_Management.GUI
         {
             if (listView1.SelectedItems.Count > 0)
             {
-                EditProductSizeForm edit = new EditProductSizeForm();
+             //   EditProductSizeForm edit = new EditProductSizeForm();
                 TypeSize typeSize = pcM.GetTypeSize(ProductParentID);
-                edit.InitData(Product_id, typeSize);
-                edit.ShowDialog();
+                InitData(Product_id, typeSize);
+             //   edit.ShowDialog();
             }
             else
             {
@@ -112,7 +115,7 @@ namespace Nike_Shop_Management.GUI
             {
                 try
                 {
-                    lbl_quantity.Text = pcM.GetQuantity((int)comboSize.SelectedValue).ToString();
+                    //lbl_quantity.Text = pcM.GetQuantity((int)comboSize.SelectedValue).ToString();
 
                 }
                 catch (Exception)
@@ -131,6 +134,8 @@ namespace Nike_Shop_Management.GUI
                 u_PictureBox.LoadImgFromUrl(selectedItem.SubItems[1].Text);
                 u_PictureBox.PathThumbail = selectedItem.SubItems[1].Text;
                 BindingData(int.Parse(listView1.SelectedItems[0].Text), int.Parse(selectedItem.SubItems[2].Text));
+                TypeSize typeSize = pcM.GetTypeSize(ProductParentID);
+                InitData(Product_id, typeSize);
             }
         }
 
@@ -141,12 +146,12 @@ namespace Nike_Shop_Management.GUI
             List<SupplierDTO> listSupplier = pcM.GetSuppliers(supplier_id);
             if (listSize.Count > 0 && listSupplier.Count > 0)
             {
-                comboSize.DataSource = listSize;
-                comboSize.DisplayMember = "size_name";
-                comboSize.ValueMember = "product_size_id";
-                comboSupplier.DataSource = listSupplier;
-                comboSupplier.DisplayMember = "supplier_name";
-                comboSupplier.ValueMember = "supplier_id";
+                //comboSize.DataSource = listSize;
+                //comboSize.DisplayMember = "size_name";
+                //comboSize.ValueMember = "product_size_id";
+                //comboSupplier.DataSource = listSupplier;
+                //comboSupplier.DisplayMember = "supplier_name";
+                //comboSupplier.ValueMember = "supplier_id";
             }
             productColorsDTO = pcM.GetByID(product_id);
             if (productColorsDTO != null)
@@ -156,7 +161,6 @@ namespace Nike_Shop_Management.GUI
                 txSizeAndFit.Text = productColorsDTO.product_size_and_fit;
                 txSolds.Text = productColorsDTO.sold;
                 txStylecode.Text = productColorsDTO.product_style_code;
-                txTotalStock.Text = productColorsDTO.total_stock;
                 tx_description.Text = productColorsDTO.product_description;
                 tx_description2.Text = productColorsDTO.product_description2;
                 tx_more_info.Text = productColorsDTO.product_more_info;
@@ -321,10 +325,18 @@ namespace Nike_Shop_Management.GUI
             deleteImg();
             updateImg();
             int flag = pcM.Update(productColorsDTO);
+           if(SaveProductSize())
+            {
             if (flag == 1)
             {
                 MessageBox.Show("EDIT SUCCESSFULL");
                 PaintData(ProductParentID);
+            }
+            else
+            {
+                MessageBox.Show("failed");
+
+            }
             }
             else
             {
@@ -377,5 +389,112 @@ namespace Nike_Shop_Management.GUI
             return 0;
         }
 
+        List<SizeDTO> listInventory;
+        List<int> listCurrentTemp = new List<int>();
+        List<GetTheSizeProductCurrentResult> listCurrent;
+        public int ProductID { get; set; }
+        ProductSizeManager pzM;
+        private void BtnRightToLeft_Click(object sender, EventArgs e)
+        {
+            if (ListSizeCurrent.SelectedRows != null)
+            {
+                var valueSelected = ListSizeCurrent.CurrentRow;
+                if (valueSelected.Cells[2].Value != null)
+                {
+                    listCurrentTemp.Add(int.Parse(valueSelected.Cells[2].Value.ToString()));
+                    Console.WriteLine(listCurrentTemp.Count);
+                }
+
+                ListSizeCurrent.Rows.Remove(valueSelected);
+                ListSizeInventory.Rows.Add(new object[] { valueSelected.Cells[0].Value.ToString(), valueSelected.Cells[1].Value.ToString(), valueSelected.Cells[2].Value != null ? valueSelected.Cells[2].Value.ToString() : null });
+            }
+        }
+
+        private void BtnLeftToRight_Click(object sender, EventArgs e)
+        {
+            if (ListSizeInventory.SelectedRows != null)
+            {
+
+                var valueSelected = ListSizeInventory.CurrentRow;
+                if (valueSelected.Cells[2].Value != null)
+                {
+                    listCurrentTemp.Remove(int.Parse(valueSelected.Cells[2].Value.ToString()));
+                }
+
+                ListSizeInventory.Rows.Remove(valueSelected);
+                ListSizeCurrent.Rows.Add(new object[] { valueSelected.Cells[0].Value.ToString(), valueSelected.Cells[1].Value.ToString(), valueSelected.Cells[2].Value != null ? valueSelected.Cells[2].Value.ToString() : null, 0 });
+            }
+        }
+
+        public void InitData(int product_id, TypeSize typeSize)
+        {
+            pzM = new ProductSizeManager();
+            ProductID = product_id;
+            listInventory = pzM.GetProductSizeInventory(product_id, typeSize);
+            ListSizeInventory.Columns.Clear();
+            ListSizeInventory.Columns.Add("size_id", "Size ID");
+            ListSizeInventory.Columns.Add("size_name", "Size Name");
+            ListSizeInventory.Columns.Add("product_size_id", "Product_size_id");
+
+            ListSizeCurrent.Columns.Clear();
+            ListSizeCurrent.Columns.Add("size_id", "Size ID");
+            ListSizeCurrent.Columns.Add("size_name", "Size Name");
+            ListSizeCurrent.Columns.Add("product_size_id", "Product_size_id");
+            ListSizeCurrent.Columns.Add("soluong", "Quality");
+
+            //  ListSizeCurrent.Columns[2].Visible = false;
+            foreach (var item in listInventory)
+            {
+                ListSizeInventory.Rows.Add(new object[] { item.size_id, item.size_name, null, });
+            }
+
+            ProductColorManager pcM = new ProductColorManager();
+            listCurrent = pcM.GetProductSizesByID(product_id);
+            foreach (var item in listCurrent)
+            {
+                ListSizeCurrent.Rows.Add(new object[] { item.size_id, item.size_name, item.product_size_id, item.soluong });
+            }
+
+
+        }
+
+       public bool SaveProductSize()
+        {
+            bool flagT = true;
+            foreach (var item in listCurrentTemp)
+            {
+                if (pzM.Delete(item) == 0)
+                {
+                    MessageBox.Show("Khong the xoa size", item.ToString());
+                    return false;
+                }
+            }
+
+            for (int i = 0; i < ListSizeCurrent.RowCount - 1; i++)
+            {
+                if (ListSizeCurrent[2, i].Value != null)
+                {
+                    // bỏ qua nè
+                    continue;
+                }
+                else
+                {
+                    // thêm vào nè
+                    int flag = pzM.Add(new ProductSizeDTO()
+                    {
+                        product_id = ProductID,
+                        size_id = int.Parse(ListSizeCurrent[0, i].Value.ToString()),
+                        soluong = 1
+                    });
+                    if (flag == 0)
+                    {
+                        flagT = false;
+                        MessageBox.Show("Cap nhat size that bai");
+                        break;
+                    }
+                }
+            }
+            return flag;
+        }
     }
 }
